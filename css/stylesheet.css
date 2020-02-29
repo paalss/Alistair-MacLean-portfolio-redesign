@@ -1,0 +1,1091 @@
+@charset "UTF-8";
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+/*$*/
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width:100%;
+}
+
+/*
+	Dreamweaver Fluid Grid Properties
+	----------------------------------
+	dw-num-cols-mobile:		4;
+	dw-num-cols-tablet:		8;
+	dw-num-cols-desktop:	12;
+	dw-gutter-percentage:	25;
+	
+	Inspiration from "Responsive Web Design" by Ethan Marcotte 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	and Golden Grid System by Joni Korpi
+	http://goldengridsystem.com/
+*/
+
+.fluid {
+	clear: both;
+	margin-left: 0;
+	width: 100%;
+	float: left;
+	display: block;
+}
+
+.fluidList {
+    list-style:none;
+    list-style-image:none;
+    margin:0;
+    padding:0;        
+}
+
+/*
+===========================================================================================================
+Mobile Layout: 480px and below.
+===========================================================================================================
+*/
+/*$ body    m*/
+body {
+	font-family:'Muli', sans-serif;
+	/*text-transform: lowercase;*/
+	font-size: 16px;
+	font-weight: 400;
+	/*min-height:100%;*/
+	position:relative;
+	/*background:#E5FF00;*/
+	
+}
+	body h1, h2, h3, iframe {
+		margin-top:10px;
+		margin-bottom:5px;
+		margin-left:5%;
+		margin-right:5%;
+	}
+	body p {
+		margin-top:0;
+		margin-bottom:5px;
+		margin-left:5%;
+		margin-right:5%;	
+		font-size:15px;	
+	}
+	.vannrettborder {
+		margin: 5px 7.3%;
+		border-bottom: 1px solid #fff;
+	}
+	body h1 {
+		/*font-family: 'Changa One';*/
+		font-family: 'Lato', sans-serif;
+		font-size:20px;
+		font-weight:700;
+		text-align:center;
+		margin-left:10%;
+		margin-right:10%;
+		/*color:#000;*/
+		color:#000;
+		border-bottom: 1px solid #336699;
+	}
+/*		body h1 a:link {
+		}
+		body h1 a:visited {
+		}
+		body h1 a:hover {
+		}
+		body h1 a:active {
+		}
+*/
+
+	body h2 {									/*		(___________________)		*/
+		font-family:'Muli', sans-serif;
+		font-size:18px;
+		font-weight:400;
+		margin: 2px 5%;
+		padding: 5px 0 5px 5%;
+		/*border:none;*/
+		/*border-top-left-radius:15px;*/
+		/*border-bottom-left-radius:30px;
+		/*border-top-right-radius:30px;
+		/*border-bottom-right-radius:15px;*/
+		border-radius:30px;
+		/*border-top: 1px solid #006496;*/
+		/*border-left: 2px solid #006496;*/
+		/*border-right: 1px solid #006496;*/
+		border-bottom: 2px solid #006496;
+		/*border: 2px solid #006496;*/
+		color:#fff;
+		/*color:#ffed00;*/
+		background:#006496;
+	}
+	body h3 {
+		font-family:'Lato', sans-serif;
+		font-size:15px;
+		font-weight:700;
+		color:#000;
+	}
+	body h4 {
+		/*font-family: 'Lato', sans-serif;
+		font-size:18px;
+		font-weight:700;
+		text-align:center;*/
+		/*color:#002D95;*/
+		/*background:#002d95;*/
+		/*border-bottom:1px solid #000;*/
+	}
+	button {
+		font-family:'Muli', sans-serif;
+		font-size:13px;
+		color:#006496;
+		border: 1px solid #fff;
+		border-radius:10px;
+		background:#fff;
+	}
+	button:hover {
+		color:#fff;
+		border: 1px solid #fff;
+		background:#006496;
+	}
+																/*bodybodybodybodybodybodybodybody*/
+.gridContainer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 86.45%;
+	padding-left: 2.275%;
+	padding-right: 2.275%;
+	clear: none;
+	float: none;
+}
+#div1 {
+}
+															/*^^^^^^^^^MOBILE^^^HEADER==*/
+/*	 ____   ____  __________  ______	   _________	  __________  ________
+	/  //  /  // /	 _____// /	   ||     /	       \\	 /  ______// /		 \\
+   /  //__/  // /  //___  	/      ||    /   	    \\  /  //___  	/	     //
+  /	 _____  // /   ___//   /  __   ||	/	  		// /   ___//   /  ___  \\
+ /  //	/  // /	 //_____  /  // |  ||  /		  //  /	 //_____  /	 //  \  \\
+/__//  /__// /________// /__//  |__|| /________// 	 /________// /__//    \__\\
+*/
+/*$ header  m*/
+.header {
+	margin-left:-8%;
+	margin-right:-8%;
+	padding-top:0;
+	padding-right:15%;
+	background-repeat:repeat;
+	background-attachment:fixed;
+	/*background:#EE00FF;*/
+	background-image:url(../images/nwe2-7_web.jpg);
+}
+	.tittel {
+		/*max-width:400px;*/
+		/*margin-top:10px;
+		margin-bottom:5px;
+		margin-left:5%;
+		margin-right:5%;*/
+		margin: 10px 5%;
+		/*background:#00B90D;*/
+	}
+		.menu a {
+			display:block;
+		}
+	.menu {
+		padding-bottom:10px;
+		padding-right:14%;
+		/*border: 1px solid #fff;*/
+		/*border-top: 1px solid #fff;*/
+		/*border-bottom: 1px solid #fff;*/
+		/*text-align:center;*/
+		/*background:rgba(255,255,255,0.20);*/
+		/*background:#2633B3;*/
+		/*background:#fff;*/
+		/*background:rgba(38,51,179,0.20);*/
+	}
+		/*.menu h2 {
+			font-size:24px;
+			padding-bottom:5px;
+			border-bottom: 2px solid #fff;
+			color:#fff;
+		}*/
+		.menu a {
+			
+			/*margin: 0 33%;
+			*/margin: 0 10%;
+			padding: 0 5%;
+			float:left;
+			text-decoration:none;
+			font-size:23px;
+			display:inline-block;			/*inline gjør til at a´-ene kommer på linje selv om det er en block, som gjør til at hele a´-ene blir egne blokker/ubrytelige/ikke-mulig-med-ordeling*/
+			border-radius:15px;
+			/*border: 1px solid #000;*/
+			/*background:#B7FF56;*/
+		}
+		.menu a:link {								/*vanlig*/
+			/*color:#000;*/
+			color:#fff;
+		}
+		.menu a:visited {							/*besøkt*/
+			/*color:#000;*/
+			color:#fff;
+		}
+		.menu a:hover {								/*berøre*/
+			transition: color 0.4s ease 0s;
+			transition: background 0.4s ease 0s;
+			/*-webkit-text-stroke-width: 5px;
+			-webkit-text-stroke-color: #ffed00;*/
+			/*text-outline: 1px solid #29FF00;	*/	
+			/*color:#006496;*/
+			/*color:#ffed00;*/
+			color:#000;
+			/*border: 1px solid #ffed00;*/
+			/*background:rgba(255,237,0,0.20);*/
+			background:#ffed00;
+			/*background:#fff;*/
+		}
+		.menu a:active {							/*klikk*/
+			/*color:#fff;*/
+			/*background:rgba(255,237,0,0.20);*/
+			/*background:#fff;*/
+		}
+		.menu a.current {
+			color:#ffed00;
+		}
+		.menu a.current:hover {
+			color:#000;
+			background:#ffed00;
+		}
+	.thehardestbuttontobutton {
+		margin: 0 15%;
+	}
+		.thehardestbuttontobutton button {
+			padding: 2px 4px;
+			font-size:16px;
+			color:#fff;
+			border:none;
+			/*border: 1px solid #ffed00;*/
+			background:none;
+		}
+		.thehardestbuttontobutton button:hover {
+			/*color:#006496;*/
+			color:#ffed00;
+			/*border: 1px solid #006496;*/
+			/*background:#fff;*/
+		}
+		.omforfatter {
+			/*border: 1px solid #00D8FF;*/
+			/*background:rgba(255,255,255,0.80);*/
+		}
+	.omforfatter-bilde-tekst {
+		padding-right:15%;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+50,000000+100&0+50,0.7+100 */
+background: -moz-linear-gradient(top, rgba(255,255,255,0) 50%, rgba(0,0,0,0.7) 100%); /* FireFox3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,rgba(255,255,255,0)), color-stop(100%,rgba(0,0,0,0.7))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(255,255,255,0) 50%,rgba(0,0,0,0.7) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(255,255,255,0) 50%,rgba(0,0,0,0.7) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(255,255,255,0) 50%,rgba(0,0,0,0.7) 100%); /* InternetExplorer10+ */
+background: linear-gradient(to bottom, rgba(255,255,255,0) 50%,rgba(0,0,0,0.7) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#b3000000',GradientType=0 ); /* InternetExplorer6-9 */		
+
+/*background:rgba(0,0,0,0.60);*/
+	}
+																												/*************************/
+	.omforfatter-bilde {
+		max-width:180px;
+		/*width: 100%;*/
+		/*width:180px;*/
+		/*height:180px;*/
+		margin-top:18px;
+		/*margin-left:10%;*/	/*på venstrejustert x-posisjon lik med tilsvarende på omfortatterteksten*/
+		margin-left:15%;
+		/*display:block;*/
+		/*border: 1px dashed;*/
+		/*background:#6C00FF;*/
+		/*background:#680018;*/
+		background:rgba(108,0,255,0.20);
+	}
+		.omforfatter-bilde img {
+			/*margin-left:10%;*/
+			/*height:100%;*/
+			/*padding-left:20%;*/
+			/*padding-right:20%;*/
+			/*border: 1px solid #000;*/
+		}	
+
+	.omforfatter-tekst {
+		/*margin: 0 5%;*/
+		/*width: 80%;*/
+		/*margin-left:auto;
+		margin-right:auto;*/
+		/*border: 1px dashed #000;*/
+		/*background:rgba(255,0,146,0.20);*/
+		
+	}
+		.omforfatter-tekst p {
+			width:80%;
+			margin-left:15%;
+			/*margin-left:auto;
+			margin-right:auto;*/
+			color:#fff;
+			/*border: 1px solid #000;*/
+			/*background: #00FFF0;*/
+		}
+	.omforfatter-bilde-tekst {
+	}
+		
+	
+															/*^^^^^^^^MOBILE^^^/HEADER==*/
+															
+															
+/*	 ___________   _________	 __		  __   ____________	 __________	 __		  __   ____________
+	/	_____  // /		    \\  /  \\	/  // /___   ____//	/  _____//  /  \\	/  // /___   ____//
+   /  //    /_// /		    // /  	\\ /  //	 /  //	   / //__	   /	\\ /  //	 /	//
+  /	 //	   __	/		   // /	 /\	 \/	 //	    /  //	  /  ___//	  /  /\  \/	 //	    /  //
+ /	//____/ // /		  // /	// \	//	   /  //	 /  //_____	 /  // \	//	   /  //
+ \_________//  \_________// /__//   \__//	  /__//		/________// /__//	\__//	  /__//
+*/														
+/*$ content m*/															
+															/*========MOBILE===CONTENT==*/
+.content {
+	/*margin-top:300px;*/
+	/*margin-bottom:100px;*/
+	padding-top:15px;
+	padding-bottom:15px;
+	/*display:block;*/
+	/*clear:both;*/
+}
+	.content a {
+		margin:0;
+		border:none;
+	}
+/*	.content-tekst p {
+		width:80%;
+		background:#FFB5F9;
+	}*/
+	.section {
+		margin: 15px 0;
+		/*background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAKCAYAAAB8OZQwAAAAIUlEQVQImWNgQIAGBjTQgC7RwMDAIAXFvugSvujaBwYAAGzbA8+rBFuKAAAAAElFTkSuQmCC);*/
+	}
+		.section p {
+		}
+	.section-columns2-text {
+		/*background:#ddd;*/
+	}
+	.section-left {
+		width:100%;
+		/*margin-left:5%;
+		margin-right:5%;*/
+		margin-bottom:30px;
+		padding-bottom:20px;
+	}
+	.section-right {
+		width:100%;
+		/*margin-left:5%;
+		margin-right:5%;*/
+		margin-bottom:30px;
+		padding-bottom:20px;
+		background:rgba(255,255,255,0.70);
+	}
+															/*cOlLeCtEdWoRkSCoLlEcTeDwOr*/
+	.fiction {
+		/*background:#34FE69;*/
+		/*display:block;*/
+		width:70%;
+		margin-left:15%;
+		margin-right:15%;
+		margin-bottom:20px;
+		padding-bottom:20px;
+		/*border-radius:30px;*/
+		/*border-bottom: 2px dashed #bbb;*/
+		/*border: 1px solid #0E00FF;*/
+		/*background:rgba(52,254,105,0.40);*/
+	}
+	.nonfiction {
+		/*background:#34FE69;*/
+		/*display:block;*/
+		width:70%;
+		margin-left:15%;
+		margin-right:15%;
+		margin-bottom:20px;
+		padding-bottom:20px;
+		/*border-radius:30px;*/
+		border-top: 2px dashed #bbb;
+		/*border: 1px solid #0E00FF;*/
+		/*background:rgba(52,254,105,0.40);*/
+	}
+	.collectedworks h3 {
+		/*text-align:center;*/
+	}
+															/*bØkErBøKeRbØkErBøKeRbØkEr*/
+		.fiction {
+			/*width:auto;*/
+			/* width:100%; */
+			/*width:130px;*/
+			
+			/*margin-left:5%;
+			margin-right:5%;*/
+			/*margin-left:1%;
+			margin-right:1%;*/				/*dette dytter div-en ut av parent div-en. flow-er litt over*/
+			/*margin-left:-15px;*/
+			/*margin-right:-15px;*/
+			/*margin-bottom:40px;*/
+			
+			/*padding-top:15px;*/
+			/*padding-left:15px;
+			padding-right:15px;*/
+			
+			/*float:none;*/					/*div="element" havner utenfor div fiction  */
+			/*position:static;*/
+			/*text-align:center;*/
+			/*border: 1px solid #981012;*/
+			/*	border-radius:15px;	*/
+			/*background:#CCFF00;*/
+			/*background:rgba(204,255,0,0.40);*/
+			/*	background:#eee;	*/
+		}
+		.nonfiction {
+			/*	border-radius:15px;	*/
+			/* border-top: 1px dashed #000; */
+			/*	background:#eee;	*/
+		}
+			.element {
+				/*width:100px;*/
+				width:125px;
+				/*width:60%;*/
+				/*width:40%;*/
+				height:250px;
+				max-width:185px;
+				/*margin-left:5%;*/
+				margin: 10px 20%;
+				/*margin-left:20%;
+				margin-right:20%;
+				margin-top:10px;
+				margin-bottom:10px;*/
+				/*padding:3px;*/
+				/*padding-left:5%;*/
+				/*display:block;*/
+				/*display:inline;*/
+				/*float:left;*/
+				/*float:none;*/
+				text-align:center;
+				align-content:center;
+				clear:none;						/*mmmmmmm*/
+				/*border: 1px dashed #000;*/
+				/*background:rgba(189,42,45,0.20);*/	
+			}
+				.element img {
+					/*border: 1px solid #000;*/
+				}
+				
+				.element img:hover {
+					-webkit-filter:brightness(60%);
+					filter:brightness(60%);				/*Firefox*/
+					
+				}
+				.element:hover {
+					/*background:#222;*/
+				}
+				.element p, .element h3 {
+					color:#000;
+				}
+				.element h3 {
+					font-size:10px;
+					margin-top:2px;
+					margin-bottom:1px;
+					/*border: 1px solid #000;*/
+					/*background:#00FCFF;*/
+					/*display:none;*/
+				}
+				.element p {
+					font-size:9px;
+					margin-top:1px;
+					margin-bottom:1px;
+					/*display:none;*/
+				}
+	.reviews {
+	}
+		.bookreview {
+		}
+			.bookreview img {
+				width:30%;
+				max-width:90px;				/*max-width:156px;*/
+				margin: 0 5%;
+				float:left;
+			}
+			.bookreview a {
+				margin-top:10px;
+			}
+		.revealin {
+			margin: 0 0 10px 0;
+			padding: 10px 0;
+			border-radius:7px;
+			background:#eee;	
+		}							
+			.revealin a {
+				padding: 1px 10px;
+				display:inline;
+				border-radius:20px;
+				text-decoration:none;
+			}
+			.revealin a:link {
+				color:#000;
+				border-bottom: 1px solid #000;
+				background:#fff;
+			}
+			.revealin a:visited {
+				color:#000;
+			}
+			.revealin a:hover {
+				color:#fff;
+				border-bottom: 1px solid #fff;
+				border-top: 1px solid #000;
+				background:#555;
+			}
+			.revealin a:active {
+			}
+	.firsteditions {
+		width:80%;
+		margin-left:10%;
+		margin-right:10%;
+		float:left;
+		clear:none;
+	}
+.totop {
+	margin: 10px 5%;
+}
+	.totop a {
+		/*margin: 5px 8.5%;*/
+		margin: 0 5px;
+		padding: 2px 10px;
+		/* border-radius:20px;
+		text-decoration:none;
+		font-size:16px; */
+		/*border: 1px solid #000;*/
+		/*background:#B7FF56;*/
+	}
+	.totop a:link {
+		/*color:#fff;*/
+		/* color:#006496;
+		border: 1px solid #fff;
+		background:none; */
+		/*background:#006496;*/
+	}
+	.totop a:visited {
+		/*color:#fff;*/
+		/* color:#006496;
+		border: 1px solid #fff; */
+	}
+	.totop a:hover {
+		/*color:#006496;*/
+		/* color:#fff;
+		border: 1px solid #006496;
+		background:#006496; */
+		/*background:#fff;*/
+	}
+	.totop a:active {
+		/*color:#fff;*/
+		/*background:#006496;*/
+		/* background:#fff; */
+	}
+															/*=======MOBILE===/CONTENT==*/
+															
+															
+															
+/*	 ___________  ________     ________     ___________	  __________  _________
+	/	______// /		  \\  /		   \\  /__		__// /	______// /	      \\
+   /  //___		/		  // /		   //	  /  //	    /  //___    /	     //
+  /	 ____//	   /		 // /		  //	 /  //	   /  ____//   /  ___  \\
+ /  //		  /		    // /		 //		/  //	  /	//_____   /	 //	 \  \\
+/__//		  \________//  \________//	   /__//	 /________// /__//	  \__\\
+*/
+/*$ footer  m*/												
+															/* v v v MOBILEv v vFOOTER==*/
+.footer {
+	margin-left:-8%;
+	margin-right:-8%;
+	padding-top:20px;
+	padding-right:15%;
+	/*background:#EE00FF;*/
+	background-image:url(../images/nwe2-7_web.jpg);
+	background-repeat:repeat;
+	background-attachment:fixed;
+	/*background:#FFB800;*/
+}
+	.footer p {
+		color:#fff;
+	}
+	.footer a:link {
+		color:#fff;
+		text-decoration:none;
+	}
+	.footer a:hover {
+		color:#fff;
+		text-decoration:underline;
+	}
+	.footer a:visited {
+		color:#ffed00;
+		text-decoration:none;
+	}
+	.footer a:active {
+		color:#fff;
+	}
+.navigation {
+}																@media only screen and (min-width: 390px) {
+
+/*$ body    m-2*/
+body {
+	/*background:#00D331;*/
+}
+/*body h1 {
+	font-size:14px;
+	color:#E14E51;
+}*/
+.fiction {
+}
+.element {
+	width:90px;
+	/*width:30%;*/
+	height:190px;
+	margin-left:5%;
+	margin-right:5%;
+	/*background:#00FFF5;*//*lyseblå*/
+}
+.content {
+}
+.navigation {
+}
+.hide_mobile {
+display: none;
+}
+.zeroMargin_mobile {
+margin-left: 0;
+}
+}
+/*
+===========================================================================================================
+Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout.
+===========================================================================================================
+*/
+/*$ body    t*/
+
+																@media only screen and (min-width: 481px) {
+body {
+	/*background:#00630A;*/
+}
+/*body h2 {
+	margin: 0 13.5%;
+}*/
+body h2 {
+	margin: 2px 9.2%;
+}
+.gridContainer {
+	width: 90.67	;
+	padding-left: 1.1625%;
+	padding-right: 1.1625%;
+	clear: none;
+	float: none;
+	margin-left: auto;
+}
+#div1 {
+}
+body {
+	/*background:#FF00C3;*/
+}
+/*body h1 {
+	font-size:60px;
+	color:#106E63;
+}*/
+	.vannrettborder {
+		/*margin: 5px 2%;*/
+	}
+													/*^^^^^^^^^TABLET^^^HEADER==*/
+/*$ header  t*/
+.header {
+	padding-top:15px;
+}
+	.tittel {
+		width:70%;
+		margin-left:20%;
+		margin-right:0;
+		margin-bottom:10px;
+	}
+	.menu {
+		margin-left:15%;
+		margin-top:2px;
+		padding-right:0;
+		
+		/*text-align:center;*/
+		/*background:rgba(0,190,254,0.46);*/
+	}
+		/*.menu h2 {
+			text-align:left;
+			margin-left:2%;
+			border-bottom: 1px solid #fff;
+		}*/
+		.menu a {
+			margin: 0 1%;
+			padding: 0 1%;
+			float:none;
+			
+		}
+	.menu {
+	}
+	.omforfatter {
+	}
+	.omforfatter-bilde-tekst {
+	}
+	.omforfatter-bilde {
+		/*margin-left:35%;*/	/*for langt ute på midten av omforfatterteksten*/
+	}
+		.omforfatter-bilde img {
+		}
+	.omforfatter-tekst {
+	}
+		.omforfatter-tekst p {
+		}
+															/*^^^^^^^^^TABLET^^^/HEADER==*/
+															/*=========TABLET===CONTENT==*/	
+/*$ content t*/
+.content {
+}
+	.section h3 {
+		/*margin: 0 12.5%;*/
+	}
+	.section-columns1-text {
+		-webkit-column-count: 1; /* Chrome, Safari, Opera */
+    	   -moz-column-count: 1; /* Firefox */
+    			column-count: 1;
+				margin: 5px 12.5%;
+				width:75%;
+	}
+	.section-columns1-text-index {
+		-webkit-column-count: 1; /* Chrome, Safari, Opera */
+    	   -moz-column-count: 1; /* Firefox */
+    			column-count: 1;
+				margin: 0 15%;
+				width:70%;
+	}
+	.section-columns2-text h3 {
+		margin: 0 5%;
+	}
+	.section-columns2-text {
+		-webkit-column-count: 1; /* Chrome, Safari, Opera */
+    	   -moz-column-count: 1; /* Firefox */
+    			column-count: 1;
+ /*-webkit-columns: 300px;*/
+    /*-moz-columns: 300px;*/
+		 /*columns: 300px;*/
+/*-webkit-column-gap: 1em;*/
+   /*-moz-column-gap: 1em;*/
+          /*column-gap: 1em;*/
+		  margin: 10px 12.5%;
+		  width:75%;
+		/*background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAQElEQVQYlW2OwQ0AMAgCbw7XcMFubj81RVpeGgIcQHK1gJC/+shjtkLNTmpTaZMm05IB76YzfTedaW46k28Opg1VYQ5hW3JdzwAAAABJRU5ErkJggg==);*/
+		/*background-color:darkorange;*/
+	}
+	.section-columns2-text-news {
+		margin: 5px 20%;
+		width:60%;
+		background:#eee;
+	}
+	.section-columns3-text {
+		-webkit-column-count: 2; /* Chrome, Safari, Opera */
+    	   -moz-column-count: 2; /* Firefox */
+    			column-count: 2;
+				/*padding-left:3.8%;*/
+				margin:0 12.5%;
+				width:75%;
+		/*background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAF0lEQVQImWNgQID/ONiYAuiy5EtitxQA3NUJ97rEulUAAAAASUVORK5CYII=);*/
+		/*background-color:#E4FFEC;*/
+		/*background-color:purple;*/
+	}
+	.section-left-text {
+		-webkit-column-count: 2; /* Chrome, Safari, Opera */
+    	   -moz-column-count: 2; /* Firefox */
+    			column-count: 2;
+				padding-left:3.8%;
+				width:90%;
+		/*background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEElEQVQImWNgwAH+Ey3IAABBAwH/eW6B8gAAAABJRU5ErkJggg==);*/
+		/*background-color:#D5E7FF;*/
+		/*background-color:lightblue;*/
+	}
+	.section-right-text {
+		-webkit-column-count: 2; /* Chrome, Safari, Opera */
+    	   -moz-column-count: 2; /* Firefox */
+    			column-count: 2;
+				padding-left:3.8%;
+				width:90%;
+		/*background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEElEQVQImWNgwAP+4+SgAABBAwH/akSlNwAAAABJRU5ErkJggg==);*/
+		/*background-color:#FBDBFF;*/
+		/*background-color:lightpink;*/
+	}
+	.collectedworks {
+	}
+	.fiction {
+	}
+		.element {
+			width:80px;
+			/*width:20%;*/
+			height:180px;
+			margin-left:2.8%;
+			margin-right:2.8%;
+			/*width:20%;
+			margin-left:5%;
+			margin-right:5%;*/
+			/*background:#00FFB6;*//*turkis*/
+		}
+		.element p {
+		}
+	.reviews {
+	}
+		.bookreview img, .bookreview p, .bookreview h3 {
+/*-webkit-column-count: 3;*/ /* Chrome, Safari, Opera */
+   /*-moz-column-count: 3;*/ /* Firefox */
+		/*column-count: 3;*/
+/*-webkit-columns: 300px;
+    -moz-columns: 300px;
+		 columns: 300px;*/
+/*-webkit-column-gap: 1em;
+   -moz-column-gap: 1em;
+        column-gap: 1em;*/
+		}
+	#first {
+		width:90%;
+		margin-left:5%;
+		margin-right:5%;
+	}
+	.firsteditions {
+		width:230px;
+		height:360px;
+		margin-left:1%;
+		margin-right:1%;
+	}
+															/*=========TABLET=/CONTENT==*/
+															/* v v v v TABLETv vFOOTER==*/
+/*$ footer  t*/
+.footer {													
+}
+.navigation {
+}
+.hide_tablet {
+display: none;
+}
+.zeroMargin_tablet {
+margin-left: 0;
+}
+
+
+}
+
+/*
+===========================================================================================================
+Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout.
+===========================================================================================================
+*/
+/*$ bofy    d*/
+																@media only screen and (min-width: 769px) {
+
+body {
+	/*background:#FFCA00;*/
+}
+/*body h1 {
+	margin-top:120px;
+	color:#FDFF00;
+}*/
+.gridContainer {
+	width: 88.5%;
+	max-width: 1232px;
+	padding-left: 0.75%;
+	padding-right: 0.75%;
+	margin: auto;
+	clear: none;
+	float: none;
+	margin-left: auto;
+}
+#div1 {
+}
+/*$ header  d*/																	/*^^^^^^^^^DESKTOP^^^^HEADER==*/
+.header {
+}
+	.tittel {
+		width:42%;
+		margin: 10px 29%;																/*PPPPPPPPPPPPPPPPPPPPPPPPPPPPP*/
+		/*margin-left:32%;
+		margin-left:16%;*/
+	}
+	.menu {
+		/*margin-left:5%;*/																/*OOOOOOOOOOOOOOOOOOOOODOOOOOOOOOOOOOOOOOO*/
+		margin-left:13.7%;
+	}
+		.menu h2 {
+		}
+		.menu a {
+		}
+		
+																												/************************/
+	.omforfatter-bilde {
+		/*max-width:300px;*/
+		width:30%;
+		/*margin: 18px 16% 18px 0;*/
+		margin-left:16%;
+		margin-bottom:18px;
+		/*float:left;
+		clear:none;*/
+	}
+	.omforfatter-bilde-tekst {
+		/*background:#007FFF;*/
+	}
+	.omforfatter-tekst {
+		/*min-width:250px;*/
+		/*max-width:250px;*/
+		width:51%;
+		/*max-height:60px;*/
+		/*float:left;*/
+		clear:none;	/*putter tekst ved siden av*/
+		margin:0;
+		padding-left:20px;
+		/*vertical-align:middle;
+		display:table-cell;*/
+		/*position:relative;*/
+		/*background:#BF00BF;*/
+	}
+	.omforfatter-tekst {
+		/*margin: 0 5%;*/
+		/*width: 80%;*/
+		/*margin-left:auto;
+		margin-right:auto;*/
+		/*border: 1px dashed #000;*/
+		/*background:rgba(255,0,146,0.20);*/
+		
+	}
+		.omforfatter-tekst p {
+			width:90%;
+			margin-left:0;
+		}
+		.omforfatter-tekst p {
+			/*position:absolute;*/
+			/*top:50%;*/
+			/*transform:translate(0,-50%);*/
+		}
+																				/*^^^^^^^^^DESKTOP^^^/HEADER==*/
+/*$ content d*/																	/*=========TABLET====CONTENT==*/
+.content {
+}
+	.section-left {
+		width:46%;
+		/*margin-left:2.5%;*/
+		/*margin-right:0;*/
+		float:left;
+	}
+		.section-left h2 {
+			padding-left:12%;
+		}
+		.section-left-text {
+			-webkit-column-count: 1; /* Chrome, Safari, Opera */
+    		   -moz-column-count: 1; /* Firefox */
+    				column-count: 1;
+			padding-left:7.8%;
+			/*background-color:#FFE4A4;*/
+			background-color:lightyellow;
+		}
+	.section-right {
+		width:46%;
+		/*margin-right:2.5%;*/
+		/*margin-right:0;*/
+		clear:none;
+	}
+		.section-right h2 {
+			padding-left:12%;
+		}
+		.section-right-text {
+			-webkit-column-count: 1; /* Chrome, Safari, Opera */
+    		   -moz-column-count: 1; /* Firefox */
+    				column-count: 1;
+			padding-left:7.8%;
+			/*background-color:#fff;*/
+			background-color:brown;
+		}
+	.collectedworks {
+	}
+	.fiction {
+	}
+		.element {
+			width:80px;
+			/*width:99.2px;*/
+			/*width:14%;*/
+			/*width:12.5%;*/
+			height:175px;
+			margin-left:1%;
+			margin-right:1%;
+			/*background:#bbb;*/
+		}
+	#first {
+		width:70%;
+		margin-left:15%;
+		margin-right:15%;
+	}
+	.firsteditions {
+		width:260px;
+		height:390px;
+		margin-left:1%;
+		margin-right:1%;
+	}
+/*$ footer  d*/
+.footer {
+}
+.menu {
+}
+
+}
+																@media only screen and (min-width: 950px) {
+/*$ body    d-2*/
+body {
+	/*background:#6B3FB5;*/
+}
+/*body h1 {
+	margin-top:160px;
+	color:#FFAD00;
+}*/
+.menu {
+}
+.content {
+}
+	.section-columns1-text {
+	}
+	.section-columns2-text {
+		-webkit-column-count: 2; /* Chrome, Safari, Opera */
+    	   -moz-column-count: 2; /* Firefox */
+    			column-count: 2;
+		/*background-color:#E4FFEC;*/
+		/*background-color:lightgreen;*/
+		/*padding-left:3.5%;*/
+		width:70%;
+	}
+	.section-columns3-text {
+		-webkit-column-count: 3; /* Chrome, Safari, Opera */
+    	   -moz-column-count: 3; /* Firefox */
+    			column-count: 3;
+		/*background-color:lightgrey;*/
+		/*padding-left:4.5%;*/
+		width:70%;
+	}
+	.collectedworks {
+	}
+	.fiction {
+	}
+		.element {
+			width:80px;
+			/*width:117.8px;*/
+			/*width:13%;*/
+			/*width:10%;*/
+			height:180px;
+			margin-left:1%;
+			margin-right:1%;
+			/*background:#FC00FF;*//*rosa*/
+		}
+.zeroMargin_desktop {
+margin-left: 0;
+}
+.hide_desktop {
+display: none;
+}
+}

@@ -1,0 +1,1329 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alistair MacLean blog</title>
+<link href="css/boilerplate.css" rel="stylesheet" type="text/css">
+<link href="css/stylesheet.css" rel="stylesheet" type="text/css">
+
+<!-- 
+To learn more about the conditional comments around the html tags at the top of the file:
+paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+
+Do the following if you're using your customized build of modernizr (http://www.modernizr.com/):
+* insert the link to your js here
+* remove the link below to the html5shiv
+* add the "no-js" class to the html tags at the top
+* you can also remove the link to respond.min.js if you included the MQ Polyfill in your modernizr build 
+-->
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!--CSS-->
+<!--font-->
+<link href="https://fonts.googleapis.com/css?family=Changa+One" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Muli" rel="stylesheet" type="text/css"><!---normal 400-->
+<link href="http://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet" type="text/css">
+<!--<script src="scripts/respond.min.js"></script>-->
+
+<!-- Place somewhere in the <head> of your document -->
+<!--<link rel="stylesheet" href="flexslider.css" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="jquery.flexslider.js"></script>
+-->
+<!--forslag påhttp://stackoverflow.com/questions/16129880/flexslider-not-working-->
+<!--<link rel="stylesheet" type="text/css" href="http://flexslider.woothemes.com/css/flexslider.css"> 
+<link rel="stylesheet" type="text/css" href="http://lab.mattvarone.com/projects/jquery/totop/css/ui.totop.css">-->
+
+<!--script-->
+
+<!--Place in the <head>, after the three links-->
+<!--	<script type="text/javascript" charset="utf-8">
+  $(window).load(function() {
+    $('.flexslider').flexslider();
+  });
+</script>	-->
+
+<!--forslag på http://stackoverflow.com/questions/16129880/flexslider-not-working-->
+<!--<script type="text/javascript" src="http://flexslider.woothemes.com/js/jquery.flexslider.js"></script> 
+<script type="text/javascript" src="http://flexslider.woothemes.com/js/jquery.easing.js"></script> 
+<script type="text/javascript" src="http://flexslider.woothemes.com/js/jquery.mousewheel.js"></script> 
+<script type="text/javascript" src="http://lab.mattvarone.com/projects/jquery/totop/js/jquery.ui.totop.js"></script>--> 
+
+<!--forslag på http://community.mybb.com/thread-136316.html-->
+<!--<script type="text/javascript">
+jQuery.noConflict();
+jQuery(window).load(function() {
+  jQuery('.flexslider').flexslider({
+    animation: "slide"
+  });
+});
+</script>-->
+
+<!--<script type="text/javascript">jQuery.noConflict();</script>-->
+
+<!--<script type="text/javascript">
+jQuery.noConflict($);
+$(window).load(function() {
+  $('.flexslider').flexslider({
+    animation: "slide"
+  });
+});
+
+</script>-->
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#hide").click(function(){
+        $(".section-columns2-text").hide(500);
+    });
+    $("#show").click(function(){
+        $("#w-ulysses").show(500);
+    });
+//	$("button.b-everysection").click(function(){
+//		$(".section-columns2-text").toggle(500);
+//	};
+	$("button#b-fiction").click(function(){
+    	$(".fiction").toggle(500);
+	});
+	$("button#b-ulysses").click(function(){
+    	$("#w-ulysses").toggle(500);
+	});
+	$("button#b-guns").click(function(){
+    	$("#w-guns").toggle(500);
+	});
+	$("button#b-south").click(function(){
+    	$("#w-south").toggle(500);
+	});
+	$("button#b-last").click(function(){
+    	$("#w-last").toggle(500);
+	});
+	$("button#b-night").click(function(){
+    	$("#w-night").toggle(500);
+	});
+	$("button#b-fear").click(function(){
+    	$("#w-fear").toggle(500);
+	});
+	$("button#b-dark").click(function(){
+    	$("#w-dark").toggle(500);
+	});
+	$("button#b-goldenrendezvous").click(function(){
+    	$("#w-goldenrendezvous").toggle(500);
+	});
+	$("button#b-satan").click(function(){
+    	$("#w-satan").toggle(500);
+	});
+	$("button#b-ice").click(function(){
+    	$("#w-ice").toggle(500);
+	});
+	$("button#b-when").click(function(){
+    	$("#w-when").toggle(500);
+	});
+	$("button#b-where").click(function(){
+    	$("#w-where").toggle(500);
+	});
+	$("button#b-force").click(function(){
+    	$("#w-force").toggle(500);
+	});
+	$("button#b-puppet").click(function(){
+    	$("#w-puppet").toggle(500);
+	});
+	$("button#b-caravan").click(function(){
+    	$("#w-caravan").toggle(500);
+	});
+	$("button#b-bear").click(function(){
+    	$("#w-bear").toggle(500);
+	});
+	$("button#b-way").click(function(){
+    	$("#w-way").toggle(500);
+	});
+	$("button#b-breakheart").click(function(){
+    	$("#w-breakheart").toggle(500);
+	});
+	$("button#b-circus").click(function(){
+    	$("#w-circus").toggle(500);
+	});
+	$("button#b-goldengate").click(function(){
+    	$("#w-goldengate").toggle(500);
+	});
+	$("button#b-seawitch").click(function(){
+    	$("#w-seawitch").toggle(500);
+	});
+	$("button#b-goodbye").click(function(){
+    	$("#w-goodbye").toggle(500);
+	});
+	$("button#b-athabasca").click(function(){
+    	$("#w-athabasca").toggle(500);
+	});
+	$("button#b-river").click(function(){
+    	$("#w-river").toggle(500);
+	});
+	$("button#b-partisans").click(function(){
+    	$("#w-partisans").toggle(500);
+	});
+	$("button#b-floodgate").click(function(){
+    	$("#w-floodgate").toggle(500);
+	});
+	$("button#b-andreas").click(function(){
+    	$("#w-andreas").toggle(500);
+	});
+	$("button#b-lonely").click(function(){
+    	$("#w-lonely").toggle(500);
+	});
+	$("button#b-santorini").click(function(){
+    	$("#w-santorini").toggle(500);
+	});
+});
+
+</script>
+</head>
+<body>
+	<!--<p>i desktop: få news div og collected-works bøker side om side. mindre scorlling. legg til marginleft til contents, (menu h2) og lenketeksten. gjør om siden slik at det blir en offisiel nettside, og ikke en blogg</p>-->
+	<div class="gridContainer clearfix"><!--682-->
+		<div id="div1" class="fluid">
+			<header class="fluid header">
+				
+				<div class="fluid omforfatter">
+					<div class="fluid tittel">
+						<!--<div class="alistair">
+							<a href="index.html"><img src="images/a1-3.png" alt="alistair maclean"></a>
+						</div>
+						<div class="maclean">
+							<a href="index.html"><img src="images/m1-3.png" alt="alistair maclean"></a>
+						</div>-->
+						<!--<p>div class="tittel"</p>-->
+						<!--<a href="index.html"><h1>Alistair Maclean</h1></a>-->
+<body onLoad="MM_preloadImages('images/am1-3-2.jpg')">
+<a href="index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('tittel','','images/am1-3-2.png',1)"><img id="tittel" src="images/am2-3.png" alt="alistair maclean"></a></body>
+						<!--<a href="index.html"><img src="images/am1-3.png" alt="alistair maclean"></a>-->
+
+						<!--<a href="#top">1</a>-->
+					</div>
+					<div class="fluid bredtittel">
+						
+					</div>
+					<!--<p>div class="omforfatter"</p>-->
+					<nav class="fluid menu"><!--<div class="vannrettborder"></div>-->
+						<a href="index.html">Home</a>
+						<a href="about.html">About MacLean</a>
+						<a href="book.html" class="current">Book Reviews</a>
+						<a href="movie.html">Movie Reviews</a>
+						<a href="first.html">First Editions</a>
+						<a href="news.html">MacLean News</a>
+					</nav>
+					<div class="fluid omforfatter-bilde-tekst">		
+						<!--<div class="fluid omforfatter-bilde">-->
+							<!--<p>fluid omforfatter-bilde</p>-->
+							<!--<img src="images/sek_person_scid_10508_web.jpg" alt="alistair maclean"/>-->
+						<!--</div>-->
+						<!--<div class="fluid omforfatter-tekst">-->
+							<!--<p>Alistair MacLean was born in Scotland in 1922. In early 1954, he won a short story contest run by the Glasgow Herald with an entry titled "The Dileas", which is included in his maritime collection The Lonely Sea. In the wake of this achievement, he was asked to write a novel; that first book, H.M.S. Ulysses, was published in October 1955. It achieved such wide acclaim that he soon became a full-time writer</p>-->
+							<!--<p></p>-->
+						<!--</div>-->
+                    </div>						<!--/omforfatter-bilde-tekst-->
+				</div>							<!--/omforfatter-->
+			</header>
+
+			<div class="fluid content">
+				<h2>Book reviews</h2>
+					<div class="fluid section"><div class="section-columns1-text">
+						<p>I rank each of Alistair MacLean's books on a 10-point scale, showing how much I enjoyed them (a purely subjective quantity). This list contains every novel he wrote, as well as the fiction/nonfiction mixture The Lonely Sea (but not the "based on a story by Alistair MacLean" books published around and after his death). Within each category, books are ranked from best to worst; for example, I think The Satan Bug is the best of the 9-star books and Night Without End is the worst (but it's still a 9-star book!).</p>
+						<!--<p>♦♦♦♦♦♦♦♦♦♦ (10 out of 10)</p>
+						<p>The Secret Ways</p>
+						<br>
+						<p>♦♦♦♦♦♦♦♦♦ (9)</p>
+						<p>The Satan Bug</p>
+						<p>Ice Station Zebra</p>
+						<p>H.M.S. Ulysses</p>
+						<p>Night Without End</p>
+ 						<br>
+						<p>♦♦♦♦♦♦♦♦ (8)</p>
+						<p>Where Eagles Dare</p>
+						<p>Puppet on a Chain</p>
+						<p>The Black Shrike</p>
+						<p>Fear is the Key</p>
+						<p>The Guns of Navarone</p>
+						<p>Caravan to Vaccares</p>
+						<p>Force 10 from Navarone</p>
+ 						<br>
+						<p>♦♦♦♦♦♦♦ (7)</p>
+						<p>The Lonely Sea</p>
+						<p>When Eight Bells Toll</p>
+						<p>The Golden Rendezvous</p>
+						<p>South by Java Head</p>
+						<p>Bear Island</p>
+ 						<br>
+						<p>♦♦♦♦♦♦  (6)</p>
+						<p>The Golden Gate</p>
+						<p>Circus</p>
+						<p>Breakheart Pass</p>
+						<p>The Way to Dusty Death</p>
+						<p>San Andreas</p>
+ 						<br>
+						<p>♦♦♦♦♦ (5)</p>
+						<p>River of Death</p>
+						<p>Santorini</p>
+						<p>Goodbye California</p>
+  						<br>
+						<p>♦♦♦♦ (4)</p>
+						<p>Athabasca</p>
+						<p>Partisans</p>
+  						<br>
+						<p>♦♦♦ (3)</p>
+						<p>Floodgate</p>
+ 						<br>
+						<p>♦♦ (2)</p>
+						<p>Seawitch</p>-->
+						</div>
+					</div><!--about book page-->
+				<div id="books" class="fluid collectedworks">
+					<!--<p>div class="collectedworks"</p>-->
+					<h2>Book reviews menu <button id="b-fiction">Show/hide</button></h2>
+            		<div class="fluid fiction">
+						<div class="section">
+							<p>Click on a book-cover to read its review</p>
+						</div>
+						<!--<h3>Fiction</h3>--><!--så lenge det ikke er nonfiction med-->
+						<!--<p>div class="fiction"</p>-->
+						<div class="fluid element">
+							<!--<a href="#w-ulysses" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('ulysses','','images/ulysses_hover_amazon.jpg',1)"><img id="ulysses" src="images/ulysses_amazon.jpg" alt="hms ulysses"></a>-->
+							<a href="#w-ulysses"><img id="ulysses" src="images/ulysses_amazon.jpg" alt="hms ulysses"></a>
+							<!--<img src="images/ulysses_amazon.jpg" alt="hms ulysses"/>-->
+		   					<h3>H.M.S. Ulysses</h3>
+							<p>1955</p>
+           		     	</div>
+						<div class="fluid element">
+							<!--<a href="#w-guns" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('guns','','images/guns_hover_amazon.jpg',1)"><img id="guns" src="images/guns_amazon.jpg" alt="the guns of navarone"></a>-->
+							<a href="#w-guns"><img id="guns" src="images/guns_amazon.jpg" alt="the guns of navarone"></a>
+							<!--<img src="images/guns_amazon.jpg" alt="the guns of navarone"/>-->
+							<h3>The Guns of Navarone</h3>
+          	   				<p>1957</p>
+          	   		   	</div>
+						<div class="fluid element">
+							<!--<a href="#w-south" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('south','','images/south2_hover_amazon.jpg',1)">-->
+							<a href="#w-south"><img id="south" src="images/south2_amazon.jpg" alt="south by java head"></a>
+							<!--<img src="images/south2_amazon.jpg" alt="south by java head"/>-->
+							<h3>South by Java Head</h3>
+							<p>1958</p>
+       	         		</div>
+						<div class="fluid element">
+							<!--<a href="#w-last" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('last','','images/last2_hover_amazon.jpg',1)">--><a href="#w-last"><img id="last" src="images/last2_amazon.jpg" alt="south by java head"></a>
+							<!--<img src="images/last2_amazon.jpg" alt="the last frontier"/>-->
+							<h3>The Last frontier</h3>
+							<p>1959</p>
+							</div>
+						<div class="fluid element">
+							<a href="#w-night"><img src="images/night_amazon.jpg" alt="night without end"/></a>
+							<h3>Night Without End</h3>
+							<p>1959</p>
+						</div>
+            	        <div class="fluid element">
+							<a href="#w-fear"><img src="images/fear_amazon.jpg" alt="fear is the key"/></a>
+							<h3>Fear Is the Key</h3>
+							<p>1961</p>
+						</div>
+						<div class="fluid element">
+							<a href="#w-dark"><img src="images/dark_amazon.jpg" alt="the dark crusader"/></a>
+							<h3>The Dark Crusader</h3>
+							<p>1961</p>
+						</div>
+						<div class="fluid element">
+							<a href="#w-goldenrendezvous"><img src="images/goldenrendezvous_amazon.jpg" alt="the golden rendezvous"/></a>
+							<h3>The Golden Rendezvous</h3>
+							<p>1962</p>
+						</div>
+						<div class="fluid element">
+							<a href="#w-satan"><img src="images/satan_amazon.jpg" alt="the satan bug"/></a>
+							<h3>The Satan Bug</h3>
+							<p>1962</p>
+						</div>
+						<div class="fluid element">
+							<a href="#w-ice"><img src="images/ice_amazon.jpg" alt="ice station zebra"/></a>
+							<h3>Ice Station Zebra</h3>
+							<p>1963</p>
+						</div>
+						<div class="fluid element">
+							<a href="#w-when"><img src="images/when_amazon.jpg" alt="when eight bells toll"/></a>
+							<h3>When Eight Bells Toll</h3>
+							<p>1966</p>
+						</div>
+						<div class="fluid element">
+							<a href="#w-where"><img src="images/where_amazon.jpg" alt="where eagles dare"/></a>
+							<h3>Where Eagles Dare</h3>
+							<p>1967</p>
+						</div>
+						<div class="fluid element">
+							<a href="#w-force"><img src="images/force_amazon.jpg" alt="force 10 from navarone"/></a>
+							<h3>Force 10 from Navarone</h3>
+							<p>1968</p>
+						</div>
+						<div class="fluid element">
+							<a href="#w-puppet"><img src="images/puppet_amazon.jpg" alt="puppet on a chain"/></a>
+							<h3>Puppet on a Chain</h3>
+							<p>1969</p>
+						</div>
+						<div class="fluid element">
+							<a href="#w-caravan"><img src="images/caravan_amazon.jpg" alt="caravan to vaccarès"/></a>
+							<h3>Caravan to Vaccarès</h3>
+							<p>1970</p>
+						</div>
+						<div class="fluid element">
+							<a href="#w-bear"><img src="images/bear_amazon.jpg" alt="bear island"/></a>
+							<h3>Bear Island</h3>
+							<p>1971</p>
+						</div>
+						<div class="fluid element">
+							<a href="#w-way"><img src="images/way_amazon.jpg" alt="the way to dusty death"/></a>
+							<h3>The Way to Dusty Death</h3>
+							<p>1973</p>
+						</div>
+						<div class="fluid element">
+							<a href="#w-breakheart"><img src="images/breakheart_amazon.jpg" alt="breakheart pass"/></a>
+							<h3>Breakheart Pass</h3>
+							<p>1974</p>
+						</div>
+						<div class="fluid element">
+							<a href="#w-circus"><img src="images/circus2_amazon_amazon.jpg" alt="circus"/></a>
+							<h3>Circus</h3>
+							<p>1975</p>
+						</div>
+						<div class="fluid element">
+							<a href="#w-goldengate"><img src="images/goldengate2_amazon.jpg" alt="the golden gate"/></a>
+							<h3>The Golden Gate</h3>
+							<p>1976</p>
+						</div>
+						<div class="fluid element">
+							<a href="#w-seawitch"><img src="images/seawitch_amazon.jpg" alt="seawitch"/></a>
+							<h3>Seawitch</h3>
+							<p>1977</p>
+						</div>
+						<div class="fluid element">
+							<a href="#w-goodbye"><img src="images/goodbye_amazon.jpg" alt="goodbye california"/></a>
+							<h3>Goodbye California</h3>
+							<p>1978</p>
+						</div>
+						<div class="fluid element">
+							<a href="#w-athabasca"><img src="images/athabasca_amazon.jpg" alt="athabasca"/></a>
+							<h3>Athabasca</h3>
+							<p>1980</p>
+						</div>
+						<div class="fluid element">
+							<a href="#w-river"><img src="images/river_amazon.jpg" alt="river of death"/></a>
+							<h3>River of Death</h3>
+							<p>1981</p>
+						</div>
+						<div class="fluid element">
+							<a href="#w-partisans"><img src="images/partisans_amazon.jpg" alt="partisans"/></a>
+							<h3>Partisans</h3>
+							<p>1982</p>
+						</div>
+						<div class="fluid element">
+							<a href="#w-floodgate"><img src="images/floodgate_goodreads.jpg" alt="floodgate"/></a>
+							<h3>Floodgate</h3>
+							<p>1983</p>
+						</div>
+						<div class="fluid element">
+							<a href="#w-andreas"><img src="images/andreas_amazon.jpg" alt="san andreas"/></a>
+							<h3>San Andreas</h3>
+							<p>1984</p>
+						</div>
+						<div class="fluid element">
+							<a href="#w-lonely"><img src="images/lonely2_amazon.jpg" alt="the lonely sea"/></a>
+							<h3>The Lonely Sea</h3>
+							<p>Short stories</p>
+                            <p>1985</p>
+						</div>
+						<div class="fluid element">
+							<a href="#w-santorini"><img src="images/santorini_amazon.jpg" alt="santorini"/></a>
+							<h3>Santorini</h3>
+							<p>1986</p>
+						</div>
+
+						<!--<p>/div class="fiction"</p>-->
+					</div><!--fluid fiction-->
+					<!--<div class="fluid nonfiction">
+						<h3>Non-fiction</h3>
+						<div class="fluid element">
+						<img id="Image1" src="images/lawrence_goodreads.jpg" alt="all about lawrence of arabia">
+							<h3>All about Lawrence of Arabia</h3>
+							<p>1962</p>
+						</div>
+						<div class="fluid element">
+							<img src="images/scotland_riverwashbooks.jpg" alt="alistair maclean introduces scotland"/>
+							<h3>Alistair Maclean Introduces Scotland</h3>
+							<p>1972</p>
+						</div>
+						<div class="fluid element">
+							<img src="images/captain_amazon.jpg" alt="captain cook"/>
+							<h3>Captain Cook</h3>
+							<p>1972</p>
+						</div>
+					</div>-->
+                    <!--<p>/div class="collectedworks"</p>-->
+				</div>
+					
+				<div id="reviews" class="fluid reviews">
+					<div class="fluid bookreview">
+						<h2>HMS Ulysses <button id="b-ulysses">Show/hide review</button></h2>
+						<div id="w-ulysses" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#books" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('ulyssesbutton','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="ulyssesbutton" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/ulysses_amazon.jpg" alt="hms ulysses"/><h3>HMS Ulysses:</h3>
+						<a href="http://www.amazon.com/HMS-Ulysses-Alistair-MacLean-ebook/dp/B002WPFGZU/ref=asap_bc?ie=UTF8">amazon</a>
+						<a href="http://www.goodreads.com/book/show/149667.HMS_Ulysses">goodreads</a></div>
+						<p>Reading H.M.S. Ulysses — as I recently did for the first time (2010) — sharpens one's insight into Alistair MacLean. His earliest novel, written at a publisher's request after he'd won a short story competition the previous year (in 1954), H.M.S. Ulysses draws heavily on MacLean's experiences in the Royal Navy during World War II. It traces the ill-starred voyage of a group of British warships escorting a shipment of tanks, ammunition, and oil along the Arctic route from the U.S. to Russia. MacLean had been part of two Arctic convoys a dozen years earlier; one can only hope they met a far better fate than the one described in this book. While meant to be uplifting as well as tragic, this story eloquently depicts warfare's senseless savagery.</p>
+						<h3>Plot keypoints</h3>
+							<p>Shepherding an Allied convoy through Arctic weather and German attacks is tantamount to suicide. But Russia, fighting the common German foe, urgently needs armaments, so the Royal Navy's top brass orders another convoy to sea. Despite severe misgivings — as well as a recent mutinous uprising aboard their ship by desperate sailors — Admiral Tyndall, Captain Vallery, and Commander Turner must once again push the H.M.S. Ulysses and its crew to the limits of their legendary luck. Blizzards, U-boat torpedoes, and aerial bombardments surely await ... as, perhaps, does the seemingly unbeatable German battleship Tirpitz.</p>
+						<h3>Strengths</h3>
+							<p>•	MacLean exerted all his writing skill in his very first novel. He lingers lovingly over the minutest details of weather, battle strategy, personal character, and all the factors that build into a sprawling naval war tale.</p>
+							<p>•	He gives a knowing look into the way WWII warships were made and operated. A diagram at the start details 68(!) parts of the Ulysses.</p>
+							<p>•	Not every crew member is infallible or heroic. Trouble from without and within the ship presents the commanding officers with many tough decisions.</p>
+							<p>•	While the ending certainly can't be called happy, the book does finish on a poignant, touching note.</p>
+						<h3>Weaknesses</h3>
+							<p>•	Realistic though they may be, the seemingly endless series of blows that rain down on this convoy may leave the reader feeling as battered as the Ulysses crew.</p>
+							<p>•	A reader unfamiliar with warships will have trouble following some of the descriptions and abbreviations with which MacLean peppers the story.</p>
+							<p>•	Occasionally, characters behave in hard-to-believe ways. One jarring example is what a top-notch crew member does — or, more precisely, doesn't do — when ordered to torpedo another ship in the convoy. (The officers' actions don't ring true there either.)</p>
+						<h3>Summation</h3>
+							<p>Before his writing started to follow recognizable patterns, Alistair MacLean forcibly carved out his own literary path with this brutal war novel. Read it and learn about naval warfare — and about him.</p>
+						<h3>Rating</h3>
+							<p>♦♦♦♦♦♦♦♦♦ (9 out of 10)</p>
+                        </div><!--/ulysses-->
+					</div><!--/bookreview-->
+					<div class="fluid bookreview">
+						<h2>The Guns of Navarone <button id="b-guns">Show/hide review</button></h2>
+						<div id="w-guns" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#books" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('guns-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="guns-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/guns_amazon.jpg" alt="guns of navarone"/><h3>The Guns of Navarone:</h3>
+						<a href="http://www.amazon.com/Guns-Navarone-Alistair-MacLean-ebook/dp/B0047T6W3Y/ref=asap_bc?ie=UTF8">amazon</a>
+						<a href="http://www.goodreads.com/book/show/296298.The_Guns_of_Navarone?from_search=true&search_version=service">goodreads</a></div>
+						<p>After making a splash two years earlier with his first novel, HMS Ulysses, Alistair MacLean grabbed an even larger spotlight with 1957's The Guns of Navarone. This epic thriller's international success led to a well-known movie of the same title (in 1961) and a sequel by MacLean, Force 10 from Navarone (in 1968). In a roundabout way, the book even spawned popular music; classic ska band The Skatalites scored a top-ten UK hit in 1967 with Guns of Navarone, a ska version of the movie's theme song.</p>
+						<h3>Plot keypoints</h3>
+							<p>German forces have occupied key Greek islands in the Aegean Sea. On the isle of Navarone, they have set up a pair of huge guns that overlook a key shipping channel. A large Allied unit is in danger on a nearby island, and the rescue operation can only come from ships moving through the channel next to Navarone. Desperate Allied officers assign a team of their most skilled (and deadly) agents to put the guns out of commission. With the help of Greek operatives who may or may not be trustworthy, they set out to perform the impossible.</p>
+						<h3>Strengths</h3>
+						<p>•	Seldom a dull moment, as the tiny group is faced with seemingly insurmountable dangers at every turn.</p>
+						<p>•	A nicely varied group of protagonists meshes well while displaying realistic emotions.</p>
+						<p>•	Exploration of some leading characters and their motivations helps the reader understand and empathize with them.</p>
+						<p>•	Though the island is mythical, Maclean's WWII experiences in that area, together with his knowledge of both land and sea warfare, give the story depth and believability.</p>
+						<h3>Weaknesess</h3>
+						<p>•	While it's nice to have a motivated local on the Allied team, the unstoppable killing machine Andreas is a bit over the top. No weaknesses, no uncertainties, no hope for the bad guys. Just too much of a foregone conclusion. (Contrast him with the similarly strong and capable Sandor from The Secret Ways, who just seems like a regular guy rather than a parody.) His habit of calling the team leader "my Keith" also annoyed me.</p>
+						<p>•	For that matter, I never cared much for MacLean's habit of turning private citizens with world-champion talents into secret agents. In this book, it's Keith Mallory, the world's greatest mountaineer; other examples that come right to mind include the world's greatest Grand Prix driver (The Way to Dusty Death) and uniquely skilled circus performers (Circus).</p>
+						<p>•	As believable as the book is in general, there's a disconnect between MacLean's description of the careful, highly trained German troops and the careless mistakes they make that repeatedly enable the good guys to escape certain doom.</p>
+						<h3>Summation</h3>
+						<p>You can see why this book became a franchise. Not MacLean's overall best, but enough strengths to overcome its weakest points. Don't start it near your bedtime, or you'll have trouble turning out the light.</p>
+						<h3>Rating</h3>
+						<p>♦♦♦♦♦♦♦♦ (8 out of 10)</p>
+                        </div><!--/guns-->
+					</div><!--/bookreview--><!--guns-->
+					<div class="fluid bookreview">
+						<h2>South by Java Head <button id="b-south">Show/hide review</button></h2>
+						<div id="w-south" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#books" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('south-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="south-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/south_amazon.jpg" alt="south by java head"/><h3>South by Java Head:</h3>
+						<a href="http://www.amazon.com/South-Java-Head-Alistair-MacLean-ebook/dp/B002RI9AUE/ref=asap_bc?ie=UTF8">amazon</a>
+						<a href="http://www.goodreads.com/book/show/1298671.South_by_Java_Head">goodreads</a></div>
+						<p>MacLean's third novel continues his exploration of seaborne peril. Based partly on his World War II experiences in the Royal Navy, South by Java Head brings characters from many countries together in a small boat, where they face the wrath of both nature and wartime enemies. The success of his preceding book, The Guns of Navarone, had introduced many new readers to his thrilling stories, and South by Java Head would surely have kept most of them hooked and awaiting his next adventure.</p>
+						<h3>Plot keypoints</h3>
+						<p>As Singapore falls to the invading Japanese in 1942, a diverse group of desperate characters commandeers the last boat leaving. Soldiers, nurses, skilled seamen, and even a small child find themselves afloat in dangerous waters, facing long odds of survival. Who can save the day? Cunning seaman John Nicolson and his crewmates? The enigmatic and mysterious interloper who calls himself Brigadier Farnholme? Van Effen, the steady and capable Dutchman? Gudrun Drachmann, whose scars bear testament to her earlier encounter with the Japanese military? Or will the typhoon, exposure, and pursuing Japanese forces prove too much for them?</p>
+						<h3>Strengths</h3>
+						<p>•	MacLean's intricate, unhurried prose paints detailed pictures of scenery, weather, and the protagonists' psyches.</p>
+						<p>•	His knowledge of maritime topics shines through his descriptions of boats, nautical maneuvers, and the sometimes-cruel sea.</p>
+						<p>•	Hidden motives and relationships add some unexpected, welcome plot twists.</p>
+						<h3>Weaknesess</h3>
+						<p>•	So many perils, so many life-or-death escapades ... the reader must suspend disbelief even more than usual to follow this unlikely series of escapes.</p>
+						<p>•	The characters spend so much time in boats that a less nautically inclined reader is likely to weary of fo'c'sles and bosuns and bilges.</p>
+						<p>•	Japanese are uniformly portrayed as evil, ugly sub-humans. By contrast, the single German agent acts very honorably and says that his countrymen would do the same. Due to his Pacific service, Alistair MacLean surely knew people who were treated savagely by the Japanese military, but his cruelly sterotypical descriptions of "those yellow devils," with their "tiny, porcine eyes," are jarring when seen in a modern light. (Millions of civilians could testify [if they had survived] how barbaric the German forces often were in those same days.)</p>
+						<p>•	The romantic side story is forced and underdeveloped, seemingly laid in just to provide a distraction from the endless misery and a motivation for late heroics.</p>
+						<h3>Summation</h3>
+						<p>Plenty of action, interspersed with long sequences of quiet desperation. Certainly well crafted, but — for the reasons cited above — not one of my very favorite MacLeans.</p>
+						<h3>Rating</h3>
+						<p>♦♦♦♦♦♦♦ (7 out of 10)</p>
+                        </div><!--/guns-->
+					</div><!--/bookreview-->
+					<div class="fluid bookreview">
+						<h2>The Secret ways <button id="b-last">Show/hide review</button></h2>
+						<div id="w-last" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#books" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('last-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="last-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/last2_amazon.jpg" alt="secret ways last frontier"/><h3>The Last Frontier (original title):</h3>
+						<a href="http://www.amazon.com/Last-Frontier-Alistair-MacLean-ebook/dp/B0046A9MSG/ref=asap_bc?ie=UTF8">amazon</a>
+						<a href="http://www.goodreads.com/book/show/149611.The_Last_Frontier">goodreads</a></div>
+						<p>His fourth book, The Secret Ways (its U.S. title; original title was The Last Frontier), catches MacLean at peak form. Combining a twist-and-turn espionage plot with an injection of Cold War politics, The Secret Ways is my favorite of his works. Characters are lifelike and sympathetic; unexpected dangers and salvations are fully believable; and larger points about freedom and tyranny merely spice the mixture.</p>
+						<h3>Plot keypoints</h3>
+						<p>Michael Reynolds, a highly trained but fallible British agent, is sent into communist Hungary to spirit out a nuclear scientist who is being blackmailed into helping the despotic government. He finds allies in the freedom-fighter underground ... but he also finds formidable enemies in the dreaded secret police.</p>
+						<h3>Strengths</h3>
+						<p>•	MacLean spends time deepening and enriching the reader's vision of the scenery, political climate, and desperate citizens in that evil time.</p>
+						<p>•	Good guys are a varied lot, from the classic MacLean physical superman to the master of disguise to the escaped political prisoner searching ceaselessly for his wife. We even get to see many facets of the love interest, showing her as a flesh-and-blood woman rather than a stereotypical dainty dame or tough broad.</p>
+						<p>•	Action scenes are thrilling yet fresh. For instance, the battle between the good and bad strongmen is a highlight of the book's denouement, rather than a throwaway as in <a href="#w-circus">Circus.</a></p>
+						<p>•	The dark effects of communism are shown and discussed in memorable ways.</p>
+						<p>•	Reynolds makes an interesting transition from simple tool to complex moral character.</p>
+						<p>•	The entire book is a well-drawn illustration of how an indomitable spirit can overcome seemingly impossible odds.</p>
+
+						<h3>Weaknesess</h3>
+						<p>•	Now that communism no longer dominates Eastern Europe, some characters' (and hence MacLean's) railing against it might become tiresome. (It didn't affect me that way, but the potential is there.)</p>
+						<p>•	Smaller touches also reveal the book's age; for instance, MacLean needs to explain what a Doberman Pinscher is, while modern readers probably are familiar with this dog breed.</p>
+
+						<h3>Summation</h3>
+						<p>If you like thrillers (and can mentally place yourself 50 years in the past), I give this one my highest recommendation.</p>
+						<h3>Rating</h3>
+						<p>♦♦♦♦♦♦♦♦♦♦ (10 out of 10)</p>
+                        </div><!--/last-->
+					</div><!--/bookreview--><!--last-->
+					<div class="fluid bookreview">
+						<h2>Night Without End <button id="b-night">Show/hide review</button></h2>
+						<div id="w-night" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#books" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('night-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="night-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/night_amazon.jpg" alt="night without end"/><h3>Night Without End:</h3>
+						<a href="http://www.amazon.com/Night-Without-End-Alistair-MacLean-ebook/dp/B004BSGITO/ref=asap_bc?ie=UTF8">amazon</a>
+						<a href="http://www.goodreads.com/book/show/149610.Night_Without_End?from_search=true&search_version=service">goodreads</a></div>
+						<p>Coming on the heels of my favorite Alistair MacLean book, The Secret Ways (also released in 1959), the comparatively straightforward and low-key adventure Night Without End marks a continuation of his peak form. Less complex and ambitious than some of his better-known works, this one follows a generally linear story line focused on a small group of characters. (Outside interlopers play only minor roles throughout most of the book, though they do add some welcome recalculations and tension near the end.) Maybe it's a case of "simple pleasures for simple minds," as my mother used to say, but this story's minimalist approach holds real appeal for me.</p>
+						<h3>Plot keypoints</h3>
+						<p>On a remote patch of icy Greenland, Dr. Peter Mason and his associates are gathering climate data for the International Geophysical Year program. Visitors are nonexistent ... until a passenger jet comes crashing down nearby. A "Gilligan's Island"-ish group of surviving passengers (senator, actress, heiress, reverend, ranked boxer, and several others) are rescued by Mason and company. But when it becomes clear that there are desperate killers among the newcomers, Mason is forced to lead an expedition that will bring everyone to salvation — or disaster.</p>
+						<h3>Strengths</h3>
+						<p>•	It's nice to have a protagonist who is not a highly trained intelligence agent, but rather a skilled scientist who happened to be in the right place at the wrong time.</p>
+						<p>•	The cast of supporting characters is drawn finely enough that the reader cares about their welfare — and is surprised by some of the twists MacLean throws in.</p>
+						<p>•	The quieter-than-usual action (without helicopters, bombs, sea chases, etc.) is gripping, as ordinary people are pushed to the edges of human endurance.</p>
+
+						<h3>Weaknesess</h3>
+						<p>•	Without wanting to give anything away, I can say that readers will likely have made good guesses about the villains' identities.</p>
+						<p>•	Of MacLean's awkwardly formed and unrealistic love stories, this book contains one of the worst; fortunately, that weak link doesn't occupy much of the tale.
+</p>
+
+						<h3>Summation</h3>
+						<p>Making few demands on the reader, Night Without End still shines in its descriptive prose and its fast-moving storyline. If you're tired of secret agents running around in boats, this might be the MacLean for you.</p>
+						<h3>Rating</h3>
+						<p>♦♦♦♦♦♦♦♦♦ (9 out of 10)</p>
+                        </div><!--/night-->
+					</div><!--/bookreview-->
+					<div class="fluid bookreview">
+						<h2>Fear is the Key <button id="b-fear">Show/hide review</button></h2>
+						<div id="w-fear" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#books" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('fear-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="fear-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/fear_amazon.jpg" alt="fear is the key"/><h3>Fear is the Key:</h3>
+						<a href="http://www.amazon.com/Fear-Key-Alistair-MacLean-ebook/dp/B002RI9D8I/ref=asap_bc?ie=UTF8">amazon</a>
+						<a href="http://www.goodreads.com/book/show/149612.Fear_is_the_Key?from_search=true&search_version=service">goodreads</a></div>
+						<p>Alistair MacLean was in the midst of a string of terrific thrillers when he published Fear is the Key in 1961. While it features many typical notes from MacLean's repertoire, this book also strikes some unusual chords. An eerie prologue whets the appetite of the reader, who is then thrown for a loop by action that continues for nearly the first third of the book. Is the apparent protagonist really a murderous criminal who will achieve his goals by any possible means? Or is the stream of events actually thick with red herrings? Many MacLean works do contain major plot twists, but in no others does he carry the subterfuge to this extent.</p>
+						<h3>Plot keypoints</h3>
+						<p>Thanks to a report from Interpol, John Talbot's trial in a sleepy southern town turns into a desperate — and violent — attempt to flee custody. Bringing along a pretty young "insurance policy" (at gunpoint), he outfoxes the local constabulary ... but other, more powerful forces are after him as well. How does this tie in to an attack on a cargo plane carrying a special shipment out of South America, years ago? And what deadly secrets are housed in a spectacular drilling platform just off the Florida coast?</p>
+						<h3>Strengths</h3>
+						<p>•	This is vintage MacLean: good seemingly outmanned in its fight against savage and brilliant criminal forces. His prose feels effortless yet sharp; the reader can nearly see the gun protruding from the shadows, feel the tangible sense of doom, and smell the freshly dug grave.</p>
+						<p>•	Once the initial bizarre events are reconciled, the rest of the plot has a refreshingly simple linear progression.</p>
+						<p>•	Romantic matters are included but not overdone, and they reach a surprising yet satisfying conclusion.</p>
+						<p>•	If you like picturing evildoers begging for mercy, this is the book for you.</p>
+
+						<h3>Weaknesess</h3>
+						<p>•	The baffling opening sequence continues (unexplained) for so long that a reader may want to exchange this book for a more straightforward one (but don't!).</p>
+						<p>•	It's a matter of taste, but the drilling platform is one of those things that I think MacLean described in too much detail, which wasn't always easy to slog through. Furthermore, extended underwater scenes may make some people feel claustrophobic.</p>
+						<h3>Summation</h3>
+						<p>For a MacLean that partly breaks the familiar MacLean mold, read Fear is the Key.</p>
+						<h3>Rating</h3>
+						<p>♦♦♦♦♦♦♦♦ (8 out of 10)</p>
+                        </div><!--/fear-->
+					</div><!--/bookreview--><!--fear-->
+					<div class="fluid bookreview">
+						<h2>The Black Shrike <button id="b-dark">Show/hide review</button></h2>
+						<div id="w-dark" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#books" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('black-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="black-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/dark_amazon.jpg" alt="the dark crusader"/><h3>The Dark Crusader (original title):</h3>
+						<a href="http://www.amazon.com/Dark-Crusader-Alistair-MacLean-ebook/dp/B002RI9SLU/ref=asap_bc?ie=UTF8">amazon</a>
+						<a href="http://www.goodreads.com/book/show/16600173-the-dark-crusader?from_search=true&search_version=service">goodreads</a></div>
+						<p>A worthy representative of Alistair MacLean's best years, The Black Shrike (its U.S. title; originally published as The Dark Crusader) is a gripping tale, skillfully told by Ian Stuart (MacLean's pseudonym at the time). You'll find unexpected twists and turns, desperate measures by desperate men, and the world's fate hanging in the balance. Steady MacLean readers will also recognize some of his signature touches: the elaborate evil plot, ruthlessly executed by the main bad guy and his physically intimidating lieutenant; the all-too-human good guy, fighting seemingly insurmountable odds while chastising himself for his mistakes; and the Johnny-and-Marie romantic bit. (Am I the only one who ends up humming Robert Palmer's "Johnny and Mary" after reading many of MacLean's books?)</p>
+						<h3>Plot keypoints</h3>
+						<p>Rocket fuel expert (and intelligence agent) John Bentall is sent on a hazardous mission: find out why many leading rocket scientists have disappeared after answering newspaper ads for mysterious positions in Australia. He (along with the beautiful agent posing as his wife) will be dangled as bait, and it isn't long before they are snatched up and led into a situation where appearances are deceiving and misplaced trust can be deadly.</p>
+						<h3>Strengths</h3>
+						<p>•	The reader is plunged directly into the action, and it proceeds at nearly full throttle for the rest of the book, driven by Bentall's harrowing escapades.</p>
+						<p>•	The couple of bad guys who have key roles in the story are memorable characters.</p>
+						<p>•	Even though the story's focus is rocket science, MacLean presents just the necessary facts in easily digestible ways.</p>
+						<p>•	His sympathy toward members of the British military is given play here; they're presented not as unbeatable, but as ready and able when given a chance to redeem themselves.</p>
+						<p>•	An important secondary character's moral ambiguity provides some relief from the usual black-vs.-white world of spy thrillers.</p>
+						<p>•	An emotionally tense ending is followed by a surprising secondary ending that brings the story full circle.
+</p>
+
+						<h3>Weaknesess</h3>
+						<p>•	The evil plot weaves together so many threads, it seems unlikely to have been executed as flawlessly as it was (up to the point where Bentall enters the picture).</p>
+						<p>•	Asians are once again set up as villains — both as foot soldiers and as the evil powers behind the entire plot. MacLean's war experiences gave him reason to mistrust some Asians, but too often, his books use them as a convenient foil.</p>
+						<p>•	For me, the romantic touches struck an off-key note. Strangers forced together in these desperate circumstances would have too much else on their minds.</p>
+						<h3>Summation</h3>
+						<p>Suspend disbelief just a tiny bit and enjoy this complex but very human Cold War tale.</p>
+						<h3>Rating</h3>
+						<p>♦♦♦♦♦♦♦♦ (8 out of 10)</p>
+                        </div><!--/dark-->
+					</div><!--/bookreview-->
+					<div class="fluid bookreview">
+						<h2>The Golden Rendezvous <button id="b-goldenrendezvous">Show/hide review</button></h2>
+						<div id="w-goldenrendezvous" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#books" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('goldenrendezvous-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="goldenrendezvous-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/goldenrendezvous_amazon.jpg" alt="the golden rendezvous"/><h3>The Golden Rendezvous:</h3>
+						<a href="http://www.amazon.com/Golden-Rendezvous-Alistair-MacLean-ebook/dp/B002RIA012/ref=asap_bc?ie=UTF8">amazon</a>
+						<a href="http://www.goodreads.com/book/show/149657.The_Golden_Rendezvous">goodreads</a></div>
+						<p>Written at the height of his powers, Alistair MacLean's 1962 thriller The Golden Rendezvous contains many of his trademarks: shipboard mystery and mayhem, a first-person protagonist with a penetrating intellect, and a naive young woman who learns to play a grown-up role in defeating evil. MacLean's prose is in top form; one can almost feel the tropical sun beating down from above, the deck swaying rhythmically underfoot, and the power of the romantic interest's intriguing green eyes. However, this isn't one of my favorites. The schemes by both the criminals and the heroes) are just a bit too unbelievable, the romantic bits (particulary the outcome) feel pasted onto the rest of the plot, and some of the characters are too strongly stereotypical. Having said all that, I still think it read-worthy by anyone who has enjoyed some of his higher-rated works.</p>
+						<h3>Plot keypoints</h3>
+						<p>The world's rich and famous clamor to cruise on the S.S. Campari, a freighter lavishly outfitted to provide passengers the very height of luxury. However, bad omens are besetting the ship: a revolution in the small Caribbean nation where the Campari lies in port; a tragedy causing some passengers to be summoned home, while their places are taken by mysterious newcomers; and even the disappearance of a tactical nuclear missile from an area the ship had just visited. These circumstances will conspire to test the crew — and in particular, Chief Officer John Carter, whose other burdens include a mercurially moody captain and unwanted attention from beautiful young Susan Beresford, traveling with her immensely wealthy family.</p>
+						<h3>Strengths</h3>
+						<p>•	MacLean's skill in depicting both quiet scenes and desperate action is on full display.</p>
+						<p>•	When he writes about boats, his love of the sea is infectious, and — unlike some of his other books — The Golden Rendezvous doesn't require the reader to master and memorize many points of naval architecture and nautical theory.</p>
+						<p>•	Plenty of unanticipated plot twists and ingenious good-guy strategies retain the reader's interest.</p>
+
+						<h3>Weaknesess</h3>
+						<p>•	For several reasons, I had little trouble figuring out who the evildoers were.</p>
+						<p>•	Their plan is so convoluted and unlikely to work that the reader really has to suspend disbelief.</p>
+						<p>•	We've met some of these supporting elements too many times before: the world's richest man, the Scottish warrior who claims the gift of foresight, the powerful storm that rises up to complicate the action, the whiskey that can seemingly cure all ills ....</p>
+						<p>•	Here's yet another unlikely romance, in which the couple all too quickly (and clumsily) moves from disdain to rapture.
+</p>
+						<h3>Summation</h3>
+						<p>As I've said about at least one other book: a complex and suspenseful tale, told in intricate prose, that falls short of MacLean's very best.</p>
+						<h3>Rating</h3>
+						<p>♦♦♦♦♦♦♦ (7 out of 10)</p>
+                        </div><!--/goldenrendezvous-->
+					</div><!--/bookreview--><!--goldenrendezvous-->
+					<div class="fluid bookreview">
+						<h2>The Satan Bug <button id="b-satan">Show/hide review</button></h2>
+						<div id="w-satan" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#books" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('satan-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="satan-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/satan_amazon.jpg" alt="the satan bug"/><h3>The Satan Bug:</h3>
+						<a href="http://www.amazon.com/Satan-Bug-Alistair-Maclean/dp/0007252935/ref=asap_bc?ie=UTF8">amazon</a>
+						<a href="http://www.goodreads.com/book/show/3214291-the-satan-bug">goodreads</a></div>
+						<p>Among the best of Alistair MacLean's pulse-pounders, The Satan Bug is a roller-coaster ride of twists, turns, red herrings, and good old-fashioned detective work. Published in 1962 under the pseudonym of Ian Stuart, it's immediately recognizable as a MacLean work from his best years (late '50s / early '60s). His typically flawed protagonist is responsible for the fate of not just his colleagues ... not even just an army ... but all life as we know it. If you're like me, this high-stakes game of cat-and-mouse with the evildoers will stimulate both your thoughts and your adrenaline production. (Note: the widely available paperback version republished with his real name shows a man dashing away with a briefcase; my 1963 "Ian Stuart" paperback's cover displays a trenchcoat-and-fedora-wearing villain with one hand grasping a struggling dame and the other pointing a gun at the reader — a wonderfully stereotypical tough-guy crime image of that era.) A <a href="movie.html#w-satan">movie of The Satan Bug</a>, based on the book but reimagined in a very different physical setting, was released in 1965.</p>
+						<h3>Plot keypoints</h3>
+						<p>Pierre Cavell, former security chief at Britain's secretive Mordon Microbiological Research Establishment, knows what types of destructive toxins are developed and refined there. So he is naturally suspicious when a visitor to his private investigation service tries to involve him in transporting biological agents that have been spirited out of Mordon. Little does he suspect that this ruse will enmesh him in trying desperately to outwit the murderous gang that has stolen ampules of the "Satan Bug" — a fantastically deadly virus that could wipe out all life forms on Earth.</p>
+						<h3>Strengths</h3>
+						<p>•	The intrigue and deception begins on the first page and doesn't let up until the breathtaking conclusion.</p>
+						<p>•	Cavell is a fine example of MacLean's almost endlessly cunning yet all-too-human heroes.</p>
+						<p>•	A small group of other "good guys" — a high official, a dogged inspector, and the inevitable Mary — are well developed, showing that it takes all types of people to overcome such a powerful menace. MacLean also adds color by including some distinctive and memorable characters in lesser roles.</p>
+						<p>•	Plenty of suspects and motives are shown; it's entertaining to guess who was involved in the crimes, and to what degree.</p>
+						<p>•	Clues (some blatant, some less obvious) are provided to aid readers in unraveling the events.</p>
+						<p>•	Once all the detective work has produced a main suspect, MacLean changes gears nicely to chase/action scenes.</p>
+
+						<h3>Weaknesess</h3>
+						<p>•	Just enough characters were presented as possible suspects that I occasionally had trouble keeping them all straight — but that's probably my shortcoming, not MacLean's.</p>
+						<p>•	The sheer complexity of the criminal plot, and the personal shortcomings of some scientists who should never have passed Mordon's top-security clearances, made the book less than fully believable. Think of it as entertainment rather than realism.</p>
+						<h3>Summation</h3>
+						<p>MacLean melds investigation, action, and world peril into an enjoyable stew in The Satan Bug.</p>
+						<h3>Rating</h3>
+						<p>♦♦♦♦♦♦♦♦♦ (9 out of 10)</p>
+                        </div><!--/satan-->
+					</div><!--/bookreview-->
+					<div class="fluid bookreview">
+						<h2>Ice Station Zebra <button id="b-ice">Show/hide review</button></h2>
+						<div id="w-ice" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#books" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('ice-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="ice-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/ice_amazon.jpg" alt="ice station zebra"/><h3>Ice Station Zebra:</h3>
+						<a href="http://www.amazon.com/Ice-Station-Zebra-Alistair-MacLean-ebook/dp/B0046A9MO0/ref=asap_bc?ie=UTF8">amazon</a>
+						<a href="http://www.goodreads.com/book/show/149621.Ice_Station_Zebra">goodreads</a></div>
+						<p>Several years removed from his late-1950s peak (The Guns of Navarone, The Secret Ways, Night Without End), Alistair MacLean turned out another gem with 1963's Ice Station Zebra. Intricately plotted, richly detailed, it rewards the determined reader with an elaborate, satisfying tale. Don't undertake this one lightly, though — it's not the type of airier, slambang story to which he resorted in his later years. It reminded me of eating a piece of dense pumpernickel bread: extra work for the teeth and jaws, but a fine experience anyway. If you don't mind giving your brain an enervating workout, plunge right in. (Note: A movie version starring Rock Hudson and Ernest Borgnine was released in 1968; see my review <a href="movie.html#w-ice">here.)</a></p>
+						<h3>Plot keypoints</h3>
+						<p>A weather monitoring crew stationed in the Arctic has suffered a catastrophic fire, leaving every man dead or badly hurt. Hurtling toward a planned rescue comes the cutting-edge U.S. Navy nuclear submarine Dolphin. Its captain, Commander Swanson, has been ordered — against his better judgment — to allow mysterious British physician Neil Carpenter on board for the journey. As the Dolphin races on beneath the polar ice cap, a deadly surprise awaits its crew, foreshadowing other shocking developments at their destination.</p>
+						<h3>Strengths</h3>
+						<p>•	The plot develops slowly but surely, with long dramatic passages being interrupted unpredictably by enemy action. The protagonist/narrator repeatedly cautions that we don't know the real story behind the events leading up to the deadly fire and urgent rescue; MacLean takes his own sweet time laying out red herrings before filling us in at the last moment.</p>
+						<p>•	MacLean clearly put tremendous effort into drawing the fine details of every scene, from submarine operations to Arctic climatic challenges. While it's a bit of a slog getting through some of those descriptions, they provide a realistic background for the desperate events.</p>
+						<p>•	The protagonist is no superhero — merely[?] a highly trained intelligence operative. Also, he's all business; we are spared the type of thinly penciled love story that can detract from MacLean's narratives.</p>
+						<p>•	This may not be to everyone's taste, but I enjoyed the climactic scene in which the protagonist gathered all the main characters together to reveal which of them was the murderer. It harkened back to classic English drawing-room mysteries. (A similar scene was handled far worse in <a href="#w-bear">Bear Island</a>.)</p>
+
+						<h3>Weaknesess</h3>
+						<p>•	Any regular MacLean reader will have a good guess about the criminal whose identity is revealed in the above-mentioned scene. (Is he the only one, though?)</p>
+						<p>•	If you're claustrophobic or bothered by icy weather, you may not enjoy a tale that takes place almost entirely aboard a submarine or in the harsh Arctic climate.</p>
+						<h3>Summation</h3>
+						<p>This deeply drawn tale is like a classic-literature version of the punchier Night Without End, another story of treachery in an inhospitably cold region. Your tastes will determine which one you prefer, but I found both of them well worth the hours.</p>
+						<h3>Rating</h3>
+						<p>♦♦♦♦♦♦♦♦♦ (9 out of 10)</p>
+                        </div><!--/ice-->
+					</div><!--/bookreview--><!--ice-->
+					<div class="fluid bookreview">
+						<h2>When Eight Bells Toll <button id="b-when">Show/hide review</button></h2>
+						<div id="w-when" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#books" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('when-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="when-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/when_amazon.jpg" alt="when eight bells toll"/><h3>When Eight Bells Toll:</h3>
+						<a href="http://www.amazon.com/When-Eight-Bells-Alistair-MacLean/dp/1402790422/ref=asap_bc?ie=UTF8">amazon</a>
+						<a href="http://www.goodreads.com/book/show/149606.When_Eight_Bells_Toll">goodreads</a></div>
+						<p>Part of his excellent run of mid-career works, Alistair MacLean's 1966 thriller When Eight Bells Toll highlights his writing skill, experience, and ambition. Scenery, thoughts, and physical sensations are described with colorful, unhurried prose. This provides a nice contrast to the sudden violence that materializes whenever his protagonists seem to be making headway against the forces of evil. One of the fairly small number of stories he wrote from a first-person perspective, When Eight Bells Toll is a typically solid MacLean yarn.</p>
+						<h3>Plot keypoints</h3>
+						<p>Ships bearing valuable cargo — along with their crews — have been disappearing in Scottish waters. As the story begins, British agents assigned to shepherd one of these ships turn up dead. Can their colleagues, former marine salvage man Philip Calvert and his partner Hunslett, succeed where others have failed? And with so many people they encounter acting suspiciously — the police, the noble shipping magnate, his once-famous wife, the local lord's daughter — is there anyone they can trust?</p>
+						<h3>Strengths</h3>
+						<p>•	MacLean's ability to paint word pictures was flourishing at this stage of his career.</p>
+						<p>•	His affection for boats and Scotland makes this story feel like a labor of love.</p>
+						<p>•	Peppered heavily with unforeseen actions and plot twists, the book is a genuine hard-to-put-down page-turner.</p>
+						<p>•	Readers are kept well in the dark regarding the sympathies and motives of some of the main characters, increasing the aura of suspense.</p>
+
+						<h3>Weaknesess</h3>
+						<p>•	A first-person narrative has pluses and minuses. The protagonist isn't an omniscient observer, but the reader does expect to find out everything that the protagonist knows. So it's annoying when MacLean chooses to blot out bits of conversation, to keep us in suspense. For instance: "So I poured him another whisky, a large one, and told him what had happened, what I knew and as much of what I thought I knew as seemed advisable to tell him." This way, he skips part of the middle of a crucial conversation, and that happens multiple times in this book. Some of what actually transpired during those skipped parts is revealed in the how-we-solved-the-mystery monologue near the end. (That monologue extends for seven or eight pages ... an awkward and tiresome way to wrap up an action story.)</p>
+						<p>•	If you're claustrophobic or bothered by icy weather, you may not enjoy a tale that takes place almost entirely aboard a submarine or in the harsh Arctic climate.</p>
+						<p>•	I found it highly unlikely that the type of people behind this book's crimes would really tolerate, much less encourage, the ruthless violence and terror used in carrying them out. Some humanitarian touches are thrown in, but still, the masterminds' personas don't match their underlings' actions.</p>
+						<h3>Summation</h3>
+						<p>A complex and suspenseful tale, told in intricate prose, still falls short of MacLean's very best.</p>
+						<h3>Rating</h3>
+						<p>♦♦♦♦♦♦♦ (7 out of 10)</p>
+                        </div><!--/when-->
+					</div><!--/bookreview-->
+					<div class="fluid bookreview">
+						<h2>Where Eagles Dare <button id="b-where">Show/hide review</button></h2>
+						<div id="w-where" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#books" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('where-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="where-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/where_amazon.jpg" alt="where eagles dare"/><h3>Where Eagles Dare:</h3>
+						<a href="http://www.amazon.com/Where-Eagles-Dare-Alistair-MacLean-ebook/dp/B002WPFH04/ref=asap_bc?ie=UTF8">amazon</a>
+						<a href="http://www.goodreads.com/book/show/148337.Where_Eagles_Dare">goodreads</a></div>
+						<p>The basis for one of "his" most successful movies, 1967's Where Eagles Dare sees Alistair MacLean returning to a World War II setting. MacLean's service with the Royal Navy had given him an insider perspective of that war — experience that served him well in earlier works such as The Guns of Navarone. Its dramatic depiction of breathless action amid breathtaking surroundings made Where Eagles Dare a natural candidate for filming; in fact, MacLean wrote the screenplay even as he worked on the novel. The movie paired well-established star Richard Burton with a young Clint Eastwood, who had just acted in a string of "spaghetti Westerns".</p>
+						<h3>Plot keypoints</h3>
+						<p>Eight of Europe's best Allied agents fly to Bavaria for a suicidal mission: recovery of a captured general who knows the plans for the upcoming D-Day invasion. He is being held in Schloss Adler — "Castle of the Eagle" — a fortress accessible only by cable car, and defended by an elite garrison of Alpenkorps soldiers. As the southern headquarters for the German Secret Service and the Gestapo, Schloss Adler is virtually impregnable. Surely the Allied operatives would be doomed to fail even if there weren't traitors in their midst ....</p>
+						<h3>Strengths</h3>
+						<p>•	First and foremost, MacLean's prose is among his best. Detailed and nuanced expositions of scenery, psychology, and [of course] action make the reading a pleasure.</p>
+						<p>•	The action itself is nearly relentless, as one would expect when agents try to invade a vitally important and heavily guarded enemy stronghold.</p>
+						<p>•	Just when you think you've figured out every plot twist, several more are tossed into the story like hand grenades.</p>
+						<p>•	MacLean makes his protagonists human and fallible, far more so than in his lesser works.</p>
+
+						<h3>Weaknesess</h3>
+						<p>•	While I'm all for irony in the face of adversity, some protagonists (as in many of MacLean's other stories) have an unrealistic habit of exchanging sardonic bons mot while mortal peril is bearing down on them.</p>
+						<p>•	The two romantic subplots are pretty weak and hard to take seriously under the dangerous circumstances.</p>
+						<p>•	The story contains so many secret plans and double-crosses that even after finishing the book, I was unsure why the Allied leaders had added certain elements to their convoluted plans.</p>
+						<h3>Summation</h3>
+						<p>Where Eagles Dare is one of the toughest MacLean books to put down. After the first paragraph, you know he's in good form; after the first chapter, I could only marvel at the deftness of his setup, while burning with curiosity to see how he would continue and complete the tale. Other than the exceptions noted above, the rest of the book lives up to its brilliant start.</p>
+						<h3>Rating</h3>
+						<p>♦♦♦♦♦♦♦♦ (8 out of 10)</p>
+                        </div><!--/where-->
+					</div><!--/bookreview--><!--where-->
+					<div class="fluid bookreview">
+						<h2>Force 10 from Navarone <button id="b-force">Show/hide review</button></h2>
+						<div id="w-force" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#books" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('force-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="force-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/force_amazon.jpg" alt="force 10 from navarone"/><h3>Force 10 from Navarone:</h3>
+						<a href="http://www.amazon.com/Force-10-Navarone-Alistair-MacLean-ebook/dp/B004JHYTHU/ref=asap_bc?ie=UTF8">amazon</a>
+						<a href="http://www.goodreads.com/book/show/149608.Force_10_from_Navarone">goodreads</a></div>
+						<p>Despite the smashing success of <a href="#w-guns">The Guns of Navarone</a> — both in print and on the big screen — it took Alistair MacLean eleven years to publish a sequel. Force 10 from Navarone is linked to the preceding work through three main characters, though the action is unrelated to that earlier mission. As in the later (inferior) work <a href="#w-partisans">Partisans</a>, Force 10 centers on the World War II struggle in Yugoslavia, between the Partisans (backed by the Allied powers) and their countrymen who sided with the Germans. These alliances let MacLean employ some of his favorite types of characters: clever German officers, fierce warriors of the high Tatras, and naive young Allied operatives learning how war and secret missions really work. Heavy on action (albeit sometimes light on sensible behavior by all concerned), Force 10 deserves to be read by anyone who enjoyed The Guns of Navarone or other MacLean stories from that era.</p>
+						<h3>Plot keypoints</h3>
+						<p>Fresh from destroying the fabled guns of Navarone, Keith Mallory, Dusty Miller, and the ever-lethal Andrea are sent on another improbable assignment: saving 7,000 Yugoslav Partisans who face annihilation by massed German tanks. Off to the Balkans they fly, accompanied by a trio of young commandos. As they attempt to contact the Partisan forces and stop the German onslaught, this elite squad encounter treachery and violence ... as well as help from locals working both openly and clandestinely to stem the Axis tide. Can that aid help them overcome fantastic odds and accomplish their unlikely goal before time runs out?</p>
+						<h3>Strengths</h3>
+						<p>•	Mysteries, frequent conflicts, and high-caliber MacLean prose drive the reader steadily along.</p>
+						<p>•	Seeing the continued development, or at least actions, of familiar characters is an unusual pleasure for MacLean readers.</p>
+						<p>•	Showing the perspectives of people away from the main events — the British supervisor, the German commander — adds new flavors to the tale.</p>
+						<p>•	A female fills a major role well without getting mushy with the main protagonist.</p>
+
+						<h3>Weaknesess</h3>
+						<p>•	While he doesn't do a bad job of mining familiar character types (see the first paragraph above), MacLean's faithful readers can anticipate what will happen to some of those characters, based on the plots of other books; this reduces the story's tension.</p>
+						<p>•	Some fans probably dote on MacLean's hyper-detailed descriptions of structures and environments where actions take place. Just when events are humming along, though, he deflates the excitement a bit by going on at length about the features of this guardhouse or that dam.</p>
+						<p>•	As in The Guns of Navarone, I found Andrea's unstoppable heroics — the way he was always a "fox among hens" — just too much to believe.</p>
+						<h3>Summation</h3>
+						<p>Overcoming the occasionally uneven pace and stereotypical supporting characters, Mallory, Miller, and Andrea do keep the opposition busy and the reader entertained.</p>
+						<h3>Rating</h3>
+						<p>♦♦♦♦♦♦♦♦ (8 out of 10)</p>
+                        </div><!--/force-->
+					</div><!--/bookreview-->
+					<div class="fluid bookreview">
+						<h2>Puppet on a Chain <button id="b-puppet">Show/hide review</button></h2>
+						<div id="w-puppet" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#books" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('puppet-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="puppet-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/puppet_amazon.jpg" alt="Puppet on a Chain"/><h3>Puppet on a Chain:</h3>
+						<a href="http://www.amazon.com/Puppet-Chain-Alistair-MacLean-ebook/dp/B0049U4152/ref=asap_bc?ie=UTF8">amazon</a>
+						<a href="http://www.goodreads.com/book/show/296299.Puppet_on_a_Chain">goodreads</a></div>
+						<p>Written in his less-great-but-still-gripping late-1960s period, Alistair MacLean's Puppet on a Chain sends the reader careening through the dark byways of Amsterdam and a many-tentacled international drug ring. The story packs many wallops, thanks to near-ceaseless action, countless plot twists, and the gripping first-person narration of a relentless Interpol cop. MacLean's well-crafted prose is an artful accomplice that helps pull the reader ever deeper into the crime web and the protagonist's attempts to destroy it before it destroys any more lives. This is among his fastest-paced and creepiest books about good battling evil; it's a shame that a couple of weak points intrude to hold this tale back from ranking even higher among his thrillers.</p>
+						<h3>Plot keypoints</h3>
+						<p>Written in his less-great-but-still-gripping late-1960s period, Alistair MacLean's Puppet on a Chain sends the reader careening through the dark byways of Amsterdam and a many-tentacled international drug ring. The story packs many wallops, thanks to near-ceaseless action, countless plot twists, and the gripping first-person narration of a relentless Interpol cop. MacLean's well-crafted prose is an artful accomplice that helps pull the reader ever deeper into the crime web and the protagonist's attempts to destroy it before it destroys any more lives. This is among his fastest-paced and creepiest books about good battling evil; it's a shame that a couple of weak points intrude to hold this tale back from ranking even higher among his thrillers.</p>
+						<h3>Strengths</h3>
+						<p>•	MacLean's lively and sometimes humorous writing keeps the reader enthralled.</p>
+						<p>•	You never have to wait long for action; it leaps out from almost every page.</p>
+						<p>•	Sherman's resourceful strategies, which help him oppose a massive conspiracy almost single-handed, are mostly believable.</p>
+						<p>•	As the story moves along, many pieces of the conspiracy are exposed in shocking fashion.</p>
+						<p>•	If you like seeing evildoers get their comeuppance, this tale will suit you; you just know they will pay for their crimes, and their punishments are commensurate with the scale of their sins.</p>
+
+						<h3>Weaknesess</h3>
+						<p>•	The baddies' scheme is unrealistically convoluted; too many people taking too many steps to get the process from point A to point B.</p>
+						<p>•	Without meaning to spoil the plot, I'll reveal that the baddies sometimes have Sherman under their control — but they never eliminate him. Sure, you want to see him stick around ... but after the first couple of escapes, as he continues to unravel their schemes, you'd think they would learn. Instead, some of the more psychopathic criminals try to get pleasure from his predicaments. Hard to believe the big boss wouldn't simply order him to be terminated.</p>
+						<p>•	Too often, MacLean portrays intelligent females as naive doe-eyed little girls where the male protagonist is concerned. In the midst of this mission's death and danger, he shows Sherman's Interpol gal pals flouncing about in nightgowns and absurdly cooing over him. An intended romantic note clangs sourly on the very last page. He could write about women and romance more deftly (e.g., in <a href="#w-last">The Secret Ways</a>); too bad that was usually a weakness in his works.</p>
+						<h3>Summation</h3>
+						<p>Overlook the overly complex drug scheme and the occasionally absurd descriptions of women, and you'll find Puppet on a Chain a high-speed roller-coaster ride with dizzying twists.</p>
+						<h3>Rating</h3>
+						<p>♦♦♦♦♦♦♦♦ (8 out of 10)</p>
+                        </div><!--/puppet-->
+					</div><!--/bookreview--><!--puppet-->
+					<div class="fluid bookreview">
+						<h2>Caravan to Vaccarès <button id="b-caravan">Show/hide review</button></h2>
+						<div id="w-caravan" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#books" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('caravan-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="caravan-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/caravan_amazon.jpg" alt="Caravan to Vaccarès"/><h3>Caravan to Vaccarès:</h3>
+						<a href="http://www.amazon.com/Caravan-Vaccares-Alistair-MacLean-ebook/dp/B002RI9PXG/ref=asap_bc?ie=UTF8">amazon</a>
+						<a href="http://www.goodreads.com/book/show/149671.Caravan_to_Vaccares">goodreads</a></div>
+						<p>Written within MacLean's period of peak skill, 1970's Caravan to Vaccares ranks among his most satisfying works. He mixes espionage, danger, intrigue, a few dabs of romance, and plenty of "local color," producing a page-turner that frequently rewards the reader with both psychological wit-matching and physical action. This is one of the few Alistair MacLean books I have re-read several times over the years.</p>
+						<h3>Plot keypoints</h3>
+						<p>As a caravan of gypsies heads for the annual festival at Saintes-Maries, in southern France, some other interested parties follow along. The flamboyant Duc de Croytor is researching a book about gypsy customs — or so he claims. Meanwhile, Neil Bowman, a British agent, has his own reasons for staying close to the caravan. What secrets are the gypsies hiding from the outside world? How many governments would be interested in some of the other inhabitants of that caravan?</p>
+						<h3>Strengths</h3>
+						<p>•	Action and more action!</p>
+						<p>•	One of MacLean's better ruthless-yet-sardonic protagonists, tossing off bons mot as he unravels the baddies' schemes.</p>
+						<p>•	Good twists: help from unexpected sources.</p>
+						<p>•	A great bullfighting scene, with far more psychological terror than animal cruelty.</p>
+						<p>•	Ancillary characters — the Duc and the ladies — enhance the tale, lifting it above a more typical solitary-agent-as-hero plotline.</p>
+
+						<h3>Weaknesess</h3>
+						<p>•	Any successful thriller requires some suspension of disbelief. However, in this case, the protagonists' survival is almost literally unbelievable. Lots of good fortune and several doses of fantastically poor judgment by the bad guys.</p>
+						<p>•	Reflects poorly (and stereotypically) on gypsy culture (though not nearly as poorly as some of his earlier books reflect on Japanese people).</p>
+						<p>•	A few of the scenes involving Bowman's object of affection are a bit overdone — young women would be unlikely to act in some of those ways. (At least the ones I know!)</p>
+						<h3>Summation</h3>
+						<p>A ripping good read, as they say. Never dull, and it will slake your thirst for adventure and heart-pounding suspense, while adding a dab of humorous and tender moments.</p>
+						<h3>Rating</h3>
+						<p>♦♦♦♦♦♦♦♦ (8 out of 10)</p>
+                        </div><!--/caravan-->
+
+					</div><!--/bookreview-->
+					<div class="fluid bookreview">
+						<h2>Bear Island <button id="b-bear">Show/hide review</button></h2>
+						<div id="w-bear" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#books" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('bear-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="bear-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/bear_amazon.jpg" alt="Bear Island"/><h3>Bear Island:</h3>
+						<a href="http://www.amazon.com/Bear-Island-Alistair-MacLean/dp/1402792549/ref=asap_bc?ie=UTF8">amazon</a>
+						<a href="http://www.goodreads.com/book/show/1934327.Bear_Island">goodreads</a></div>
+						<p>The largely nautical thriller Bear Island, published in 1971, finds MacLean in the latter part of his career but still maintaining his top-notch narrative skills. Many of his trademarks are on display here: intimate descriptions of seagoing craft, an agent amidst mortal danger, and even a pair of lovely lasses named Mary. Submerge yourself in this one and you won't find it easy to close the pages.</p>
+						<h3>Plot keypoints</h3>
+						<p>Dr. Christopher Marlowe has joined a movie production crew for a hazardous voyage to the remote Bear Island, situated north of the Arctic Circle. Their plan to film scenes there begins to unravel as some members of the traveling party turn up dead or missing. Who is behind the mysterious doings and dreadful murders aboard the Morning Rose? And whom can Dr. Marlowe trust to help him keep the dark forces at bay?</p>
+						<h3>Strengths</h3>
+						<p>•	A growing string of murders, in a situation (boat) from which nobody can escape, and needless to say the weather makes everything worse ... good setting for suspense.</p>
+						<p>•	A protagonist with whom the reader can empathize: someone with superb training and immense knowledge, but still not omnipotent or omniscient (in other words, occasionally mistake-prone like the rest of us).</p>
+						<p>•	His usual painting-with-words descriptions of the physical environment adds texture.</p>
+						<p>•	Enough twists, and lack of obvious clues, to keep the reader uncertain of which characters are on the wrong side of the law.</p>
+
+						<h3>Weaknesess</h3>
+						<p>•	By far my largest complaint about this book is the way he wraps up all the intrigue in one huge monologue. The good guy rambles on and on about all the interconnections among the suspects ... how Person A was blackmailing Person B, Person C was secretly related to Person D, Person E had a strong motive to kill Person F, etc. Most of these facts weren't known to the reader, and it's just too much backstory to toss into what was otherwise a pretty successful yarn.</p>
+						<p>•	For that matter, the sheer number of tangled connections and relationships among the passengers burdens the story. Most of MacLean's works are mainly based on action and perhaps one large secret, explaining why the bad guys do what they do. This felt more like a drawing-room mystery where everyone is made to appear suspicious; that type of ending can work well (as in Ice Station Zebra), but here it's handled far more clumsily.</p>
+						<p>•	It's typical for a MacLean protagonist to speak in subtle allusions, literary references, and other overtly clever statements; no great harm done there. In Bear Island, though, too many characters converse with him in that same manner; it's a bit too Noel Coward-ish (or is it Oscar Wilde-ish?) for me.</p>
+						<p>•	The two Marys' mannerisms were occasionally a bit precious for my tastes.</p>
+						<h3>Summation</h3>
+						<p>Prepare to be enthralled by the action and tension aboard the Morning Rose. Just don't be disappointed when too many details are revealed at the last moment.</p>
+						<h3>Rating</h3>
+						<p>♦♦♦♦♦♦♦ (7 out of 10)</p>
+                        </div><!--/bear-->
+					</div><!--/bookreview--><!--bear-->
+					<div class="fluid bookreview">
+						<h2>The Way to Dusty Death <button id="b-way">Show/hide review</button></h2>
+						<div id="w-way" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#books" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('way-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="way-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/way_amazon.jpg" alt="The Way to Dusty Death"/><h3>The Way to Dusty Death:</h3>
+						<a href="http://www.amazon.com/Way-Dusty-Death-Alistair-MacLean-ebook/dp/B002RI9D6K/ref=asap_bc?ie=UTF8">amazon</a>
+						<a href="http://www.goodreads.com/book/show/149629.The_Way_to_Dusty_Death">goodreads</a></div>
+						<p>When I was a kid, 1973's The Way to Dusty Death was one of my favorite Alistair MacLean books. This was partly due to my older brother's influence; a huge auto racing fan, he followed and mythologized the Grand Prix racing circuit that forms this book's core. My liking for it was also probably age-based, though, as a rereading many years later shows it to be "Alistair MacLean for 13-year-old boys." That's not necessarily a criticism; it's more of a pointer toward the audience best suited to this book.</p>
+						<h3>Plot keypoints</h3>
+						<p>Johnny Harlow, fantastically skilled Grand Prix champion, is suddenly losing his nerve — and his sobriety. His friends and enemies alike watch Johnny submerge himself in a morass of scotch, shaky behavior, and dangerous — even deadly — crashes. Meanwhile, a pall also hangs over his Coronado racing team for another reason: the disappearance of the owner's wife. What connection could there be between a kidnapping and a driver's downward spiral? And will the owner's daughter, the beautiful Mary, lose hope in her mother's return, or faith in her beloved Johnny?</p>
+						<h3>Strengths</h3>
+						<p>•	If you like auto racing, you'll enjoy some of the scenes and references to the Grand Prix circuit.</p>
+						<p>•	As with a turbocharged engine, once the action starts, it revs along at high RPMs.</p>
+						<p>•	He adds some interesting looks at family dynamics, among the owner, his daughter, and her brother.</p>
+
+						<h3>Weaknesess</h3>
+						<p>•	The best MacLeans are subtle, nuanced, psychological thrillers. This one works in broad, almost cartoonish brush strokes. The characters are largely stereotyped, and the plot is occasionally clumsy and generally unrealistic.</p>
+						<p>•	It takes the good-vs.-bad action a long time to start; nearly half the book is spent just documenting Harlow's dissolution. Only a patient reader will hang in long enough to reach the meat of the story.</p>
+						<p>•	Not to give too much away, but Johnny Harlow is that worst type of Alistair MacLean protagonist: the man of superhuman talents, fantastic ability to anticipate events, and nearly infallible judgment. Would the world's greatest driver transform himself into James Bond (except more so)? This strained my credibility.</p>
+						<p>•	Characters are forever invoking the Deity and questioning others' sanity. (Sample quote from a bad guy: "God's sake, Harlow, are you mad?") I doubt that high-level criminals (or good guys, for that matter) go around frequently spouting those sorts of phrases.</p>
+						<h3>Summation</h3>
+						<p>If you're an adolescent boy, you'll probably enjoy the vroom-vroom and bang-bang and smack!-oof! nature of this book. Adults can find Alistair MacLean books that better fit their intellectual desires.</p>
+						<h3>Rating</h3>
+						<p>♦♦♦♦♦♦ (6 out of 10)</p>
+                        </div><!--/way-->
+					</div><!--/bookreview-->
+					<div class="fluid bookreview">
+						<h2>Breakheart Pass <button id="b-breakheart">Show/hide review</button></h2>
+						<div id="w-breakheart" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#books" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('breakheart-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="breakheart-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/breakheart_amazon.jpg" alt="Breakheart Pass"/><h3>Breakheart Pass:</h3>
+						<a href="http://www.amazon.com/Breakheart-Pass-Alistair-MacLean-ebook/dp/B004D39PKQ/ref=asap_bc?ie=UTF8">amazon</a>
+						<a href="http://www.goodreads.com/book/show/149607.Breakheart_Pass">goodreads</a></div>
+						<p>Though I couldn't remember reading it, I'd long held a positive view of Breakheart Pass, Alistair MacLean's 1974 novel set in the American "Old West." That beneficent view probably stemmed from a long-ago memory of an ad for the movie version, which starred Charles Bronson. In those days before Death Wish 3 and its ilk, Bronson was a high-class action-movie hero, and his presence meant that a film was well worth seeing. Reading the book recently, though, I was disappointed; it fit into the drab period when MacLean's gift was dwindling (though far from extinguished), around the time of The Way to Dusty Death. I generally rank his works from that time as "You could do a lot worse, but you could also do better with a different MacLean."</p>
+						<h3>Plot keypoints</h3>
+						<p>In post-Civil-War California, a U.S. Army troop train is headed for Fort Humboldt, scene of a deadly cholera outbreak. A legendary marshal comes aboard to escort a prisoner wanted for trial on horrific charges. Meanwhile, the state's governor and his niece are accompanied on the train by a crack detachment of soldiers. Some of the passengers know, while others don't suspect, that a desperate fate awaits the innocents at journey's end ... if they survive that long.</p>
+						<h3>Strengths</h3>
+						<p>•	MacLean lingers, with intricate and well-crafted prose, over the characters we first meet and the down-at-the-heels town from which they will depart.</p>
+						<p>•	It's hard at first to guess who are the good guys and who are the baddies.</p>
+
+						<h3>Weaknesess</h3>
+						<p>•	It's possible to read one MacLean too many ... there's comfort in the familiar, but we see a bit too much of the same old stuff: protagonists John and Mary [well, Marica in this case]; unrealistically convoluted bad-guy schemes, involving senseless massacres; the knife-wielding villain who delights in killing; ceaseless drinking; the one fool who tries to draw when the gun-wielding good guy has just told everyone not to; etc.</p>
+						<p>•	The train trip takes virtually the entire book, and I grew tired of that particular setting. I'm not sure why, as he did the same thing with boats in other books (e.g., Bear Island), but in this case I was eager for the action to disembark and start happening elsewhere.</p>
+						<p>•	MacLean's typical unrealistic verbal jousting (going from disdainful to pseudoromantic) between good guy & pretty woman rings false. He has a habit of issuing bons mot from their mouths while they are in mortal danger and really need to focus on survival rather than flirtation.</p>
+						<h3>Summation</h3>
+						<p>It's an odd hybrid ... an Alistair MacLean Western. Worthwhile for the MacLean fan (more so than for a typical Western buff), but far from his best.</p>
+						<h3>Rating</h3>
+						<p>♦♦♦♦♦♦ (6 out of 10)</p>
+                        </div><!--/breakheart-->
+					</div><!--/bookreview--><!--breakheart-->
+					<div class="fluid bookreview">
+						<h2>Circus <button id="b-circus">Show/hide review</button></h2>
+						<div id="w-circus" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#books" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('circus-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="circus-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/circus2_amazon_amazon.jpg" alt="Circus"/><h3>Circus:</h3>
+						<a href="http://www.amazon.com/Circus-Alistair-MacLean-ebook/dp/B002RI9Q2G/ref=asap_bc?ie=UTF8">amazon</a>
+						<a href="http://www.goodreads.com/book/show/349011.Circus">goodreads</a></div>
+						<p>Published in 1975, Circus continued a streak of OK-but-not-outstanding Alistair MacLean works, as his career began a downhill slide. The circus atmosphere, as well as the somewhat cartoonish characters and actions, make this book similar to <a href="#w-way">The Way to Dusty Death</a> — a sort of "MacLean for juveniles." While its setting is unique among his works, the plot encompasses familiar themes: uniquely talented protagonists, nasty Eastern European secret police, a traitor amidst the good guys, a leading lady chosen for the wrong reasons, and a pasted-on romantic subplot. There are also some red herrings; I hope not to give away too much by saying that some characters are suspicious just because of their names, but MacLean lets them off the hook in this case.</p>
+						<h3>Plot keypoints</h3>
+						<p>Bruno Wildermann, gifted mentalist and leader of a brother-team aerial act, is "the outstanding star in the outstanding circus on earth." Thrilling capacity crowds throughout the U.S., he and his circus colleagues lead a tiring but simple life ... until CIA officers come to visit. They ask Bruno to take on a risky mission in the very city from which he had escaped earlier in life: Crau. The fate of the world — and of his own family — dangles as precariously as an acrobat on a high trapeze. As Bruno prepares to cross the ocean for his dangerous homecoming, evil forces are already encircling him in a net of mayhem and murder ....</p>
+						<h3>Strengths</h3>
+						<p>•	Action moves along at a good pace. Whenever it seems too quiet, MacLean whips up another incursion by the bad guys.</p>
+						<p>•	Inside (though seldom detailed) looks at circus life add some color to the proceedings.</p>
+						<p>•	For an awkwardly forced romance, this one isn't all that distracting.</p>
+
+						<h3>Weaknesess</h3>
+						<p>•	One of the "cartoonish" qualities I mentioned is the infallibility of Bruno and his circus buddies. The supreme aerialist, world's strongest man, perfect rope-trick artist, and can't-miss knife thrower belong in a kids' animated series.</p>
+						<p>•	MacLean repeatedly describes specific circus performances as reaching new heights, outdoing even their own usual level, etc., but without providing a good picture of what makes those performances so special.</p>
+						<p>•	Some factors, such as the deadly secret being held in Bruno's old hometown, are a bit too coincidental to be credible.</p>
+						<p>•	The book's very last sentence is a near carbon copy of some other MacLean book's ending. (When I think of which one, I'll mention it here.)</p>
+						<h3>Summation</h3>
+						<p>An entertaining read that nonetheless leaves one hungering for a more substantial MacLean work.</p>
+						<h3>Rating</h3>
+						<p>♦♦♦♦♦♦ (6 out of 10)</p>
+                        </div><!--/circus-->
+					
+					</div><!--/bookreview-->
+					<div class="fluid bookreview">
+						<h2>The Golden Gate <button id="b-goldengate">Show/hide review</button></h2>
+						<div id="w-goldengate" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#books" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('goldengate-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="goldengate-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/goldengate2_amazon.jpg" alt="The Golden Gate"/><h3>The Golden Gate:</h3>
+						<a href="http://www.amazon.com/Golden-Gate-Alistair-MacLean-ebook/dp/B0049U40ZS/ref=asap_bc?ie=UTF8">amazon</a>
+						<a href="http://www.goodreads.com/book/show/149622.The_Golden_Gate">goodreads</a></div>
+						<p>His 1976 work The Golden Gate fit neatly into Alistair MacLean's booklist of that era, including its immediate predecessors, <a href="#w-breakheart">Breakheart Pass</a> and <a href="#w-circus">Circus.</a> (To its credit, it was far better than his following book, the abysmal <a href="#w-seawitch">Seawitch.</a>) None of that trio would be ranked among his best novels, but each of them could keep a typical reader turning pages. The Golden Gate is a classic example of MacLean's lone-agent-vs.-evil-conspirators sagas. The horde of baddies think they have everything under control (and they appear to be right), but the wily protagonist stealthily begins knocking chips out of their seemingly unassailable edifice until it is ready to crumble.</p>
+						<h3>Plot keypoints</h3>
+						<p>Police commanders and intelligence services worldwide knew Peter Branson all too well. Though implicated or suspected in many high-level crimes, he had never been brought to justice, due to his brilliance and meticulous planning. But would even his extraordinary abilities (and his crack team of underlings) be enough to carry off his boldest and most breathtaking plot: holding the President of the United States for ransom, in the middle of the Golden Gate Bridge? Initially, his plan went exactly according to form, and he seemed to hold all the cards. He didn't know, though, that among his captives was Paul Revson, not really a journalist after all but rather a ruthlessly capable FBI agent who would seek to unravel the plot from within.</p>
+						<h3>Strengths</h3>
+						<p>•	In describing so many nefarious deeds by the bad guys, MacLean depicts well the intricate and risky steps needed to carry off such an audacious plot.</p>
+						<p>•	Revson's ingenuity comes across as both impressive and realistic. At the same time, MacLean shows how he must coordinate his efforts with those of many people outside his immediate environment, enabling the reader to experience more characters and also making it clear that one man can't always defeat a conspiracy.</p>
+
+						<h3>Weaknesess</h3>
+						<p>•	Many circumstances, and so many poor decisions by people in important jobs, must go exactly the way Branson had planned/hoped. The reader is forced to accept this unlikely set of outcomes to reach the meat of the plot.</p>
+						<p>•	Part of Branson's plan entailed extracting a presidential pardon for what he had done; this is nonsensical, as any agreements (such as pardons) made under duress are unenforceable.</p>
+						<p>•	A common behavior in MacLean books is for people to refer to each other as madmen, often with little justification or at times when nobody would actually say that. In The Golden Gate, that happens quite a lot.</p>
+						<p>•	Once again we're presented with a wholly unbelievable romantic angle. MacLean was strangely fixated on the deep feelings that develop between highly skilled agents and random women with large eyes.</p>
+						<h3>Summation</h3>
+						<p>If you ignore references to madness and romance, you'll find The Golden Gate a reasonably satisfying page-turner.</p>
+						<h3>Rating</h3>
+						<p>♦♦♦♦♦♦ (6 out of 10)</p>
+                        </div><!--/goldengate-->
+					</div><!--/bookreview--><!--goldengate-->
+					<div class="fluid bookreview">
+						<h2>Seawitch <button id="b-seawitch">Show/hide review</button></h2>
+						<div id="w-seawitch" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#books" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('seawitch-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="seawitch-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/seawitch_amazon.jpg" alt="Seawitch"/><h3>When Eight Bells Toll:</h3>
+						<a href="http://www.amazon.com/Seawitch-Alistair-MacLean-ebook/dp/B002RI9TW8/ref=asap_bc?ie=UTF8">amazon</a>
+						<a href="http://www.goodreads.com/book/show/1164114.Seawitch">goodreads</a></div>
+						<p>The 1977 thriller Seawitch continued a downslide from MacLean's best days. Unlike some of his peak works, where plots were subtle, characters were fleshed out, and results were unpredictable, this one has a real paint-by-numbers quality, as if someone had written an Alistair MacLean parody. I've seen reviews by people who thought it was OK; however, I think any true MacLean fan should finish many of his other books before considering giving this one a read.</p>
+						<h3>Plot keypoints</h3>
+						<p>Lord Worth, an oil billionaire whose low prices antagonize other oil magnates, has created a new type of drilling rig in the waters off Houston. His enemies enlist an explosives effort to destroy it, by any means possible. Lord Worth makes plans to defend it, in any way necessary. Oh, and he has two beautiful daughters who love two pauperly but highly skilled private investigators. Needless to say, all protagonists are utterly ruthless.</p>
+						<h3>Strengths</h3>
+						<p>•	MacLean's knowledge of sea vessels helps him spin the yarn, and he's clearly researched the process of aquatic oil exploration.</p>
+						<h3>Weaknesess</h3>
+						<p>Where to begin?</p>
+						<p>•	The characters are two-dimensional and speak in clichés. It's not clear why the reader should care about any of them.</p>
+						<p>•	The plot often seems like a recitation of events, rather than suspenseful action sequences.</p>
+						<p>•	Leading characters (good and bad), who are otherwise shown to be brilliant strategists, overlook obvious threats and fall into absurd traps.</p>
+						<p>•	The U.S. military is, multiple times, depicted as grossly incompetent; this grows tiresome.</p>
+						<h3>Summation</h3>
+						<p>I stayed up late finishing this one ... not because the prose was rewarding or the plot gripping, but because I kept waiting to see when he would shift into "real" Alistair MacLean mode. I reached the end and am still waiting. Originally, I gave this one three stars, but it deserves even less.</p>
+						<h3>Rating</h3>
+						<p>♦♦ (2 out of 10)</p>
+                        </div><!--/seawitch-->
+					</div><!--/bookreview-->
+					<div class="fluid bookreview">
+						<h2>Goodbye California <button id="b-goodbye">Show/hide review</button></h2>
+						<div id="w-goodbye" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#books" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('goodbye-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="goodbye-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/goodbye_amazon.jpg" alt="Goodbye California"/><h3>Goodbye California:</h3>
+						<a href="http://www.amazon.com/Goodbye-California-Alistair-MacLean-ebook/dp/B002RTINBU/ref=asap_bc?ie=UTF8">amazon</a>
+						<a href="http://www.goodreads.com/book/show/450416.Goodbye_California">goodreads</a></div>
+						<p>I found 1977's Goodbye California a strange hybrid of MacLean's best and worst, his past and future. It features the familiar theme of a cunning protagonist trying to disrupt the evil machinations of a brilliant, amoral villain who threatens to wreak unfathomable devastation. Readers can follow the good guy as he (along with relatives and colleagues) works to unravel the conspiracy, thread by thread, link by link. However, character development seldom surpasses the level of simple stereotype, and much of the action is more sensationalistic than realistic. This book also foreshadows some of his later works. Like <a href="#w-andreas">San Andreas</a>, it begins with a professorial lecture about a real topic that is fictionalized in the book (earthquakes in this case, life in the British Navy during WWII in <a href="#w-andreas">San Andreas</a>). And as in <a href="#w-floodgate">Floodgate</a> (regrettably), a long tale of intrigue and danger finally reaches the concluding confrontation and then simply fizzles out.</p>
+						<h3>Plot keypoints</h3>
+						<p>When Detective Sergeant Ryder's wife is kidnapped along with nuclear scientists from the California power station where they all work, he sets out to find her, and to figure out why other eminent nuclear scientists have also been disappearing. Facing resistance and danger from external forces as well as within his own police department, he leaves his job and begins taking the law into his own hands. His son Jeff, a highway patrolman, and a few other trusted compatriots join him in desperate measures to root out corruption in high places and to track down the terrorists who are threatening to use nuclear weapons to unleash an Armageddon-level earthquake.</p>
+						<h3>Strengths</h3>
+						<p>•	MacLean's prose is allowed to unwind in a fairly unconstrained way, as shown by the sheer length of Goodbye California. While the two books directly before it (<a href="#w-goldengate">The Golden Gate</a> and <a href="#w-seawitch">Seawitch</a>) and the one right after it (<a href="#w-athabasca">Athabasca</a>) are oddly consistent, coming in at 284-286 pages each in the paperback editions I own, this one stretches to 315; that extra 11% or so really makes it feel like a more substantial read.</p>
+						<p>•	He includes enough factual information to make the threat seem all too believable.</p>
+
+						<h3>Weaknesess</h3>
+						<p>•	Ryder's brutality toward corrupt officials, and his impertinence toward anyone else who questions his methods, make his character both unsympathetic and unrealistic.</p>
+						<p>•	Some of the other characters — a police chief with whom he clashes, one of the captive scientists — repeatedly behave in hot-tempered ways that seem drawn from a B movie.</p>
+						<p>•	Events that are connected, or suspected to be connected, to the evildoers' plot get so convoluted that I'm still not sure whether they were all interwoven or whether some were just red herrings.</p>
+						<p>•	After such a long buildup, and so much anticipation, the final showdown with the main bad guys is all too brief and thoroughly unsatisfying.</p>
+						<h3>Summation</h3>
+						<p>As with many of MacLean's later books, my thoughts while reading it went something like this: "Hey, this isn't so bad, it's really kind of interesting ... OK, actually it's not all that good ... Come on, get to the point already ... Huh? It ends like that? What a letdown."</p>
+						<h3>Rating</h3>
+						<p>♦♦♦♦♦ (5 out of 10)</p>
+                        </div><!--/goodbye-->
+					</div><!--/bookreview--><!--goodbye-->
+					<div class="fluid bookreview">
+						<h2>Athabasca <button id="b-athabasca">Show/hide review</button></h2>
+						<div id="w-athabasca" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#books" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('athabasca-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="athabasca-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/Athabasca_amazon.jpg" alt="when eight bells toll"/><h3>Athabasca:</h3>
+						<a href="http://www.amazon.com/Athabasca-Alistair-MacLean-ebook/dp/B002RTINBK/ref=asap_bc?ie=UTF8">amazon</a>
+						<a href="http://www.goodreads.com/book/show/1039347.Athabasca">goodreads</a></div>
+						<p>After producing a string of solid and sometimes exceptional thrillers from the mid-1950s to the late '60s, Alistair MacLean began a steadily decline in book quality during the '70s. Athabasca, published in the first year of the '80s, shows that sad trend continuing. Cobbling together many of his normal plot devices, MacLean wrote a tale of oil-field treachery that begins promisingly (with an instructive prologue) but fails to gain full traction. The would-be heroes, jetting back and forth while unraveling clues and drinking heavily, are never developed as three-dimensional people whose fate strongly draws the reader's interest and empathy.</p>
+						<h3>Plot keypoints</h3>
+						<p>The upper reaches of the North American continent boast vast oil reserves, particularly in Alaska's Prudhoe Bay area (in which oil is pumped from the ground and piped hundreds of miles) and Alberta's Athabasca region (where it must be distilled from massive amounts of "tar sands"). When the companies overseeing both of these operations receive anonymous threats, Jim Brady's crew of oil security experts fly in from Texas to try to prevent attacks and trace the would-be criminals. Threats and violence escalate; casualties mount in both areas, and Brady's team finds itself targeted by the evildoers. As evidence points toward an "inside job," investigators team up with law and military forces to face the dangers head-on.</p>
+						<h3>Strengths</h3>
+						<p>•	The prologue gets this story off to a nice start, educating the reader about oil and its extraction.</p>
+						<p>•	Depictions of the fantastic digging and processing equipment that handles the tar sands are quite impressive and yet believable.</p>
+						<p>•	A few clues here and there give the reader some chance to start figuring out pieces of the puzzle.</p>
+
+						<h3>Weaknesess</h3>
+						<p>•	As mentioned above, the main investigators are simple stereotypes rather than realistic, flesh-and-blood characters. They share wit and booze while spouting their theories and going about their business.</p>
+						<p>•	The attractive young females (more than one this time!) are simple-minded and unwary; their beauty alone seems to motivate various males to form attachments to them.</p>
+						<p>•	Some scenes are too familiar, as when the main protagonist hears bad news over the phone and thoughtlessly crushes the glass he's holding (seen before in <a href="#w-last">The Secret Ways</a>).</p>
+						<p>•	We haven't met some of the bad guys before the denouement, which is unsatisfyingly sudden and short. We're then treated to one of those drawing-room scenes where the good guys expose the identity of one last baddie. That sort of scene can be done well, but here it isn't.</p>
+						<h3>Summation</h3>
+						<p>Disjointed and largely unsatisfying, Athabasca is recommended only for the Alistair MacLean completist.</p>
+						<h3>Rating</h3>
+						<p>♦♦♦♦ (4 out of 10)</p>
+                        </div><!--/Athabasca-->
+					</div><!--/bookreview-->
+					<div class="fluid bookreview">
+						<h2>River of Death <button id="b-river">Show/hide review</button></h2>
+						<div id="w-river" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#books" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('river-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="river-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/river_amazon.jpg" alt="River of Death"/><h3>River of Death:</h3>
+						<a href="http://www.amazon.com/River-Death-Alistair-MacLean-ebook/dp/B002RUA4UC/ref=asap_bc?ie=UTF8">amazon</a>
+						<a href="http://www.goodreads.com/book/show/149695.River_of_Death">goodreads</a></div>
+						<p>While it wasn't his last book chronologically, River of Death was the final Alistair MacLean novel that I read (in late 2010). It shows clear signs of having been written during his waning-effort period of the early 1980s. Still, it is not nearly devoid of interesting material; it just feels like an early draft that needed to be fleshed out further. A few characters are well developed, while others appear two-dimensional and hastily created. Some scenery is described in loving detail, creating a palpable atmospheric sense, while the surroundings are glossed over in other sections. I can't wholeheartedly recommend River of Death, but it packs enough intrigue to make a quick perusal worthwhile. I also thought that this storyline could be turned into a good movie; in fact, a movie version (with a greatly altered plot) was released in 1989, but it wasn't what I'd call good (see my review <a href="movie.html#w-river">here</a>).</p>
+						<h3>Plot keypoints</h3>
+						<p>In the waning days of World War II, a pair of rogue German SS officers have a falling-out over a fortune in looted treasures. Pause the action ... and resume it decades later in Brazil. A shadowy magnate named Smith is delighted when itinerant explorer John Hamilton offers to take him to a fabled lost city, deep in the treacherous jungles. Along with his two masterful helpers, Hamilton leads Smith and his associates toward an unexpected climax, where vengeance awaits and few people are what they seem to be.</p>
+						<h3>Strengths</h3>
+						<p>•	Viewed in its own right, the plotline is a promising intermingling of Nazis, gold, savage tribes, and multiple revenge.</p>
+						<p>•	MacLean's superb sense for portraying characters and their surroundings is evident in many scenes, though not nearly all.</p>
+						<p>•	To his credit, MacLean just subtly hints at a possible future romantic thread, without nearly overdoing that angle as he did in some of his other works from this era.</p>
+
+						<h3>Weaknesess</h3>
+						<p>•	Outside of its "classic MacLean" scenes, this book often consists of forgettable prose and cliched action. For example, more than once we see a good guy knock an enemy unconscious with one blow from a knife handle, and the descriptions are boringly matter-of-fact.</p>
+						<p>•	When (pardon the following minor spoiler) some bad guys capture the good guys, they make the typical mistake of not guarding the heroes closely enough, despite the obvious threat posed by a crew who had overcome many obstacles to infiltrate the enemy camp.</p>
+						<p>•	There are a few of MacLean's usual "alcohol solves everything" scenes, though they're not as heavy-handed as in some other books.</p>
+						<h3>Summation</h3>
+						<p>River of Death is sometimes excellent but too often just okay. It had potential to be much more.</p>
+						<h3>Rating</h3>
+						<p>♦♦♦♦♦ (5 out of 10)</p>
+                        </div><!--/river-->
+					</div><!--/bookreview--><!--river-->
+					<div class="fluid bookreview">
+						<h2>Partisans <button id="b-partisans">Show/hide review</button></h2>
+						<div id="w-partisans" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#books" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('partisans-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="partisans-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/partisans_amazon.jpg" alt="partisans"/><h3>Partisans:</h3>
+						<a href="http://www.amazon.com/Partisans-Alistair-MacLean-ebook/dp/B002RTIN9W/ref=asap_bc?ie=UTF8">amazon</a>
+						<a href="http://www.goodreads.com/book/show/149670.Partisans">goodreads</a></div>
+						<p>One of his later works, 1982's Partisans finds Alistair MacLean still in respectable form, though far from his best days. Though it occasionally reads as if he were going through the motions, most of this book features strong prose and action in the classic MacLean mold. Sadly, the loom of plot upon which this tale is woven doesn't live up to his usual standards. (Note: according to the <a href="https://en.wikipedia.org/wiki/Partisans_%28novel%29">Wikipedia page about this book</a>, it was partly based on the plot from the film <a href="movie.html#w-force">Force 10 from Navarone</a>. I have seen no other confirmation of this claim.) Someone who is looking to spend a couple of hours in make-believe adventure land could do worse than Partisans ... but also far better.</p>
+						<h3>Plot keypoints</h3>
+						<p>World wars make strange bedfellows. As WWII rages, several small groups enmeshed in secretive services find themselves sharing a torpedo boat ride from Italy to the Yugoslav coast. They are all working to support the Axis-favored Royalists against the freedom-fighting Partisans ... or are they? Whose secret plans have been leaked, and why has a team of assassins joined them onboard? Even if the boat does reach its destination, what surprises await its passengers during their bitter winter foray into the Balkans? Intelligence agent Peter Petersen and his companions must use all their connections and wiles to solve these mysteries.</p>
+						<h3>Strengths</h3>
+						<p>•	As I mentioned, much of MacLean's prose is reminiscent of his earlier best efforts. As the reader, you feel as if you know these characters well, and as if you are experiencing the hazards and dilemmas they face. This feature alone makes the book worth your time and attention.</p>
+
+						<h3>Weaknesess</h3>
+						<p>•	Plot and pacing are well below MacLean's usual standard. Most of the book is spent watching the parties reach their destination (having faced typical dangers en route), but the rest of the story is anticlimactic, hardly justifying the long buildup.</p>
+						<p>•	While the characters' actions usually make sense, what comes out of their mouths is often mediocre. The main good guys always have the unrealistically perfect answer to whatever someone else says; meanwhile, other characters appear goofy. (Some of them bounce back and forth between saying the protagonist is wonderful and flying into petty rages at him. This grows tiresome.)</p>
+						<p>•	There are a couple of weak and unrealistic stabs at a romantic connection; they merely detract from the story.</p>
+						<p>•	I found it hard to keep some of their commanders' and adversaries' names straight. After reading about so many majors and generals, and who is on which side of the conflict, and whose secret orders are being followed by whom, I lost much of my interest in seeing what happened to those officers.</p>
+						<p>•	It's hard to keep writing completely fresh material after so many years, but this book echoes some earlier books too closely. For instance, one of the main good guys is awfully similar to a character from Caravan to Vaccares. Some dialogue is recycled too. Example:</p>
+						<p>"By heaven, Stefan, I don't care what people say, there's nothing wrong with the young generation." (The Secret Ways). "By heavens, Major, there's nothing wrong with this new generation of ours." (Partisans)</p>
+						<h3>Summation</h3>
+						<p>While not MacLean's worst, Partisans is best recommended to readers who can enjoy his style despite a relative lack of substance.</p>
+						<h3>Rating</h3>
+						<p>♦♦♦♦ (4 out of 10)</p>
+                        </div><!--/partisans-->
+					</div><!--/bookreview-->
+					<div class="fluid bookreview">
+						<h2>Floodgate <button id="b-floodgate">Show/hide review</button></h2>
+						<div id="w-floodgate" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#books" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('floodgate-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="floodgate-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/Floodgate_goodreads.jpg" alt="Floodgate"/><h3>Floodgate:</h3>
+						<a href="http://www.amazon.com/Floodgate-Alistair-MacLean/dp/0006169112/ref=sr_1_1?s=books&ie=UTF8&qid=1447095260&sr=1-1&keywords=floodgate">amazon</a>
+						<a href="http://www.goodreads.com/book/show/149686.Floodgate">goodreads</a></div>
+						<p>Floodgate, published in 1983 (near the end of Alistair MacLean's career), presents interesting contrasts. MacLean's familiar prose stylings are in pretty good form, and the way the book opens at the scene of a disaster is reminiscent of the start of The Way to Dusty Death. I was intrigued when I recently began reading this book for the first time, as the early sections read like classic MacLean. However, it gradually became clear that his plotting instincts had largely deserted him by this point. The farther I read, the less believable I found the conflict between the seemingly unstoppable bad guys and the infinitely cunning and resourceful heroes. In fact, "conflict" is a misstatement — the two sides never really engaged each other in the ways a MacLean reader would expect. The baddies went about their evil business, the goodies made clever and wry statements and downed a variety of spirits, and when I thought we had finally reached the climactic clash, everything just ... sort ... of ... fizzled.</p>
+						<h3>Plot keypoints</h3>
+						<p>Low-lying nations such as The Netherlands rely on massive systems of dikes to keep deadly waters at bay. Hence, the citizens' welfare rests on their government's ability to ward off threats to those dikes. The Dutch government is at a loss, though, in handling the mysterious F.F.F. group, which repeatedly shows that it can blow up key dikes with impunity. It looks as if the Dutch and British are powerless to resist the terrorists' demands — unless Amsterdam police lieutenant Peter Van Effen's team of experts can penetrate and disarm the F.F.F. before it unleashes a killer flood.</p>
+						<h3>Strengths</h3>
+						<p>•	The prose is both admirable and familiar, though some of MacLean's typical themes are overdone.</p>
+
+						<h3>Weaknesess</h3>
+						<p>•	The plot meanders and chases its tail and then doesn't deliver at the key moment. Instead of a typical story where good and bad guys are aware of each other and have unpleasant/violent interplay at various points, this one offers an almost purely psychological buildup that isn't satisfyingly resolved. As Gertrude Stein said about Oakland, "There's no there there."</p>
+						<p>•	As occasionally happens in MacLean's works, the evildoers are superhumanly clever and capable, and the heroes are so smart that they understand (and professionally admire) every action and motivation of the villains. Fallible flesh-and-blood characters would ring truer. One glaring exception is that when several different organizations suddenly start committing awful acts on a large scale, the brilliant policemen don't seem to consider that these groups could be related to each other. Weird.</p>
+						<p>•	Another in a long line of weak romantic subplots doesn't help matters.</p>
+						<p>•	Perhaps I'm too parochial, but there were so many "Von" and "Van" names that I kept having to refer back to earlier passages to keep the characters straight.</p>
+						<p>•	The protagonists subsist almost entirely on, and are fairly obsessed by, stiff drinks.</p>
+						<h3>Summation</h3>
+						<p>At first, I thought I'd stumbled on a treasure ... but Floodgate turned out to be fool's gold.</p>
+						<h3>Rating</h3>
+						<p>♦♦♦ (3 out of 10)</p>
+                        </div><!--/floodgate-->
+					</div><!--/bookreview--><!--floodgate-->
+					<div class="fluid bookreview">
+						<h2>San Andreas <button id="b-andreas">Show/hide review</button></h2>
+						<div id="w-andreas" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#books" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('andreas-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="andreas-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/andreas_amazon.jpg" alt="san andreas"/><h3>San Andreas:</h3>
+						<a href="http://www.amazon.com/San-Andreas-Alistair-MacLean-ebook/dp/B002RUA560/ref=asap_bc?ie=UTF8">amazon</a>
+						<a href="http://www.goodreads.com/book/show/163275.San_Andreas">goodreads</a></div>
+						<p>The World War II nautical adventure San Andreas (1984) is an odd bird. While showing off Alistair MacLean's familiarity with oceanic military operations of that era, it is a long and sometimes slow-moving drama that also focuses on developing connections among key characters even as they await almost certain doom. (Perhaps this is a good allegory for war duty: long periods of inaction during which relationships are formed and strengthened, flavored with sudden deadly onslaughts.) Hewing closely to many familiar MacLean themes, San Andreas barely avoids parody in some areas, such as the motley collection of people rescued by the ship from various disasters. All the same — and despite the overly langorous pace — I was surprised at the energetic prose in many parts, more reminiscent of earlier Alistair MacLean books than of the dreck he produced in his final years.</p>
+						<h3>Plot keypoints</h3>
+						<p>Laws of war make hospital ships such as Britain's San Andreas off-limits to enemy attacks. In this case, the German enemy pays no heed to those laws. The ship's desperate voyage across the North Sea is interrupted by a savage assault that wipes out part of its crew and leaves it weakened in the face of great danger. As if the enemies outside weren't troublesome enough, saboteurs are also damaging the ship and its crew from within. With the ship's captain badly injured, bosun Archie McKinnon and a handful of reliable officers must figure out how to survive bomber and U-boat attacks while rooting out the evildoers aboard the San Andreas.</p>
+						<h3>Strengths</h3>
+						<p>•	From the prologue on, this often reads like classic MacLean, showing how all-too-human protagonists (in a well-detailed naval setting) struggle to shorten the long odds against their very survival.</p>
+
+						<h3>Weaknesess</h3>
+						<p>•	Given the amount of real action that occurs, the book feels too long by about a third. Many pages are spent describing unenthralling events such as repairs being made to portions of the ship.</p>
+						<p>•	As usual, one protagonist is clever enough to anticipate almost everything the enemies will attempt ... and on the few occasions when he overlooks a threat, he is full of self-recrimination, even though nobody else had seen it coming either. That gets a bit old.</p>
+						<p>•	Though more substantial than in some of his other later works, the romantic subplots (plural!) still don't feel genuine; just too much cleverness and over-emoting, while a real war is raging around them.</p>
+						<p>•	Some plot twists that seem to be in the works never quite materialize. For example, the half-German British nurse and the half-British German pilot almost seem to know each other ... but we never learn more about their connections, or why they are immediately so chummy.</p>
+						<p>•	The universal solution to any physical or mental problem is, as in so many other MacLean books, alcohol. If I urgently needed to figure out how to evade a U-boat or how to navigate through unknown waters without instruments, I wouldn't spend time going into rapture over a glass of scotch.</p>
+						<h3>Summation</h3>
+						<p>While San Andreas falls short (or perhaps overly long) of its early promise, it is a fairly diverting step up from other 1980's-era Alistair MacLean novels.</p>
+						<h3>Rating</h3>
+						<p>♦♦♦♦♦♦ (6 out of 10)</p>
+                        </div><!--/andreas-->
+					</div><!--/bookreview-->
+					<div class="fluid bookreview">
+						<h2>The Lonely Sea <button id="b-lonely">Show/hide review</button></h2>
+						<div id="w-lonely" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#books" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('lonely-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="lonely-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/lonely2_amazon.jpg" alt="the lonely sea"/><h3>The Lonely Sea:</h3>
+						<a href="http://www.amazon.com/Lonely-Sea-Alistair-MacLean-ebook/dp/B002RUA5F6/ref=asap_bc?ie=UTF8">amazon</a>
+						<a href="http://www.goodreads.com/book/show/1498033.The_Lonely_Sea">goodreads</a></div>
+						<p>Unlike all the novels reviewed here, The Lonely Sea is an amalgam of fiction and nonfiction. It combines a collection of true naval-warfare tales Alistair MacLean wrote in 1960 for the Glasgow Sunday Herald with a group of short stories built around maritime action. Included is "The Dileas", MacLean's winning entry in the Herald's 1954 short-story competition, which launched his professional writing career. Given the massive difference between MacLean's accounts of harrowing naval battles and his mostly whimsical creative pieces in The Lonely Sea, I am separating my reactions into two groupings (below).</p>
+						<h3>WWII Naval Encounters</h3>
+						<p>Anyone who has read <a href="#w-ulysses">H.M.S. Ulysses</a> knows that Alistair MacLean describes naval warfare starkly, pulling no punches and softening no blows. Such is also the case in this book's set of naval battle tales. However, his gripping scenes of death, destruction, and cruelty are leavened by glowing descriptions of courage and heroism. A typical account features German warships attacking unsuspecting or overmatched Allied craft, which carry refugees, prisoners, or even children, and are led by brave and ingenious yet often doomed officers. Amid all these defeats and tragedies, the story of how the British Navy sank the dreaded Bismarck (this book's longest piece) provides some relief. Sometimes, MacLean blames the Germans for inhumane actions; in one case, though, he actually claims that incompetence by high-ranking British officials led to tragedy. Throughout his dramatized reports, as ships and their passengers are mercilessly hammered by bombs, shells, and torpedoes, it's sometimes hard — but very comforting — to remember that the Allies eventually won this war. First-person accounts by survivors of some of these confrontations add a sorely needed human angle to these brutal yet fascinating retellings.</p>
+						<h3>Short Fiction</h3>
+						<p>Interspersed with the battle descriptions are half a dozen short fictional tales, with sailors and/or boats playing a large role in each. "The Dileas" is interesting as a first taste of MacLean's unique style, though the reader must be ready to confront some Gaelic terms and spellings. The other short stories generally lack gravitas; in some cases, it seems like MacLean had an idea that amused him, so he dashed off a quick tale about it, leaving the plot and characters largely undeveloped. If you're used to reading novel-length MacLeans, these stories will feel familiar but not terribly satisfying. As stylistic exercises, though, they're worth a look by any Alistair MacLean fan.</p>
+						<h3>Summation</h3>
+						<p>While the naval battles and the stabs at short fiction are an odd coupling — and the latter often fail to impress — The Lonely Sea is still a worthwhile read. (MacLean fans will also find value in the final chapter, "Alistair MacLean on the Rewards and Responsibilities of Success," in which the master himself offers insights into his writing career, his writing habits, his responsibility toward those who buy his books [but not toward book critics], and other aspects of his philosophy and psyche.)</p>
+						<h3>Rating</h3>
+						<p>♦♦♦♦♦♦♦ (7 out of 10)</p>
+                        </div><!--/lonely-->
+					</div><!--/bookreview--><!--andreas-->
+					<div class="fluid bookreview">
+						<h2>Santorini <button id="b-santorini">Show/hide review</button></h2>
+						<div id="w-santorini" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#books" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('santorini-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="santorini-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/Santorini_amazon.jpg" alt="Santorini"/><h3>Santorini:</h3>
+						<a href="http://www.amazon.com/Santorini-Alistair-MacLean-ebook/dp/B002RUA56U/ref=asap_bc?ie=UTF8">amazon</a>
+						<a href="http://www.goodreads.com/book/show/1039334.Santorini">goodreads</a></div>
+						<p>What do fans of Alistair MacLean's books enjoy? Some of them probably favor slam-bang action, while others relish the more cerebral aspects. If you're in the former group, 1986's Santorini  is not your cup of tea. The latter readers, though, might find it worth their while. Published just the year before his death, this is the last book MacLean wrote, and the book's sedate plotline may reflect the author's own lack of energy. Comparing this conversation-heavy story with his very first novel, the relentlessly pounding WWII battle tale <a href="#w-ulysses">H.M.S. Ulysses</a>, one sees how he reduced his reliance on violence and increased the protagonists' use of cleverness in overcoming looming evil. (As much as I generally loathe violence, his early books — with their assassinations, assaults and chase scenes — are far better than his gentler later works.)</p>
+						<h3>Plot keypoints</h3>
+						<p>It's a busy day in the Aegean Sea for the Royal Navy ship Ariadne. A jet crashes into the water near a pleasure boat that is aflame and sinking. What connection could the boat's surviving passengers have with the jet's deadly cargo, which now lies on the sea bottom? It's up to Captain Talbot and Admiral Hawkins to root out and stop the terrorist plot — with some stateside help from the Pentagon and even the president.</p>
+						<h3>Strengths</h3>
+						<p>•	The setup is quite promising: nuclear weapons, shady characters, beyond-capable naval officers. It was easy to keep turning pages.</p>
+						<p>•	Interesting bits of actual history (mainly of natural disasters) are thrown in to enhance the sense of danger.</p>
+
+						<h3>Weaknesess</h3>
+						<p>•	As in a few of MacLean's other later books (most notably Floodgate), he spends most of the book setting up a final confrontation that then peters out disappointingly.</p>
+						<p>•	Too often, his protagonists seem smug and fully confident that they have anticipated and defused any threats from the bad guys; in the face of such a potential catastrophe, real people wouldn't act this way.</p>
+						<p>•	Much of the action that does occur takes place behind the scenes; the protagonists are notified of it from afar. The reader is told of, but not shown, some key happenings.</p>
+						<h3>Summation</h3>
+						<p>I was trying hard to like this book, and up to a point I did; but that point came and was passed, and by the book's end, I still felt unsatisfied.</p>
+						<h3>Rating</h3>
+						<p>♦♦♦♦♦ (5 out of 10)</p>
+                        </div><!--/santorini-->
+					</div><!--/bookreview-->
+				</div><!--/div class="fluid reviews"-->
+
+ 				<!--<p>div class="content"</p>-->
+				<!--<div class="flexslider">
+					<ul class="slides">
+						<li id="slide1">
+							<img src="images/0-M_inferno_ark.jpg" alt="inferno"/>
+						</li>
+						<li id="slide2">
+							<img src="images/0-M_raketten_ark.jpg" alt="raketten"/>
+						</li>
+					</ul>
+				</div>-->
+				<div id="about" class="fluid section">		
+					<div class="fluid totop">
+						<a href="#top" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('knapp','','images/amnettsidegrafikkhover_totop3.png',1)"><img id="knapp" src="images/amnettsidegrafikk_totop3.png" alt="knapp"></a>
+					</div>
+				
+				<!--				<div class="bg">
+					<img src="images/WIK_US_Convoy-to-Capetown_1941_kingsacademy.jpg" alt="convoy">
+				</div>-->
+				</div>													<!--/content-->
+            <footer class="fluid footer">
+				<!--<p>&copy; Pål Stakvik 2015</p>-->
+				<p>Questions/ideas? Drop me a line: <a href="mailto:info@AlistairMacLean.com">info@AlistairMacLean.com</a></p>
+				<p>Go <a href="http://alistair-maclean.blogspot.nl/">here</a> for more facts about MacLean and about novels by other authors, based on plot summaries he wrote.</p>
+				<br>
+				<p>Literature lover? Learn about my favorite book, Jane Eyre — visit my site at <a href="http://janeeyre.net/">JaneEyre.net!</a></p>
+				<p>alistairmaclean.com redesigned by &copy; Pål Stakvik 2015</p>
+			</footer>
+		</div>														
+		</div>														<!--/div id="div1" class="fluid"-->
+	</div>															<!--/container-->
+
+<p></p>
+</body>
+</html>

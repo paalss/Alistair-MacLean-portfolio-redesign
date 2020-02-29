@@ -1,0 +1,213 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alistair MacLean blog</title>
+<link href="css/boilerplate.css" rel="stylesheet" type="text/css">
+<link href="css/stylesheet.css" rel="stylesheet" type="text/css">
+
+<!-- 
+To learn more about the conditional comments around the html tags at the top of the file:
+paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+
+Do the following if you're using your customized build of modernizr (http://www.modernizr.com/):
+* insert the link to your js here
+* remove the link below to the html5shiv
+* add the "no-js" class to the html tags at the top
+* you can also remove the link to respond.min.js if you included the MQ Polyfill in your modernizr build 
+-->
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!--CSS-->
+<!--font-->
+<link href="https://fonts.googleapis.com/css?family=Changa+One" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Muli" rel="stylesheet" type="text/css"><!---normal 400-->
+<link href="http://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet" type="text/css">
+<!--<script src="scripts/respond.min.js"></script>-->
+
+<!-- Place somewhere in the <head> of your document -->
+<!--<link rel="stylesheet" href="flexslider.css" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="jquery.flexslider.js"></script>-->
+
+<!--forslag påhttp://stackoverflow.com/questions/16129880/flexslider-not-working-->
+<!--<link rel="stylesheet" type="text/css" href="http://flexslider.woothemes.com/css/flexslider.css"> 
+<link rel="stylesheet" type="text/css" href="http://lab.mattvarone.com/projects/jquery/totop/css/ui.totop.css">-->
+
+<!--script-->
+
+<!--Place in the <head>, after the three links-->
+<!--	<script type="text/javascript" charset="utf-8">
+  $(window).load(function() {
+    $('.flexslider').flexslider();
+  });
+</script>	-->
+
+<!--forslag på http://stackoverflow.com/questions/16129880/flexslider-not-working-->
+<!--<script type="text/javascript" src="http://flexslider.woothemes.com/js/jquery.flexslider.js"></script> 
+<script type="text/javascript" src="http://flexslider.woothemes.com/js/jquery.easing.js"></script> 
+<script type="text/javascript" src="http://flexslider.woothemes.com/js/jquery.mousewheel.js"></script> 
+<script type="text/javascript" src="http://lab.mattvarone.com/projects/jquery/totop/js/jquery.ui.totop.js"></script>--> 
+
+<!--forslag på http://community.mybb.com/thread-136316.html-->
+<!--<script type="text/javascript">
+jQuery.noConflict();
+jQuery(window).load(function() {
+  jQuery('.flexslider').flexslider({
+    animation: "slide"
+  });
+});
+</script>-->
+
+<!--<script type="text/javascript">jQuery.noConflict();</script>-->
+
+<!--<script type="text/javascript">
+jQuery.noConflict($);
+$(window).load(function() {
+  $('.flexslider').flexslider({
+    animation: "slide"
+  });
+});
+
+</script>-->
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#hide").click(function(){
+        $(".omforfatter-bilde, .omforfatter-tekst").hide(500);
+    });
+    $("#show").click(function(){
+        $(".omforfatter-bilde, .omforfatter-tekst").show(500);
+    });
+	$("button#toggle").click(function(){
+    	$(".omforfatter-bilde, .omforfatter-tekst").toggle(500);
+	});
+});
+
+</script>
+<!--<link rel="shortcut icon" href="images/nwe2-7_web.jpg">-->
+</head>
+<body>
+	<!--<p>i desktop: få news div og collected-works bøker side om side. mindre scorlling. legg til marginleft til contents, (menu h2) og lenketeksten. gjør om siden slik at det blir en offisiel nettside, og ikke en blogg</p>-->
+	<div class="gridContainer clearfix">
+		<div id="div1" class="fluid">
+			<header class="fluid header">
+				
+				<div class="fluid omforfatter">
+					<div class="fluid tittel">
+						<!--<div class="alistair">
+							<a href="index.html"><img src="images/a1-3.png" alt="alistair maclean"></a>
+						</div>
+						<div class="maclean">
+							<a href="index.html"><img src="images/m1-3.png" alt="alistair maclean"></a>
+						</div>-->
+						<!--<p>div class="tittel"</p>-->
+						<!--<a href="index.html"><h1>Alistair Maclean</h1></a>-->
+<body onLoad="MM_preloadImages('images/am1-3-2.jpg')">
+<a href="index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('tittel','','images/am1-3-2.png',1)"><img id="tittel" src="images/am1-3-2.png" alt="alistair maclean"></a></body>
+						<!--<a href="index.html"><img src="images/am1-3.png" alt="alistair maclean"></a>-->
+
+						<!--<a href="#top">1</a>-->
+					</div>										<!--/div class="fluid tittel"-->
+					<!--<div class="fluid bredtittel">
+					</div>-->
+					<!--<p>div class="omforfatter"</p>-->
+					<nav class="fluid menu"><!--<div class="fluid vannrettborder"></div>-->
+						<a href="index.html" class="current">Home</a>
+						<a href="about.html">About MacLean</a>
+						<a href="book.html">Book Reviews</a>
+						<a href="movie.html">Movie Reviews</a>
+						<a href="first.html">First Editions</a>
+						<a href="news.html">MacLean News</a>
+					</nav>
+					<div class="fluid vannrettborder">
+					</div>
+					<div class="fluid thehardestbuttontobutton">
+						<button id="toggle">Close/Open Author info</button>
+					</div>
+					<div class="fluid omforfatter-bilde-tekst">
+						
+						<div class="fluid omforfatter-bilde">
+							<!--<p>fluid omforfatter-bilde</p>-->
+							<img src="images/sek_person_scid_10508_web.jpg" alt="alistair maclean"/>
+						</div>
+						<div class="fluid omforfatter-tekst">
+							<br>
+							<p>Alistair MacLean was born in Scotland in 1922. In early 1954, he won a short story contest run by the Glasgow Herald with an entry titled "The Dileas", which is included in his maritime collection The Lonely Sea. In the wake of this achievement, he was asked to write a novel; that first book, H.M.S. Ulysses, was published in October 1955. It achieved such wide acclaim that he soon became a full-time writer. (excerpt from About MacLean/Alistair MacLean's Writing Career)</p>
+							<p></p>
+						</div>
+                    </div>						<!--/omforfatter-bilde-tekst-->
+				</div>							<!--/omforfatter-->
+			</header>
+
+			<div class="fluid content">
+				<div class="fluid section">
+					<h2>The Writings & Films of Alistair MacLean</h2><div class="fluid section-columns1-text-index"><br><p>One of the all-time great thriller writers, Alistair MacLean has long been a favorite of mine. I set up this site to share my views about his books and the films based on them.</p><p>I have now reviewed every novel he wrote (see links above)! I am gradually covering more movie treatments of his books; sadly, few are available as home video rentals.</p><p>For each book, I provide an introduction; plot keypoints; strengths and weaknesses; and a rating. Movie reviews are less structured.</p><p>This is all highly subjective, of course! Though your tastes probably aren't identical to mine, I hope my thoughts will help guide you toward enjoyable reading and viewing.</p><p>Click to visit Amazon.com for a large selection of <a href="http://www.amazon.com/s?ie=UTF8&x=0&ref_=nb_ss_gw_1_5&y=0&field-keywords=alistair%20maclean&url=search-alias%3Daps&sprefix=alist">Alistair MacLean's Books and Movies.</a></p></div>
+				</div>
+ 				<!--<p>div class="content"</p>-->
+				<!--<div class="flexslider">
+					<ul class="slides">
+						<li id="slide1">
+							<img src="images/0-M_inferno_ark.jpg" alt="inferno"/>
+						</li>
+						<li id="slide2">
+							<img src="images/0-M_raketten_ark.jpg" alt="raketten"/>
+						</li>
+					</ul>
+				</div>-->
+						<!--samlede verk bøker-->
+					<!--<div class="fluid totop">
+						<a href="index.html#top">To top</a>
+					</div>-->
+					<div class="fluid totop">
+						<a href="#top" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('knapp','','images/amnettsidegrafikkhover_totop3.png',1)"><img id="knapp" src="images/amnettsidegrafikk_totop3.png" alt="knapp"></a>
+					</div>
+				<!--				<div class="bg">
+					<img src="images/WIK_US_Convoy-to-Capetown_1941_kingsacademy.jpg" alt="convoy">
+				</div>-->
+				
+
+			</div>													<!--/content-->
+            <footer class="fluid footer">
+				<!--<p>&copy; Pål Stakvik 2015</p>-->
+				<p>Questions/ideas? Drop me a line: <a href="mailto:info@AlistairMacLean.com">info@AlistairMacLean.com</a></p>
+				<p>Go <a href="http://alistair-maclean.blogspot.nl/">here</a> for more facts about MacLean and about novels by other authors, based on plot summaries he wrote.</p>
+				<br>
+				
+				<p>Literature lover? Learn about my favorite book, Jane Eyre — visit my site at <a href="http://janeeyre.net/">JaneEyre.net!</a></p>
+				<p>alistairmaclean.com redesigned by &copy; Pål Stakvik 2015</p>
+			</footer>
+				
+		</div>														<!--/div id="div1" class="fluid"-->
+	</div>															<!--/container-->
+    <p></p>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alistair MacLean blog</title>
+<link href="css/boilerplate.css" rel="stylesheet" type="text/css">
+<link href="css/stylesheet.css" rel="stylesheet" type="text/css">
+
+<!-- 
+To learn more about the conditional comments around the html tags at the top of the file:
+paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+
+Do the following if you're using your customized build of modernizr (http://www.modernizr.com/):
+* insert the link to your js here
+* remove the link below to the html5shiv
+* add the "no-js" class to the html tags at the top
+* you can also remove the link to respond.min.js if you included the MQ Polyfill in your modernizr build 
+-->
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!--CSS-->
+<!--font-->
+<link href="https://fonts.googleapis.com/css?family=Changa+One" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Muli" rel="stylesheet" type="text/css"><!---normal 400-->
+<link href="http://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet" type="text/css">
+<!--<script src="scripts/respond.min.js"></script>-->
+
+<!-- Place somewhere in the <head> of your document -->
+<!--<link rel="stylesheet" href="flexslider.css" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="jquery.flexslider.js"></script>-->
+
+<!--forslag påhttp://stackoverflow.com/questions/16129880/flexslider-not-working-->
+<!--<link rel="stylesheet" type="text/css" href="http://flexslider.woothemes.com/css/flexslider.css"> 
+<link rel="stylesheet" type="text/css" href="http://lab.mattvarone.com/projects/jquery/totop/css/ui.totop.css">-->
+
+<!--script-->
+
+<!--Place in the <head>, after the three links-->
+<!--	<script type="text/javascript" charset="utf-8">
+  $(window).load(function() {
+    $('.flexslider').flexslider();
+  });
+</script>	-->
+
+<!--forslag på http://stackoverflow.com/questions/16129880/flexslider-not-working-->
+<!--<script type="text/javascript" src="http://flexslider.woothemes.com/js/jquery.flexslider.js"></script> 
+<script type="text/javascript" src="http://flexslider.woothemes.com/js/jquery.easing.js"></script> 
+<script type="text/javascript" src="http://flexslider.woothemes.com/js/jquery.mousewheel.js"></script> 
+<script type="text/javascript" src="http://lab.mattvarone.com/projects/jquery/totop/js/jquery.ui.totop.js"></script>--> 
+
+<!--forslag på http://community.mybb.com/thread-136316.html-->
+<!--<script type="text/javascript">
+jQuery.noConflict();
+jQuery(window).load(function() {
+  jQuery('.flexslider').flexslider({
+    animation: "slide"
+  });
+});
+</script>-->
+
+<!--<script type="text/javascript">jQuery.noConflict();</script>-->
+
+<!--<script type="text/javascript">
+jQuery.noConflict($);
+$(window).load(function() {
+  $('.flexslider').flexslider({
+    animation: "slide"
+  });
+});
+
+</script>-->
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("button#b1").click(function(){
+    	$("#section1").toggle(500);
+	});
+});
+$(document).ready(function(){
+	$("button#b2").click(function(){
+    	$("#section2").toggle(500);
+	});
+});
+$(document).ready(function(){
+	$("button#b3").click(function(){
+    	$("#section3").toggle(500);
+	});
+});
+$(document).ready(function(){
+	$("button#b4").click(function(){
+    	$("#section4").toggle(500);
+	});
+});
+</script>
+</head>
+<body>
+	<!--<p>i desktop: få news div og collected-works bøker side om side. mindre scorlling. legg til marginleft til contents, (menu h2) og lenketeksten. gjør om siden slik at det blir en offisiel nettside, og ikke en blogg</p>-->
+	<div class="gridContainer clearfix">
+		<div id="div1" class="fluid">
+			<header class="fluid header">
+				
+				<div class="fluid omforfatter">
+					<div class="fluid tittel">
+						<!--<div class="alistair">
+							<a href="index.html"><img src="images/a1-3.png" alt="alistair maclean"></a>
+						</div>
+						<div class="maclean">
+							<a href="index.html"><img src="images/m1-3.png" alt="alistair maclean"></a>
+						</div>-->
+						<!--<p>div class="tittel"</p>-->
+						<!--<a href="index.html"><h1>Alistair Maclean</h1></a>-->
+<body onLoad="MM_preloadImages('images/am1-3-2.jpg')">
+<a href="index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('tittel','','images/am1-3-2.png',1)"><img id="tittel" src="images/am2-3.png" alt="alistair maclean"></a></body>
+						<!--<a href="index.html"><img src="images/am1-3.png" alt="alistair maclean"></a>-->
+
+						<!--<a href="#top">1</a>-->
+					</div>
+					<!--<div class="fluid bredtittel">
+					</div>-->
+					<!--<p>div class="omforfatter"</p>-->
+					<nav class="fluid menu"><!--<div class="vannrettborder"></div>-->
+						<a href="index.html">Home</a>
+						<a href="about.html" class="current">About MacLean</a>
+						<a href="book.html">Book Reviews</a>
+						<a href="movie.html">Movie Reviews</a>
+						<a href="first.html">First Editions</a>
+						<a href="news.html">MacLean News</a>
+					</nav>
+					<!--<div class="fluid omforfatter-bilde-tekst">-->		
+						<!--<div class="fluid omforfatter-bilde">
+							<!--<p>fluid omforfatter-bilde</p>-->
+							<!--<img src="images/sek_person_scid_10508_web.jpg" alt="alistair maclean"/>-->
+						<!--</div>-->
+						<!--<div class="fluid omforfatter-tekst">-->
+							<!--<p>Alistair MacLean was born in Scotland in 1922. In early 1954, he won a short story contest run by the Glasgow Herald with an entry titled "The Dileas", which is included in his maritime collection The Lonely Sea. In the wake of this achievement, he was asked to write a novel; that first book, H.M.S. Ulysses, was published in October 1955. It achieved such wide acclaim that he soon became a full-time writer</p>-->
+							<!--<p></p>-->
+						<!--</div>-->
+                    <!--</div>-->						<!--/omforfatter-bilde-tekst-->
+				</div>							<!--/omforfatter-->
+			</header>
+
+			<div class="fluid content">
+ 				<!--<p>div class="content"</p>-->
+				<!--<div class="flexslider">
+					<ul class="slides">
+						<li id="slide1">
+							<img src="images/0-M_inferno_ark.jpg" alt="inferno"/>
+						</li>
+						<li id="slide2">
+							<img src="images/0-M_raketten_ark.jpg" alt="raketten"/>
+						</li>
+					</ul>
+				</div>-->
+				<div id="am" class="fluid section">
+					<h2>About Alistair MacLean <button id="b1">Show/hide</button></h2><div id="section1" class="fluid section-columns2-text"><p>In this section of the site, we look at Alistair MacLean, the man and author. Resources here include a brief biography of Alistair MacLean and a <a href="about.html#key">review</a> of Robert A. Lee's book Alistair MacLean: The Key is Fear, which examines the evolution and common themes of his writing style.</p><p>An interesting fact I hadn't known until long after I created this site: MacLean's second wife, whose maiden name was Mary Marcelle Georgius, co-wrote many books. On various volumes, she was credited as "Contessa Villeneuve De Plessis," "Mrs. Alistair MacLean," or "Mary M. MacLean." Her steady co-author was Milton Bowser, president of a firm called Sitare, which published her books. Many of them are <a href="http://www.amazon.com/b/ref=sr_aj?node=283155&ajr=0">listed at Amazon.com</a> but are unavailable there because they are out of print.</p><p>I haven't seen any of these books; my information comes largely from this Goodreads entry about her. If you're familiar with her writing, please drop me a line.</p></div>
+				</div><!--/div id="am" class"fluid section"-->
+				<div id="lifeandwriting" class="fluid section">
+					<h2>Alistair MacLean's Writing Career <button id="b2">Show/hide</button></h2><div id="section2" class="fluid section-columns2-text"><p>Below is a bare-bones overview of MacLean's career. For a vastly more detailed description, I recommend Jack Webster's biography <a href="#life">Alistair MacLean: A Life.</a></p><h3>Early Life</h3><p>Alistair MacLean was born in Scotland in 1922. After serving five years in the Royal Navy during World War II (often on dangerous assignments), he attended college and became a teacher. In early 1954, he won a short story contest run by the Glasgow Herald with an entry titled "The Dileas", which is included in his maritime collection The Lonely Sea. In the wake of this achievement, he was asked to write a novel; that first book, <a href="book.html#w-ulysses">H.M.S. Ulysses</a>, was published in October 1955. It achieved such wide acclaim that he soon became a full-time writer.</p><h3>Top-Notch Novelist</h3><p>MacLean's second novel, <a href="book.html#w-guns">The Guns of Navarone</a>, brought him great international fame. It also caught the eye of movie producers, and a <a href="movie.html#w-guns">movie version</a> of this book became the top-grossing film of 1961. Thus inspired (and enriched), MacLean continued to write excellent thrillers, about one each year. Many of them were filmed, with <a href="movie.html#w-where">Where Eagles Dare</a> widely considered the best — its plot matched the book closely because MacLean wrote the script himself!
+From 1955 to about 1970, MacLean produced his best work. All of the books that I rank in his top ten were among the 15 he wrote during that period.
+</p><h3>Downward Slide</h3><p>As MacLean got older, his books grew steadily less impressive. The five he wrote in the early to mid 1970s are just below the middle of my rankings. His eight later ones (starting with 1977's <a href="book.html#w-seawitch">Seawitch</a>) show him basically going through the motions, rather than cranking out more ambitious stories. Alcoholism probably harmed the quality of his writing, too; it contributed to his 1987 death.</p><h3>Themes in MacLean's Novels</h3><p>While the settings often differ wildly, certain themes repeatedly appear in Alistair MacLean's novels. Frequently, the "hero" is a highly skilled but cynical agent (inspector, soldier, spy, etc.) who bitterly blames himself for mistakes even while he is brilliantly and ruthlessly unraveling the bad guys' plots. He, or one of his closest allies, is often depicted as having an astounding tolerance for alcohol (a sad plot device, in light of MacLean's own alcoholism). His name is often John, and even more often, the heroine and/or love interest is named Mary or Marie or Maria. (MacLean's second wife's name was Marcelle; he referred to her as Mary.)</p><p>Given his Royal Navy experience, it's not surprising that many of his stories concern that conflict or its aftermath, or that others take place largely at sea. A typical MacLean villain is an evil and cunning criminal with an immensely strong and sadistic sidekick. Sometimes, the heroes of his books have unmatched skills in their area of interest and are then persuaded to become operatives: mountaineer Keith Mallory in <a href="book.html#w-guns">The Guns of Navarone</a> and <a href="book.html#w-force">Force 10 from Navarone</a>, Grand Prix champion Johnny Harlow in <a href="book.html#w-way">The Way to Dusty Death</a>, performers in <a href="book.html#w-circus">Circus.</a></p><p>Want to write your own MacLean-ish story? Combine all those themes, add plenty of slam-bang action and detailed psychological insights, and season with generous dollops of scenery, history, and weaponry. Go to it!</p></div>
+				</div><!--/div id="lifeandwriting" class"fluid section"-->
+				<div id="life" class="fluid section">
+					<h2>Alistair MacLean: A life <button id="b3">Show/hide</button></h2><div id="section3" class="fluid section-columns2-text"><h3>A biography by Jack Webster</h3><p>How could I have missed it? In the years since I'd acquired the AlistairMacLean.com address and started reviewing his novels and related films there, I hadn't heard of a MacLean biography. A fortunate Amazon.com search led me to stumble upon <a href="http://www.amazon.com/gp/product/1855925761/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1855925761&linkCode=as2&tag=maclean-20">Alistair MacLean: A Life</a>, by Jack Webster, a features writer from Glasgow Herald.</p><p>Released in 1991 (four years after his death), the book reflects considerable research and many interviews, all in the service of illuminating MacLean's remarkable life. From it, I learned:</p><p>how young Alistair's loss of both his father and his oldest brother affected his later years</p><p>the startling success of HMS Ulysses, and his disciplined writing habits that produced it</p><p>his sometimes tempestuous relationship with first wife Gisela, and the three sons they raised</p><p>countless potential film deals, and why some stories never reached the screen</p><p>second wife Marcelle's destructive effects on Alistair's finances and mental health</p><p>his on-again, off-again, too-frequent love affair with alcohol</p><p>his role in the UNACO series, where other writers based books on his ideas</p><p>his peripatetic life, dwelling in many cities and countries, and how he ended up in Geneva and Yugoslavia</p><p>why he was buried in the same Swiss cemetery as Richard Burton (star of Where Eagles Dare)</p><p>... and much more</p><br><p>Fair warning: this book was written for a British, and maybe particularly Scottish, audience. Webster assumed his readers would understand references such as "carried off the gold medal at the Mod in Dundee," "a son of the manse" [cited ad nauseum], and the names of various neighborhoods and persons apparently prominent in the British Isles.</p><br><p>While Webster amassed an impressive amount of information, he was not a great literary stylist. He tries to imbue many of the events with greater importance and deeper meaning (and more flowery prose) than they merit. He also dwells repeatedly on certain MacLean idiosycrasies, which often don't seem all that idiosyncratic (such as Alistair's habit of sometimes declaring his own greatness in one moment, then expressing deep insecurities in the next).</p><br><p>People in this book often treat each other shabbily, but the author saves special venom for Marcelle, who took MacLean's heart [while he was still married], much of his savings, and his peace of mind. So severe is Webster's vituperation, it makes the reader wonder whether one of his interviewees urged him to repay the character assassination that Marcelle managed to visit upon Alistair even after they had both died (the ugly details of which appear in this book). Perhaps that was his first wife, Gisela, who apparently had every right to view Marcelle as an amoral homewrecker. The information Gisela provided to Webster is a main attraction of this book; it's bittersweet to read it while realizing that she died only recently (2011), twenty years after its publication.</p><p>One nice bonus is a previously unpublished MacLean short story, The Cruise of the Golden Girl, which is based on a harrowing sailing trip he took with several friends. I'm not nautically inclined, but his prose was in peak form here — sharp, pulsating with life, and occasionally hilarious.
+
+Whatever imperfections <a href="http://www.amazon.com/gp/product/1855925761/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1855925761&linkCode=as2&tag=maclean-20">Alistair MacLean: A Life</a> may contain, it is an absolute must-read for the thriller fan who'd like to know what made him tick. It's given me a far fuller perspective on MacLean's life and work</p></div>
+				</div><!--/div id="life" class"fluid section"-->
+				<div id="key" class="fluid section">
+					<h2>Alistair MacLean: The Key is Fear <button id="b4">Show/hide</button></h2><div id="section4" class="fluid section-columns2-text"><h3>A review of the book by Robert A. Lee</h3><p>Literary analysis is always a popular topic for scholars. Delving into the finer points of Shakespeare or Cervantes or Faulkner, and adding your own spin on their meaning, is a common way to produce that master's thesis or doctoral dissertation.</p><p>It came as a surprise, though, when I discovered that a certain Robert A. Lee had published, in 1976, an analysis of Alistair MacLean's literary stylings. His book, Alistair MacLean: The Key is Fear, is Volume Two in "The Milford Series — Popular Writers of Today," a set of 30 64-page monographs from The Borgo Press in San Bernardino, California. I haven't yet found a full list of the titles, but the series had a strong science-fiction bent, as the authors profiled included Robert Heinlein, Arthur C. Clarke, Ursula Le Guin, and Ray Bradbury. (Publisher Robert Reginald was apparently a sci-fi devotee.)</p><p>Lee's book covers MacLean's writing career from its very beginnings through the 1976 release of The Golden Gate. From that limited vantage point (which preceded MacLean's later mediocre-to-bad period), he has mostly praise for the author's skill.</p><p>Central to the book is an evolving discussion of themes that commonly appear in MacLean's works. To sum up (and perhaps drastically oversimplify) Lee's ideas: MacLean is at his best when he combines danger from both people and nature; deception as to the allegiances of important characters; and descriptions (based on personal experience) of "the sea, the Arctic wastes, and the journeys men make through and over them." His writing quality suffers when he sets his stories in areas or environments he doesn't fully understand; when he makes his characters so extravagantly talented that they seem like comic-strip heroes; and when his protagonists work outside the law, rather than with it, to overcome evil.</p><p>While I concur with Lee on many larger points about MacLean's talents, we differ markedly on the quality of specific books. Of the five novels that top my ratings, only one — Night Without End — earned similar praise from Lee. He lambasted my favorite book, The Secret Ways, as "one of MacLean's weaker efforts ... over-written, over-long, and probably over-praised." (That last term, of course, means that many reviewers agreed with me!) On the other hand, he dubbed Bear Island "quite possibly his finest achievement to date," despite a rambling web of previously unknown relationships, revealed at the denouement, that was so extensive and cliched that it read like a parody.</p><p>Lee concludes his analysis by writing, "MacLean seems to have grown weary of the whole game; his last few books lack the imaginative spark that kept his early fiction moving, even when the plots were less than his best." He's lucky he wrote this book when he did, before subjecting himself to such misbegotten late-MacLean works as [shudder] Seawitch.</p><p>In terms of deathless prose, few would confuse Alistair MacLean with history's literary giants. But his idiosyncratic and highly successful style certainly merits the type of examination it got from Lee. If you're a confirmed MacLean buff, find yourself a copy of this book and enjoy reading (and maybe sometimes disagreeing with) his well-studied conclusions.</p></div>
+                </div><!--/div id="key" class"fluid section"-->
+					<div class="fluid totop">
+						<a href="#top" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('knapp','','images/amnettsidegrafikkhover_totop3.png',1)"><img id="knapp" src="images/amnettsidegrafikk_totop3.png" alt="knapp"></a>
+					</div>
+				
+				<!--				<div class="bg">
+					<img src="images/WIK_US_Convoy-to-Capetown_1941_kingsacademy.jpg" alt="convoy">
+				</div>-->
+				
+				
+
+			</div>													<!--/content-->
+            <footer class="fluid footer">
+				<!--<p>&copy; Pål Stakvik 2015</p>-->
+				<p>Questions/ideas? Drop me a line: <a href="mailto:info@AlistairMacLean.com">info@AlistairMacLean.com</a></p>
+				<p>Go <a href="http://alistair-maclean.blogspot.nl/">here</a> for more facts about MacLean and about novels by other authors, based on plot summaries he wrote.</p>
+				<br>
+				<p>Literature lover? Learn about my favorite book, Jane Eyre — visit my site at <a href="http://janeeyre.net/">JaneEyre.net!</a></p>
+				<p>alistairmaclean.com redesigned by &copy; Pål Stakvik 2015</p>
+			</footer>
+				
+		</div>														<!--/div id="div1" class="fluid"-->
+	</div>															<!--/container-->
+    <p></p>
+</body>
+</html>

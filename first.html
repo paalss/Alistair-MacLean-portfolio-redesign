@@ -1,0 +1,399 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alistair MacLean blog</title>
+<link href="css/boilerplate.css" rel="stylesheet" type="text/css">
+<link href="css/stylesheet.css" rel="stylesheet" type="text/css">
+
+<!-- 
+To learn more about the conditional comments around the html tags at the top of the file:
+paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+
+Do the following if you're using your customized build of modernizr (http://www.modernizr.com/):
+* insert the link to your js here
+* remove the link below to the html5shiv
+* add the "no-js" class to the html tags at the top
+* you can also remove the link to respond.min.js if you included the MQ Polyfill in your modernizr build 
+-->
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!--CSS-->
+<!--font-->
+<link href="https://fonts.googleapis.com/css?family=Changa+One" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Muli" rel="stylesheet" type="text/css"><!---normal 400-->
+<link href="http://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet" type="text/css">
+<!--<script src="scripts/respond.min.js"></script>-->
+
+<!-- Place somewhere in the <head> of your document -->
+<!--<link rel="stylesheet" href="flexslider.css" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="jquery.flexslider.js"></script>-->
+
+<!--forslag påhttp://stackoverflow.com/questions/16129880/flexslider-not-working-->
+<!--<link rel="stylesheet" type="text/css" href="http://flexslider.woothemes.com/css/flexslider.css"> 
+<link rel="stylesheet" type="text/css" href="http://lab.mattvarone.com/projects/jquery/totop/css/ui.totop.css">-->
+
+<!--script-->
+
+<!--Place in the <head>, after the three links-->
+<!--	<script type="text/javascript" charset="utf-8">
+  $(window).load(function() {
+    $('.flexslider').flexslider();
+  });
+</script>	-->
+
+<!--forslag på http://stackoverflow.com/questions/16129880/flexslider-not-working-->
+<!--<script type="text/javascript" src="http://flexslider.woothemes.com/js/jquery.flexslider.js"></script> 
+<script type="text/javascript" src="http://flexslider.woothemes.com/js/jquery.easing.js"></script> 
+<script type="text/javascript" src="http://flexslider.woothemes.com/js/jquery.mousewheel.js"></script> 
+<script type="text/javascript" src="http://lab.mattvarone.com/projects/jquery/totop/js/jquery.ui.totop.js"></script>--> 
+
+<!--forslag på http://community.mybb.com/thread-136316.html-->
+<!--<script type="text/javascript">
+jQuery.noConflict();
+jQuery(window).load(function() {
+  jQuery('.flexslider').flexslider({
+    animation: "slide"
+  });
+});
+</script>-->
+
+<!--<script type="text/javascript">jQuery.noConflict();</script>-->
+
+<!--<script type="text/javascript">
+jQuery.noConflict($);
+$(window).load(function() {
+  $('.flexslider').flexslider({
+    animation: "slide"
+  });
+});
+
+</script>-->
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("button#b1").click(function(){
+    	$("#section1").toggle(500);
+	});
+});
+$(document).ready(function(){
+	$("button#b2").click(function(){
+    	$("#section2").toggle(500);
+	});
+});
+$(document).ready(function(){
+	$("button#b3").click(function(){
+    	$("#section3").toggle(500);
+	});
+});
+$(document).ready(function(){
+	$("button#b4").click(function(){
+    	$("#section4").toggle(500);
+	});
+});
+</script>
+</head>
+<body>
+	<!--<p>i desktop: få news div og collected-works bøker side om side. mindre scorlling. legg til marginleft til contents, (menu h2) og lenketeksten. gjør om siden slik at det blir en offisiel nettside, og ikke en blogg</p>-->
+	<div class="gridContainer clearfix">
+		<div id="div1" class="fluid">
+			<header class="fluid header">
+				
+				<div class="fluid omforfatter">
+					<div class="fluid tittel">
+						<!--<div class="alistair">
+							<a href="index.html"><img src="images/a1-3.png" alt="alistair maclean"></a>
+						</div>
+						<div class="maclean">
+							<a href="index.html"><img src="images/m1-3.png" alt="alistair maclean"></a>
+						</div>-->
+						<!--<p>div class="tittel"</p>-->
+						<!--<a href="index.html"><h1>Alistair Maclean</h1></a>-->
+<body onLoad="MM_preloadImages('images/am1-3-2.jpg')">
+<a href="index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('tittel','','images/am1-3-2.png',1)"><img id="tittel" src="images/am2-3.png" alt="alistair maclean"></a></body>
+						<!--<a href="index.html"><img src="images/am1-3.png" alt="alistair maclean"></a>-->
+
+						<!--<a href="#top">1</a>-->
+					</div>
+					<!--<div class="fluid bredtittel">
+					</div>-->
+					<!--<p>div class="omforfatter"</p>-->
+					<nav class="fluid menu"><!--<div class="vannrettborder"></div>-->
+						<a href="index.html">Home</a>
+						<a href="about.html">About MacLean</a>
+						<a href="book.html">Book Reviews</a>
+						<a href="movie.html">Movie Reviews</a>
+						<a href="first.html" class="current">First Editions</a>
+						<a href="news.html">MacLean News</a>
+					</nav>
+					<!--<div class="fluid omforfatter-bilde-tekst">-->		
+						<!--<div class="fluid omforfatter-bilde">
+							<!--<p>fluid omforfatter-bilde</p>-->
+							<!--<img src="images/sek_person_scid_10508_web.jpg" alt="alistair maclean"/>-->
+						<!--</div>-->
+						<!--<div class="fluid omforfatter-tekst">-->
+							<!--<p>Alistair MacLean was born in Scotland in 1922. In early 1954, he won a short story contest run by the Glasgow Herald with an entry titled "The Dileas", which is included in his maritime collection The Lonely Sea. In the wake of this achievement, he was asked to write a novel; that first book, H.M.S. Ulysses, was published in October 1955. It achieved such wide acclaim that he soon became a full-time writer</p>-->
+							<!--<p></p>-->
+						<!--</div>-->
+                    <!--</div>-->						<!--/omforfatter-bilde-tekst-->
+				</div>							<!--/omforfatter-->
+			</header>
+
+			<div class="fluid content">
+ 				<!--<p>div class="content"</p>-->
+				<!--<div class="flexslider">
+					<ul class="slides">
+						<li id="slide1">
+							<img src="images/0-M_inferno_ark.jpg" alt="inferno"/>
+						</li>
+						<li id="slide2">
+							<img src="images/0-M_raketten_ark.jpg" alt="raketten"/>
+						</li>
+					</ul>
+				</div>-->
+			<h2>First Editions</h2>
+				<div class="fluid section">
+				<div class="section-columns1-text"><p>A visitor to this website, <strong>Terry Zobeck</strong>, generously provided these cover images of his Alistair MacLean first editions. His collection covers both UK and U.S. editions. I have laid them out chronologically. (I apologize if this page takes a while to load; I wanted to include all covers at substantial sizes, which takes a lot of data.)</p>
+<p>It's interesting to see how the covers are often quite similar but equally often bear little resemblance to each other. Early on, many more UK covers featured people, but that trend switched later. Some U.S. covers added brief descriptions of the books. Typography was sometimes the main difference (I especially like the "mod" lettering on the UK version of Circus). Seawitch shows the greatest contrast — would you be more enticed by an illustration of men aiming rifles beneath chattering helicopters, or by an image of a rusty barrel sitting in some water? Anyway, enjoy this collection!</p></div>
+				</div>
+				<div id="first" class="fluid section">
+					<div class="fluid section">
+						<!--<div class="fluid firsteditions">
+							<h3>UK first Editions</h3>
+						</div>
+						<div class="fluid firsteditions">
+							<h3>US first Editions</h3>
+						</div>-->
+						<div class="fluid firsteditions">
+							<img src="images/ulyssesuk_alistairmaclean.png" alt="hms ulysses">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/ulyssesus_alistairmaclean.png" alt="hms ulysses">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/navaroneuk_alistairmaclean.png" alt="the guns of navarone">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/navaroneus_alistairmaclean.png" alt="the guns of navarone">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/southuk_alistairmaclean.png" alt="south by java head">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/southus_alistairmaclean.png" alt="south by java head">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/lastuk_alistairmaclean.png" alt="the last frontier">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/lastus_alistairmaclean.png" alt="the secret ways">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/nightuk_alistairmaclean.png" alt="night without end">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/nightus_alistairmaclean.png" alt="night without end">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/fearuk_alistairmaclean.png" alt="fear is the key">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/fearus_alistairmaclean.png" alt="fear is the key">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/darkuk_alistairmaclean.png" alt="the dark crusader">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/darkus_alistairmaclean.png" alt="the dark crusader">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/goldenrendezvousuk_alistairmaclean.png" alt="the golden rendezvous">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/goldenrendezvousus_alistairmaclean.png" alt="the golden rendezvous">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/satanuk_alistairmaclean.png" alt="the satan bug">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/satanus_alistairmaclean.png" alt="the satan bug">
+						</div>
+
+						<div class="fluid firsteditions">
+							<img src="images/iceuk_alistairmaclean.png" alt="ice station zebra">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/iceus_alistairmaclean.png" alt="ice station zebra">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/whenuk_alistairmaclean.png" alt="when eight bells toll">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/whenus_alistairmaclean.png" alt="when eight bells toll">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/whereuk_alistairmaclean.png" alt="where ealges dare">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/whereus_alistairmaclean.png" alt="where ealges dare">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/forceuk_alistairmaclean.png" alt="force 10 from navarone">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/forceus_alistairmaclean.png" alt="force 10 from navarone">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/puppetuk_alistairmaclean.png" alt="puppet on a chain">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/puppetus_alistairmaclean.png" alt="puppet on a chain">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/caravanuk_alistairmaclean.png" alt="caravan to vaccarès">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/caravanuk_alistairmaclean.png" alt="caravan to vaccarès">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/bearuk_alistairmaclean.png" alt="bear island">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/bearus_alistairmaclean.png" alt="bear island">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/wayuk_alistairmaclean.png" alt="the way to dusty death">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/wayus_alistairmaclean.png" alt="the way to dusty death">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/breakheartuk_alistairmaclean.png" alt="breakheart pass">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/breakheartus_alistairmaclean.png" alt="breakheart pass">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/circusuk_alistairmaclean.png" alt="circus">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/circusus_alistairmaclean.png" alt="circus">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/goldengateuk_alistairmaclean.png" alt="the golden gate">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/goldengateus_alistairmaclean.png" alt="the golden gate">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/seawitchuk_alistairmaclean.png" alt="seawitch">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/seawitchus_alistairmaclean.png" alt="seawitch">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/goodbyeuk_alistairmaclean.png" alt="goodbye california">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/goodbyeus_alistairmaclean.png" alt="goodbye california">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/athabascauk_alistairmaclean.png" alt="athabasca">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/athabascaus_alistairmaclean.png" alt="athabasca">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/riveruk_alistairmaclean.png" alt="river of death">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/riverus_alistairmaclean.png" alt="river of death">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/partisansuk_alistairmaclean.png" alt="partisans">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/partisansus_alistairmaclean.png" alt="partisans">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/floodgateuk_alistairmaclean.png" alt="floodgate">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/floodgateus_alistairmaclean.png" alt="floodgate">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/andreasuk_alistairmaclean.png" alt="san andreas">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/andreasus_alistairmaclean.png" alt="san andreas">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/lonelyuk_alistairmaclean.png" alt="the lonely sea">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/lonelyus_alistairmaclean.png" alt="the lonely sea">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/santoriniuk_alistairmaclean.png" alt="santorini">
+						</div>
+						<div class="fluid firsteditions">
+							<img src="images/santorinius_alistairmaclean.png" alt="santorini">
+						</div>
+					</div>
+                </div><!--/div id="key" class"fluid section"-->
+					<div class="fluid totop">
+						<a href="#top" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('knapp','','images/amnettsidegrafikkhover_totop3.png',1)"><img id="knapp" src="images/amnettsidegrafikk_totop3.png" alt="knapp"></a>
+					</div>
+				
+				<!--				<div class="bg">
+					<img src="images/WIK_US_Convoy-to-Capetown_1941_kingsacademy.jpg" alt="convoy">
+				</div>-->
+				
+				
+
+			</div>													<!--/content-->
+            <footer class="fluid footer">
+				<!--<p>&copy; Pål Stakvik 2015</p>-->
+				<p>Questions/ideas? Drop me a line: <a href="mailto:info@AlistairMacLean.com">info@AlistairMacLean.com</a></p>
+				<p>Go <a href="http://alistair-maclean.blogspot.nl/">here</a> for more facts about MacLean and about novels by other authors, based on plot summaries he wrote.</p>
+				<br>
+				<p>Literature lover? Learn about my favorite book, Jane Eyre — visit my site at <a href="http://janeeyre.net/">JaneEyre.net!</a></p>
+				<p>alistairmaclean.com redesigned by &copy; Pål Stakvik 2015</p>
+			</footer>
+				
+		</div>														<!--/div id="div1" class="fluid"-->
+	</div>															<!--/container-->
+    <p></p>
+</body>
+</html>

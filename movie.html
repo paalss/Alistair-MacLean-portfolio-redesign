@@ -1,0 +1,555 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alistair MacLean blog</title>
+<link href="css/boilerplate.css" rel="stylesheet" type="text/css">
+<link href="css/stylesheet.css" rel="stylesheet" type="text/css">
+
+<!-- 
+To learn more about the conditional comments around the html tags at the top of the file:
+paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+
+Do the following if you're using your customized build of modernizr (http://www.modernizr.com/):
+* insert the link to your js here
+* remove the link below to the html5shiv
+* add the "no-js" class to the html tags at the top
+* you can also remove the link to respond.min.js if you included the MQ Polyfill in your modernizr build 
+-->
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!--CSS-->
+<!--font-->
+<link href="https://fonts.googleapis.com/css?family=Changa+One" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Muli" rel="stylesheet" type="text/css"><!---normal 400-->
+<link href="http://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet" type="text/css">
+<!--<script src="scripts/respond.min.js"></script>-->
+
+<!-- Place somewhere in the <head> of your document -->
+<!--<link rel="stylesheet" href="flexslider.css" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="jquery.flexslider.js"></script>
+-->
+<!--forslag påhttp://stackoverflow.com/questions/16129880/flexslider-not-working-->
+<!--<link rel="stylesheet" type="text/css" href="http://flexslider.woothemes.com/css/flexslider.css"> 
+<link rel="stylesheet" type="text/css" href="http://lab.mattvarone.com/projects/jquery/totop/css/ui.totop.css">-->
+
+<!--script-->
+
+<!--Place in the <head>, after the three links-->
+<!--	<script type="text/javascript" charset="utf-8">
+  $(window).load(function() {
+    $('.flexslider').flexslider();
+  });
+</script>	-->
+
+<!--forslag på http://stackoverflow.com/questions/16129880/flexslider-not-working-->
+<!--<script type="text/javascript" src="http://flexslider.woothemes.com/js/jquery.flexslider.js"></script> 
+<script type="text/javascript" src="http://flexslider.woothemes.com/js/jquery.easing.js"></script> 
+<script type="text/javascript" src="http://flexslider.woothemes.com/js/jquery.mousewheel.js"></script> 
+<script type="text/javascript" src="http://lab.mattvarone.com/projects/jquery/totop/js/jquery.ui.totop.js"></script>--> 
+
+<!--forslag på http://community.mybb.com/thread-136316.html-->
+<!--<script type="text/javascript">
+jQuery.noConflict();
+jQuery(window).load(function() {
+  jQuery('.flexslider').flexslider({
+    animation: "slide"
+  });
+});
+</script>-->
+
+<!--<script type="text/javascript">jQuery.noConflict();</script>-->
+
+<!--<script type="text/javascript">
+jQuery.noConflict($);
+$(window).load(function() {
+  $('.flexslider').flexslider({
+    animation: "slide"
+  });
+});
+
+</script>-->
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#hide").click(function(){
+        $(".section-columns2-text").hide(500);
+    });
+    $("#show").click(function(){
+        $("#w-ulysses").show(500);
+    });
+//	$("button.b-everysection").click(function(){
+//		$(".section-columns2-text").toggle(500);
+//	};
+	$("button#b-fiction").click(function(){
+    	$(".fiction").toggle(500);
+	});
+	$("button#b-secret").click(function(){
+    	$("#w-secret").toggle(500);
+	});
+	$("button#b-guns").click(function(){
+    	$("#w-guns").toggle(500);
+	});
+	$("button#b-satan").click(function(){
+    	$("#w-satan").toggle(500);
+	});
+	$("button#b-ice").click(function(){
+    	$("#w-ice").toggle(500);
+	});
+	$("button#b-where").click(function(){
+    	$("#w-where").toggle(500);
+	});
+	$("button#b-when").click(function(){
+    	$("#w-when").toggle(500);
+	});
+	$("button#b-puppet").click(function(){
+    	$("#w-puppet").toggle(500);
+	});
+	$("button#b-fear").click(function(){
+    	$("#w-fear").toggle(500);
+	});
+	$("button#b-caravan").click(function(){
+    	$("#w-caravan").toggle(500);
+	});
+	$("button#b-breakheart").click(function(){
+    	$("#w-breakheart").toggle(500);
+	});
+	$("button#b-goldenrendezvous").click(function(){
+    	$("#w-goldenrendezvous").toggle(500);
+	});
+	$("button#b-force").click(function(){
+    	$("#w-force").toggle(500);
+	});
+	$("button#b-bear").click(function(){
+    	$("#w-bear").toggle(500);
+	});
+	$("button#b-river").click(function(){
+    	$("#w-river").toggle(500);
+	});
+});
+
+</script>
+</head>
+<body>
+	<!--<p>i desktop: få news div og collected-works bøker side om side. mindre scorlling. legg til marginleft til contents, (menu h2) og lenketeksten. gjør om siden slik at det blir en offisiel nettside, og ikke en blogg</p>-->
+	<div class="gridContainer clearfix"><!--682-->
+		<div id="div1" class="fluid">
+			<header class="fluid header">
+				
+				<div class="fluid omforfatter">
+					<div class="fluid tittel">
+						<!--<div class="alistair">
+							<a href="index.html"><img src="images/a1-3.png" alt="alistair maclean"></a>
+						</div>
+						<div class="maclean">
+							<a href="index.html"><img src="images/m1-3.png" alt="alistair maclean"></a>
+						</div>-->
+						<!--<p>div class="tittel"</p>-->
+						<!--<a href="index.html"><h1>Alistair Maclean</h1></a>-->
+<body onLoad="MM_preloadImages('images/am1-3-2.jpg')">
+<a href="index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('tittel','','images/am1-3-2.png',1)"><img id="tittel" src="images/am2-3.png" alt="alistair maclean"></a></body>
+						<!--<a href="index.html"><img src="images/am1-3.png" alt="alistair maclean"></a>-->
+
+						<!--<a href="#top">1</a>-->
+					</div>
+					<!--<div class="fluid bredtittel">
+					</div>-->
+					<!--<p>div class="omforfatter"</p>-->
+					<nav class="fluid menu"><!--<div class="vannrettborder"></div>-->
+						<a href="index.html">Home</a>
+						<a href="about.html">About MacLean</a>
+						<a href="book.html">Book Reviews</a>
+						<a href="movie.html" class="current">Movie Reviews</a>
+						<a href="first.html">First Editions</a>
+						<a href="news.html">MacLean News</a>
+					</nav>
+					<div class="fluid omforfatter-bilde-tekst">		
+						<!--<div class="fluid omforfatter-bilde">-->
+							<!--<p>fluid omforfatter-bilde</p>-->
+							<!--<img src="images/sek_person_scid_10508_web.jpg" alt="alistair maclean"/>-->
+						<!--</div>-->
+						<!--<div class="fluid omforfatter-tekst">-->
+							<!--<p>Alistair MacLean was born in Scotland in 1922. In early 1954, he won a short story contest run by the Glasgow Herald with an entry titled "The Dileas", which is included in his maritime collection The Lonely Sea. In the wake of this achievement, he was asked to write a novel; that first book, H.M.S. Ulysses, was published in October 1955. It achieved such wide acclaim that he soon became a full-time writer</p>-->
+							<!--<p></p>-->
+						<!--</div>-->
+                    </div>						<!--/omforfatter-bilde-tekst-->
+				</div>							<!--/omforfatter-->
+			</header>
+			<div class="fluid content">
+				<h2>Movie reviews</h2>
+					<div class="section-columns1-text">
+						<p>(Although 15 of Alistair MacLean's books were eventually made into movies, not all of them are available on home video. I am gradually adding more reviews as I acquire more movies, and I hope to expand the reviews further as additional movies reach the home market.)</p>
+					</div><!--about movie page-->
+				<div id="adaptions" class="fluid collectedworks">
+					<!--<p>div class="collectedworks"</p>-->
+					<h2>Movie reviews menu <button id="b-fiction">Show/hide</button></h2>
+            		<div class="fluid fiction">
+						<div class="section">
+							<p>Click on a movie-cover/poster to read its review</p>
+						</div>
+						<!--<h3>Fiction</h3>-->
+						<!--<p>div class="fiction"</p>-->
+						<div class="fluid element">
+							<a href="#w-secret"><img id="secret" src="images/secret_moviepostershop.jpg" alt="the secret ways"></a>
+							<!--<img src="images/ulysses_amazon.jpg" alt="hms ulysses"/>-->
+		   					<h3>The Secret Ways</h3>
+							<p>1961</p>
+           		     	</div>
+						<div class="fluid element">
+							<a href="#w-guns"><img id="guns" src="images/guns2_amazon.jpg" alt="the guns of navarone"></a>
+							<!--<img src="images/guns_amazon.jpg" alt="the guns of navarone"/>-->
+							<h3>The Guns of Navarone</h3>
+          	   				<p>1961</p>
+          	   		   	</div>
+						<div class="fluid element">
+							<a href="#w-satan"><img id="satan" src="images/satan2_imdb.jpg" alt="the satan bug"></a>
+							<!--<img src="images/south2_amazon.jpg" alt="south by java head"/>-->
+							<h3>The Satan Bug</h3>
+							<p>1965</p>
+       	         		</div>
+						<div class="fluid element">
+							<a href="#w-ice"><img id="ice" src="images/ice_imdb.jpg" alt="ice station zebra"></a>
+							<!--<img src="images/last2_amazon.jpg" alt="the last frontier"/>-->
+							<h3>Ice Station Zebra</h3>
+							<p>1968</p>
+						</div>
+						<div class="fluid element">
+							<a href="#w-where"><img src="images/where_imdb.jpg" alt="where eagles dare"/></a>
+							<h3>Where Eagles Dare</h3>
+							<p>1968</p>
+						</div>
+            	        <div class="fluid element">
+							<a href="#w-when"><img src="images/When_wikipedia.jpg" alt="When Eight Bells Toll"/></a>
+							<h3>When Eight Bells Toll</h3>
+							<p>1971</p>
+						</div>
+						<div class="fluid element">
+							<a href="#w-puppet"><img src="images/puppet2_amazon.jpg" alt="Puppet on a Chain"/></a>
+							<h3>Puppet on a Chain</h3>
+							<p>1971</p>
+						</div>
+						<div class="fluid element">
+							<a href="#w-fear"><img src="images/fear2_amazon.jpg" alt="Fear is the Key"/></a>
+							<h3>Fear is the Key</h3>
+							<p>1972</p>
+						</div>
+						<div class="fluid element">
+							<a href="#w-caravan"><img src="images/caravan2_amazon.jpg" alt="Caravan to Vaccarès"/></a>
+							<h3>Caravan to Vaccarès</h3>
+							<p>1974</p>
+						</div>
+						<div class="fluid element">
+							<a href="#w-breakheart"><img src="images/breakheart2_amazon.jpg" alt="Breakheart Pass"/></a>
+							<h3>Breakheart Pass</h3>
+							<p>1975</p>
+						</div>
+						<div class="fluid element">
+							<a href="#w-goldenrendezvous"><img src="images/goldenrendezvous2_amazon.jpg" alt="Golden Rendezvous"/></a>
+							<h3>Golden Rendezvous</h3>
+							<p>1977</p>
+						</div>
+						<div class="fluid element">
+							<a href="#w-force"><img src="images/force_imdb.jpg" alt="force 10 from navarone"/></a>
+							<h3>Force 10 from Navarone</h3>
+							<p>1978</p>
+						</div>
+						<div class="fluid element">
+							<a href="#w-bear"><img src="images/bear2_amazon.jpg" alt="bear island"/></a>
+							<h3>Bear Island</h3>
+							<p>1979</p>
+						</div>
+						<div class="fluid element">
+							<a href="#w-river"><img src="images/river2_amazon.jpg" alt="River of Death"/></a>
+							<h3>River of Death</h3>
+							<p>1989</p>
+						</div>
+						<!--<p>/div class="fiction"</p>-->
+					</div><!--fluid fiction-->
+                    <!--<p>/div class="collectedworks"</p>-->
+				</div>
+					
+				<div id="reviews" class="fluid reviews">
+					<div class="fluid bookreview">
+						<h2>The Secret Ways <button id="b-secret">Show/hide review</button></h2>
+						<div id="w-secret" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#adaptions" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('secret-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="secret-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/secret_moviepostershop.jpg" alt="the secret ways"/><h3>The Secret Ways:</h3>
+						<a href="http://www.imdb.com/title/tt0055423/?ref_=rvi_tt">imdb</a>
+						</div>
+						<p>It's hard to review a movie based on a favorite book. Even a respectable film will fall short of the reader's lofty expectations. Still, films that fulfill a beloved book's promise are not unheard of; examples of outstanding films based on some of my favorite books include the Lord of the Rings trilogy and To Kill A Mockingbird.</p><p>Site readers know that <a href="book.html#w-last">The Secret Ways</a> (a.k.a. The Last Frontier) is my top-ranked MacLean work. Only a masterful film could have lived up to the gripping tale of early-Cold-War espionage inside Communist Hungary.</p><p>Let me start by stating that this — the first MacLean-based film released, months before the far superior <a href="#w-guns">The Guns of Navarone</a> — is not a masterful film. Perhaps that's why it is unavailable through normal channels; as of this writing, neither Amazon.com nor eBay had any listings for it. The copy I watched (kindly provided by site reader Greg Krewski) was a commercially sold DVD that had merely been dubbed from a televised showing on the American Movie Classics channel. (Not being an expert on intellectual property, I don't know whether this product violates copyrights.)</p><p>The plot bears only a superficial resemblance to MacLean's original. It does take place in Hungary (after a long and often nonsensical invented segment in Vienna, which seems largely designed to showcase a mysterious blonde bombshell). Also, many characters have the correct names. But nearly all similarity ends there. The differences are apparent the moment the film starts: it shows someone trying to cross a border by hiding in a horse-drawn cart full of hay, rather than in a truck as MacLean wrote it.</p><p>The book is built around British intelligence agent Michael Reynolds's efforts to take a noted scientist out of Hungary, with the help of a network of freedom fighters run by a man named Jansci. In the movie, there is no scientist; instead, Jansci himself must be smuggled out of Budapest. (Without wanting to reveal any "spoilers," I must say this plot thread is the near opposite of the book's ending.) We never get much idea of what Jansci and his colleagues are doing to help their oppressed countrymen.</p><p> His daughter Julia, part of her father's network in the book, has an entirely different movie role: traveling with Reynolds from Vienna to help him find her father.</p><p>Instead of MacLean's intricate tale of cat-and-mouse spy games and confrontations (and deep political discussions), we're given a progression of stark [black-and-white] scenes of Reynolds — as played by Richard Widmark — blustering, getting beaten up, and desperately dashing along countless roads, hallways, and staircases with the fair Julia. (While she is "fair" in his eyes, she is brunette rather than having "yellow hair, the color of ripening corn" as in MacLean's depiction.)</p><p>Oddly, amid all the plot changes, two scenes are presented almost exactly as written. One is when Reynolds is forcibly taken to Jansci's headquarters and tries to escape by tricking and assaulting the powerful Sandor. The other comes when Reynolds and Jansci are imprisoned and given drugged coffee to lower their defenses and make them talk. "Keep your head up! ... I told you to keep it up!", Jansci urges. These scenes give a frustrating hint of how much better (and truer to the book) the film could have been.</p><p>While the plot is nearly unrecognizable and many characters (especially Sandor) endure different fates than in the book, one moment in particular sums up how much the filmmakers thumbed their noses at MacLean's sensibilities. In the book, Julia has trouble pronouncing Reynolds's full first name, which he insists she use:</p><p>"Michael." She said the name slowly, pronouncing it "Meechail." "Mike?"</p><p>"I'll murder you," he threatened.</p><p>"Very well. Michael."</p><p>Meanwhile, while riding in a car in the movie, he turns to her and jauntily declares, "Just call me Mike."</p><p>Widmark — the only actor whose name is familiar to me — plays Reynolds as a nasty piece of work, a middle-aged freelancer with an instant sarcastic answer to whatever anyone says. He is doing this job only because he owes a lot of money and needs a quick payday, and his bitterness shows. Eventually, he does start caring about Julia, but not noticeably about any grander ideas, whereas the original Reynolds was converted to the freedom-fighters' perspective. (A note in this film's <a href="https://en.wikipedia.org/wiki/The_Secret_Ways">Wikipedia entry</a> says Widmark took over as director; there's no indication of how he changed the plot or characters.)</p><p>
+While most of the other actors comport themselves well, it's hard to say much about them because their characters are given little chance to be developed.</p><p>As a standalone entity, without the book's context, The Secret Ways would be an often disagreeable but not completely worthless film. As a representation of my favorite MacLean work, it is simply a travesty.</p>
+						<h3>Rating</h3>
+							<p>♦♦♦ (3 out of 10)</p>
+                        </div><!--/ulysses-->
+					</div><!--/bookreview--><!--secret-->
+					<div class="fluid bookreview">
+						<h2>The Guns of Navarone <button id="b-guns">Show/hide review</button></h2>
+						<div id="w-guns" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#adaptions" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('guns-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="guns-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/guns2_amazon.jpg" alt="guns of navarone"/><h3>The Guns of Navarone:</h3>
+						<a href="http://www.imdb.com/title/tt0054953/?ref_=rvi_tt">imdb</a>
+						<a href="https://www.amazon.com/Guns-Navarone-James-Robertson-Justice/dp/B002ICL0ZW/ref=sr_1_1/ref=sr_1_1?_encoding=UTF8&keywords=the%20guns%20of%20navarone&qid=1447690668&s=movies-tv&sr=1-1">amazon</a>
+						<br>
+						<a href="http://www.amazon.com/Navarone-Collectors-James-Robertson-Justice/dp/B000MGTQ7U/ref=sr_1_2?s=movies-tv&ie=UTF8&qid=1447690668&sr=1-2&keywords=the+guns+of+navarone">amazon (Collector's Edition)</a>
+						</div>
+						<p>The second film based on an Alistair MacLean book is the first one I'm reviewing. As the movie that brought MacLean's name to a worldwide audience, The Guns of Navarone begged to be viewed. (See <a href="book.html#w-guns">this page</a> for a review of the book on which it was based.)</p><p>Producers assembled a cast headed by three cinematic all-stars. Gregory Peck as Captain Keith Mallory; Anthony Quinn as his deadly sidekick, Andrea; and David Niven as Corporal "Dusty" Miller all throw their dramatic weight around.</p><p>I had to watch this movie with a 1961 sensibility, rather than comparing it to modern films. Actions and gestures were large and occasionally cartoonish; colors were unnaturally vivid; and the special effects, while impressive for their time, sometimes showed their age.</p><p>It's a diverting movie, and the 2 hours and 37 minutes flow past quickly. Judged merely on its own merits, it deserves a good (though perhaps not excellent) rating.</p><p>From a MacLean fan's perspective, though, some notes are jarring. Chronologically, the first one is the "veddy British" voiceover before the opening credits, informing viewers why Navarone was so crucial. That oh-so-cultured voice clashes with the down-and-dirty manner in which MacLean typically presented situations in his books.</p><p>Jarring notes two through four are the main characters. Mallory, a New Zealander in the book, is portrayed by Peck, a red-blooded American; Miller, a sardonic American, is played by British icon Niven; and Andrea, the huge powerful killing machine, becomes Quinn, the slim swarthy fellow with an occasional evil eye glint. While I appreciate that stars help build the box office, these against-type castings greatly alter the story's dynamics.</p><p>Unpleasantries five and five-and-a-half are the women tossed into the film as potential love interests. Two local partisans, who were men in the book, undergo a gender switch so that Andrea can get friendly with one and Mallory can get briefly kissed by the other. Romantic scenes are fine and dandy except when they are forced into a script that should be pure action.</p><p>OK, enough complaints. The film also features some nice touches. First and foremost, I'm glad that the German troops all speak German to each other, rather than heavily accented English as in so many movies. (I understand enough German to get the gist of what they say, but even if you don't, you won't miss any important plot details — they're just going about their soldiering business.)</p><p>Scene settings are well constructed. Our heroes clamber up and down Greek hills and through ruins, all of which look genuine. Town scenes work well too. I especially enjoyed an extended bit in which the locals are having a celebration, complete with authentic-seeming music and dancing. You can almost smell the souvlaki.</p><p>To sum up: MacLean purists will frequently wrinkle their noses at some differences between the book and movie (which is true of almost any book that gets the Hollywood treatment). I'd still recommend it, though, as a mostly gripping adventure tale supported by stars who bring a different perspective to the main roles. Give The Guns of Navarone a look.
+</p>
+						<h3>Rating</h3>
+						<p>♦♦♦♦♦♦♦ (7 out of 10)</p>
+                        </div><!--/guns-->
+					</div><!--/bookreview-->
+					<div class="fluid bookreview">
+						<h2>The Satan Bug <button id="b-satan">Show/hide review</button></h2>
+						<div id="w-satan" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#adaptions" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('satan-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="satan-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/satan2_imdb.jpg" alt="the satan bug"/><h3>The Satan Bug:</h3>
+						<a href="http://www.imdb.com/title/tt0059678/?ref_=rvi_tt">imdb</a>
+						<a href="http://www.amazon.com/Satan-Bug-Blu-ray-George-Maharis/dp/B010S00AII/ref=sr_1_1?s=movies-tv&ie=UTF8&qid=1447689990&sr=1-1&keywords=the+satan+bug">amazon</a>
+						</div>
+						<p>Movies based on Alistair MacLean's novels tend to be either rare hits (e.g., <a href="#w-where">Where Eagles Dare</a>, <a href="#w-guns">TheGuns of Navarone</a>) or far more frequent misses (nearly all others I've watched). The Satan Bug is an intriguing mixture of random plot alterations and well-tuned reproductions of scenes from the book.</p><p>As the film opens, we see that the setting has switched from the English countryside to a Californian desert. That change is easy to digest, as the germ-warfare research center at the center of this tale is believably depicted, with airlock rooms and a dog-patrolled double layer of security fencing. I got an "Uh-oh, here we go again" feeling because this beginning was so different from the book's opening scene, in which a security expert's loyalty is tested; however, that scene arrives soon and is delightfully faithful to the book (despite being on a boat rather than in a dingy office).</p><p>The expert (and former chief of security at the germ factory) is named Lee Barnett, rather than Pierre Cavell as in the book. I'd pictured him as an acerbic, battle-weary man, rather than this insouciant figure slouching about in a trench coat. But the movie character is a good fit for the California milieu.</p><p>Events develop from there in a similar fashion to MacLean's novel (written under the name Ian Stuart, which is how he is listed in the film's credits). Criminals break into the lab, kill a couple of workers, and make off with two types of biological agents: deadly botulinus toxin, and the so-called Satan Bug, which could extinguish all life on earth. The detective work to trace them, and the chase scenes to bring them to justice, continue to alternate between invented and book-derived. It's easy to figure out who the main villain is, and there are a few too many interactions where good guys point their guns at a baddie who then threatens to drop a flask full of deadly germs. Still, the story is diverting in a very 1960s, suits-and-skinny-ties way.</p><p>Some revisions were probably made to simplify the story, which — although it is my second-favorite MacLean novel — I found complex enough to be mildly confusing (see my <a href="book.html#w-satan">book review</a>). That may be why Cavell's wife was changed to just a pretty female accomplice. However, one huge alteration left a bad taste: the villain's motivation. In the book, the stolen germs are a red herring within a grander plan; in the film, the bad guy simply wants them so he can achieve some unspecified megalomaniacal aims. At least he meets the same end as his book counterpart.</p><p>Unlike many other films based on MacLean's works, this one lacks established movie luminaries, though a couple of the leads had starred in popular TV series (e.g., protagonist George Maharis in "Route 66"). The only actor I recognized was Ed Asner, sneering his way through the role of an evil henchman.</p><p>Re-setting a movie from an exotic foreign locale to southwestern North America can be done well — for example, remaking The Seven Samurai as The Magnificent Seven. The Satan Bug certainly doesn't deserve to be mentioned in the same breath as those classics, but it does a respectable job of converting an intricately plotted English tale into a slambang California thriller, while remaining surprisingly faithful to Alistair MacLean's vision. While not the best MacLean-based film, it’s definitely worth a look from Alistair aficionados.</p>
+						<h3>Rating</h3>
+						<p>♦♦♦♦♦♦ (6 out of 10)</p>
+                        </div><!--/guns-->
+					</div><!--/bookreview--><!--satan-->
+					<div class="fluid bookreview">
+						<h2>Ice Station Zebra <button id="b-ice">Show/hide review</button></h2>
+						<div id="w-ice" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#adaptions" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('ice-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="ice-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/ice_imdb.jpg" alt="Ice Station Zebra"/><h3>Ice Station Zebra: (original title):</h3>
+						<a href="http://www.imdb.com/title/tt0063121/?ref_=rvi_tt">imdb</a>
+						<a href="http://www.amazon.com/gp/product/B008B4KVS8/ref=as_li_ss_tl?ie=UTF8&tag=maclean-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=B008B4KVS8">amazon</a>
+						</div>
+						<p>Ice Station Zebra was such a good book (see my review <a href="book.html#w-ice">here</a>) that it would have been hard for a movie version to live up to it. Well, this movie didn't come close.</p><p>I favor films that follow books' plots faithfully. That doesn't mean word for word or even scene for scene; film and literature are different genres with their own strengths and weaknesses, and you can't duplicate one in the other. Still, when I like the way an author has written a tale, it pains me to see his ideas canned and replaced with vastly inferior ones, as happened with Ice Station Zebra.</p><p>At the most basic level, the movie imitates the film's plot: a British agent is sent on an American nuclear submarine to track down some film of incalculable intelligence value — and to find out how some scientists, and other agents, died — at an isolated Arctic science station. Beyond that, the screenwriter took appalling amounts of license with the plot. He added a couple of major characters; introduced a Soviet military incursion; and glossed over the detective work and psychological niceties that were the book's strengths. (Admittedly, it's hard to turn many of the protagonist's thoughts into video, but scenes that should have been taut became merely head-scratchers as various unidentifiable characters in huge fur-trimmed coats wandered about in a snowstorm.)</p><p>Rather than opposing intelligence operatives, the climactic confrontation is between the submarine commander and a Soviet counterpart. The latter is supposed to seem cultured and smart, but he takes absurd actions, such as giving his enemies two minutes to decide whether to relinquish the film to him. (He might as well have added, "I hope that's enough time for you to do something clever with it that would render it worthless to me.")</p><p>The acting is also disappointing, even for a 1960s thriller. Patrick McGoohan (star of the classic TV series "The Prisoner") gives us a cartoonish version of the British agent, bouncing between wry bon vivant and man of mystery. At more serious moments late in the movie, he merely looks pained. Rock Hudson, the submarine captain, makes a believable military commander, though his steely gaze and crisp declarations occasionally border on parody. Jim Brown (yes, the famous football star turned actor) is wooden as a supposed-to-be-tough Marine captain. And Ernest Borgnine — who had already enjoyed many maritime adventures in "McHale's Navy" — has the thankless task of portraying a Russian turncoat who tries to ingratiate himself (in a most grating way) with the Allied personnel.</p><p>Special effects also strike a jarring note. Repeated scenes of Russian fighter jets in flight are so obviously faked (with pasted-in backgrounds) that one wonders why the filmmakers decided to make them so long.</p><p>One last pair of weird touches: the movie begins with an extended musical interlude (with an unchanging screen image), and about halfway through the word "Intermission" appears while more music plays for a while. I've seen many movies from this era but don't recall those odd breaks in any others!</p><p>Overall, I didn't care for the plot changes, most of the acting, the strange musical delays, or much of anything else in this film.</p>
+						<h3>Rating</h3>
+						<p>♦♦♦♦ (4 out of 10)</p>
+                        </div><!--/last-->
+					</div><!--/bookreview-->
+					<div class="fluid bookreview">
+						<h2>Where Eagles Dare <button id="b-where">Show/hide review</button></h2>
+						<div id="w-where" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#adaptions" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('where-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="where-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/where_imdb.jpg" alt="Where Eagles Dare"/><h3>Where Eagles Dare:</h3>
+						<a href="http://www.imdb.com/title/tt0065207/?ref_=rvi_tt">imdb</a>
+						<a href="http://www.amazon.com/Where-Eagles-Dare-Richard-Burton/dp/B003AWRMCO/ref=sr_1_1?s=movies-tv&ie=UTF8&qid=1447689865&sr=1-1&keywords=where+eagles+dare+dvd">DVD on amazon</a>
+						<a href="http://www.amazon.com/Where-Eagles-Dare-Blu-ray/dp/B00FCFUOJ0/ref=sr_1_3?s=movies-tv&ie=UTF8&qid=1447689928&sr=1-3&keywords=where+eagles+dare+blu+ray">Blu-ray on amazon</a>
+						</div>
+						<p>Having just re-read the book on which it is based, I especially enjoyed the film Where Eagles Dare,made in 1968 but released in '69. That's largely because the film hews closely to the book's plot — no surprise, since Alistair MacLean wrote the book and the movie screenplay simultaneously!</p><p>Oh, the two aren't quite identical. A movie — even one that fills more than two-and-a-half hours, as this one does — can't contain every thought and action an author describes. However, all the vital events made it into the movie, and the few plot alterations are small and unimportant (such as name changes for some of the Allied agents). In some cases, I think MacLean actually added by subtracting; for instance, he almost completely excised a secondary romance that seemed artificial and annoying in the book. (See my review of the book <a href="book.html#w-where">here.</a>)</p><p>So: a ripping good yarn in print became a ripping good adventure on the big screen. In fact, only a couple of factors kept me from rating this even higher than 8 out of 10 stars.</p><p>One small quibble is with the casting. Richard Burton is excellent in the lead role, and reasonably similar to the way I'd envisioned Major John Smith. On the other hand, Clint Eastwood's performance — while strong — differs markedly from the Lieutenant Schaffer in the book, who had an easy-going, folksy persona (not the typically intense one modeled by Eastwood). That changes the chemistry among the main protagonists.</p><p>My other, larger complaint is about well-trained German soldiers firing thousands of rounds at the Allied agents without inflicting more than a small scratch, while those agents easily mow down SS troops by the score. This makes the story seem a lot less real. It reminded me of the nonserious 1980's TV series "The A Team", in which the good guys often faced a blizzard of bullets with nary a casualty. One's disbelief can be suspended only so far.</p><p>Bear in mind, though, that those problems are far overshadowed by the many strengths of the movie, with its faithfulness to the book chief among them. Definitely worth viewing by any MacLean fan!</p><p>P.S. Interesting historical note: according to a <a href="http://opinionator.blogs.nytimes.com/2012/05/15/enclave-hunting-in-switzerland/?_r=0">2012 New York Times article</a>, Richard Burton, lead actor in this film, is buried "a few yards" from MacLean himself, in Céligny, Switzerland.</p>
+						<h3>Rating</h3>
+						<p>♦♦♦♦♦♦♦♦ (8 out of 10)</p>
+                        </div><!--/night-->
+					</div><!--/bookreview--><!--where-->
+					<div class="fluid bookreview">
+						<h2>When Eight Bells Toll <button id="b-when">Show/hide review</button></h2>
+						<div id="w-when" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#adaptions" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('when-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="when-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/When_wikipedia.jpg" alt="When Eight Bells Toll"/><h3>When Eight Bells Toll:</h3>
+						<a href="http://www.imdb.com/title/tt0067976/?ref_=fn_al_tt_1">imdb</a>
+						<a href="http://www.amazon.com/When-Eight-Bells-Toll-Region/dp/B0001P1B3O/ref=sr_1_1?s=movies-tv&ie=UTF8&qid=1447690068&sr=1-1&keywords=when+eight+bells+toll">amazon</a>
+						</div>
+						<p>As of this writing (2012), When Eight Bells Toll had been released on DVD only in PAL format,which doesn't work with typical U.S. DVD players. However, it is available through some streaming services. A site reader told me he'd watched it through Netflix; I accessed it through Hulu Plus. (As I lack any special hardware, that meant I had to watch it on my PC monitor, which fortunately is a widescreen.)</p><p>Clocking in at a brisk 90 minutes, When Eight Bells Toll can't fully reproduce the book's contents. However, when Alistair MacLean wrote the screenplay, he made mainly wise choices about which scenes to trim or remove, so the action doesn't feel too rushed. What is mainly missing, as in many of his film treatments, is the protagonist's inner life — the backbone of the story. In reviewing <a href="book.html#w-when">the book When Eight Bells Toll</a>, I wrote: "Scenery, thoughts, and physical sensations are described with colorful, unhurried prose." Well, the film's viewer gets glimpses of scenery but misses out on Philip Calvert's thoughts (rage, self chastisement, impending dread, etc.) and physical sensations (pain of injuries, tingling of spine, and so on).</p><p>The film begins promisingly, with a mysterious black-clad figure swimming up to and boarding a boat while James-Bondish music swells. (The soundtrack adds to one's impression that When Eight Bells Toll was meant as an imitation Bond flick. Substitute Sean Connery for Hopkins — no great stretch, as it takes place in Scotland after all — and you might mistake this for a lesser-known Ian Fleming work.) Soon, the figure — Calvert — is staring down the barrel of the Peacemaker Colt referred to in the book's opening sentence. A nicely reproduced scene. After that, the film focuses less on artistry and more on action and attitude.</p><p>Calvert is zestfully portrayed by a dashing young Anthony Hopkins. Anyone accustomed to his more recent elder-statesman roles will be surprised (and likely charmed) by his energetic physicality and insouciance. The rest of the cast is less prominent. Second billing goes to Jack Hawkins, who plays shipping magnate Lord Skouras; I knew him only as the stern Reverend Brocklehurst in one of the less commendable <a href="http://janeeyre.net/1970-film-made-for-US-TV.html">Jane Eyre movies</a>. Robert Morley, who appeared in countless other films, is Calvert's boss "Uncle Arthur". Unfortunately, he [over]plays the admiral / intelligence chief as a complete buffoon, detracting greatly from the film's atmosphere.</p><p>Still, if you like the book, you'll probably enjoy this largely faithful rendition. A handful of plot changes — several of which revolve around Lady Skouras, in her two incarnations — raise the viewer's eyebrows but don't detract markedly. The final battle, though, is one large and unwelcome alteration, involving lots more shooting (and fewer allies) than in the book; perhaps MacLean felt that his prose-crafted ending would seem anticlimactic on the big screen.</p><p>After the battle concludes, one character unexpectedly sails off toward the horizon. You'll have to watch the film to find out who.</p>
+						<h3>Rating</h3>
+						<p>♦♦♦♦♦♦ (6 out of 10)</p>
+                        </div><!--/fear-->
+					</div><!--/bookreview-->
+					<div class="fluid bookreview">
+						<h2>Puppet on a Chain <button id="b-puppet">Show/hide review</button></h2>
+						<div id="w-puppet" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#adaptions" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('puppet-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="puppet-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/puppet2_amazon.jpg" alt="Puppet on a Chain"/><h3>Puppet on a Chain:</h3>
+						<a href="http://www.imdb.com/title/tt0066258/?ref_=rvi_tt">imdb</a>
+						<a href="http://www.amazon.com/Puppet-On-Chain-Barbara-Parkins/dp/B006HLBDAC/ref=pd_sim_74_1?ie=UTF8&dpID=61tXMBZMjCL&dpSrc=sims&preST=_AC_UL160_SR113%2C160_&refRID=0VNP6QPVSKA19V38Q8HB">amazon</a>
+						</div>
+						<p>While I liked the book Puppet on a Chain, I felt that the plot (especially the bad guys' scheme) was too convoluted (see my <a href="book.html#w-puppet">review</a>). The movie script largely avoided this pitfall by being cut to a mere 97 minutes. The drug-dealers' scheme was still a mite too complex, but I was pleasantly surprised by how deftly Alistair MacLean (who wrote the screenplay from his own book) shortened the tale while still preserving its most vital elements. The main evildoers are accurately portrayed in the movie, and if you haven't read the book, you won't guess the ringleader's identity until the denouement. It's also nice to see some scenes closely match MacLean's original vision, such as protagonist Paul Sherman being tortured by amplified clock chimes (and escaping by the same method as in the book).</p><p>Of course, the film shows its age, and some of its early-'70s aspects feel trite. But it doesn't sink into the outright cheesiness that often afflicted other film adaptations of MacLean's novels. While some storylines are changed and/or added on, the new material is sensible, not a bunch of ill-fitting scenes cobbled onto the original plot. Even a wholly invented speedboat chase is well designed and feels natural.</p><p>One welcome reduction is that Sherman gets only one female underling, rather than the pair of largely senseless beauties described by Maclean. Their behavior was a glaring weakness of the novel, so it was nice to see one missing and the other acting a bit more professional.</p><p>The no-name group of actors is competent, if not outstanding. The biggest "name" is Barbara Parkins, who was in countless TV series and such movies as Peyton Place; here, she's Sherman's female accomplice. Sherman is portrayed sensibly by a Swedish actor named Sven-Bertil Taube, who is still acting in current movies such as The Girl with the Dragon Tattoo. If anything, he is too handsome (the book's Sherman was scarred by plastic surgery) and too American (rather than being a British Interpol agent). Another quibble: since nearly all the characters are supposed to be Dutch, it's a mystery why quite a few of them speak in a "veddy British" way.</p><p>The movie Puppet on a Chain isn't great cinema; I didn't need to research whether it got any Oscar nominations. However, it holds up well as an early-'70s adventure film, and it should satisfy a MacLean fan who isn't offended by any little plot changes. I might not even call it "good," but it's surprisingly not-bad. Check it out if you can.</p>
+						<h3>Rating</h3>
+						<p>♦♦♦♦♦♦♦ (7 out of 10)</p>
+                        </div><!--/dark-->
+					</div><!--/bookreview--><!--puppet-->
+					<div class="fluid bookreview">
+						<h2>Fear is the Key <button id="b-fear">Show/hide review</button></h2>
+						<div id="w-fear" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#adaptions" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('fear-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="fear-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/fear2_amazon.jpg" alt="Fear is the Key"/><h3>Fear is the Key:</h3>
+						<a href="http://www.imdb.com/title/tt0068576/?ref_=rvi_tt">imdb</a>
+						<a href="http://www.amazon.com/Fear-Key-Region-Ben-Kingsley/dp/B000UYBOYM/ref=sr_1_2?s=movies-tv&ie=UTF8&qid=1447690171&sr=1-2&keywords=fear+is+the+key">amazon</a>
+						</div>
+						<p>Most movie versions of Alistair MacLean's novels fall into a few categories: high-profile hits (<a href="#w-guns">The Guns of Navarone</a>, <a href="#w-where">Where Eagles Dare</a>); dreary messes (<a href="#w-secret">The Secret Ways</a>, Bear Island); or decent lesser-known adaptations (<a href="#w-satan">The Satan Bug</a>, <a href="#w-when">When Eight Bells Toll</a>).</p><p>Fear is the Key falls into the third category — in fact, I'd say it heads that category. It's a craftsmanlike, punchy take on this unique book, in which the first third of the story is not what it seems.</p><p>While I was aware the film existed, I'd only seen it offered on PAL-format DVD's, which I'm unequipped to watch. A site reader kindly pointed me to the film's <a href="https://www.amazon.com/gp/product/B000I0FPQG/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000I0FPQG&linkCode=as2&redirect=true&tag=maclean-20">Amazon.com listing</a> , where it is offered for sale in digital format. I wasted no time in laying out the $9.99 and downloading it onto my TiVo device.</p><p>Fear is the Key is among the roughly one-third of MacLean's novels written in the first person. Filming such a story is harder because the viewer can't get inside the protagonist's head as a reader can. Typically, his first-person stories lose a lot in translation to the screen, as that person's plans and fears and psychological battles are less transparent (a flaw that afflicts <a href="#w-goldenrendezvous">Golden Rendezvous</a> and <a href="#w-puppet">Puppet on a Chain</a>, for example). Fear is the Key lost less of its flavor, largely because much of the protagonist's thoughts and narration concerned technical aspects of boats, oil rigs, buoyancy systems, and so forth. It was hard to slog through some of those details in the book; the movie runs smoother without them.</p><p>While most of the alterations between book and movie are sensible time-savers, others make the viewer wonder. Some changes seem pointless, such as setting the action in Louisiana rather than Florida, or altering several characters' first names. Others detract more from the movie's authenticity: a scene in which protagonist John Montague Talbot states his name and plans on an open radio frequency (he used code phrases in the book); a character who is a high-strung drug addict in the book but merely chews gum rapidly in the film; Talbot asking for details of the villains' salvage operation (the fact that he didn't in the book was a significant clue that the villains missed); the lead female, Sarah Ruthven, showing a violent urge toward a bad guy (her reluctance in the book to clobber someone nearly cost Talbot).
+The most significant omission is a character who greatly aids Talbot in the book — and who also serves as Sarah's romantic interest. (Given his absence in the movie, I figured Talbot would get the dame; I hope it's not a spoiler to reveal that it didn't turn out the way I expected.)</p><p>Many parts of the film, however, are gratifyingly authentic. The opening scene rings entirely true. The second one, involving a courthouse, starts out unexpectedly but then becomes more familiar. A car chase, with Talbot trying to escape while holding Miss Kendall hostage, actually extends the book's description, occupying a staggering chunk of screen time. (That may be a relic of the early-'70s era in which this film was made.) By the concluding scene, in which Talbot uses fear (hence the title) to extract confessions from the bad guys, the viewer realizes that this has been a worthwhile rendering of MacLean's vision.</p><p>The cast is generally strong. Barry Newman, star of the mid-'70s TV drama series "Petrocelli," shows a believable toughness as man-of-action Talbot. Dolph Sweet, a frequent '70s and '80s TV actor, is very watchable as Talbot's New-York-raised ally. The main baddies are competently played by John Vernon (despicable Dean Wormer in Animal House, who radiates menace nicely here despite oddly mispronouncing the name "Ruthven" several times) and the under-used (in this movie) Ben Kingsley. Little impression was made, though, by lead actress Suzy Kendall, perhaps best known as a young teacher who gets involved with Sidney Poitier in To Sir With Love.</p><p>More technical aspects of the film are high quality, from atmospheric music tracks to subtly but effectively lit dark scenes. While the oil rig where much of the later action occurs is smaller than in the book, it's believable. Talbot descends down a long series of rungs into a convincingly rust-flecked, claustrophobic metal cylinder that leads underwater; it was indentical on screen to my book-formed mental image. Even a privacy-warning sign concealing the baddies' operation is worded precisely as in the book. Such attention to detail is gratifying.</p><p>Had I reviewed it on its standalone merits, I might not have enjoyed Fear is the Key as much. However, screenwriter Robert Carrington (who also wrote the classic film Wait Until Dark) and director Michael Tuchner did an admirable job of translating first-person MacLean into a pleasingly authentic (though far from verbatim) film. Waiting so long to see this movie was frustrating ... but it was worth the wait.
+</p>
+						<h3>Rating</h3>
+						<p>♦♦♦♦♦♦♦ (7 out of 10)</p>
+                        </div><!--/goldenrendezvous-->
+					</div><!--/bookreview-->
+					<div class="fluid bookreview">
+						<h2>Caravan to Vaccarès <button id="b-caravan">Show/hide review</button></h2>
+						<div id="w-caravan" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#adaptions" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('caravan-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="caravan-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/caravan2_amazon.jpg" alt="Caravan to Vaccarès"/><h3>Caravan to Vaccarès:</h3>
+						<a href="http://www.imdb.com/title/tt0071278/?ref_=fn_al_tt_1">imdb</a>
+						<a href="http://www.amazon.com/Caravan-Vaccares-VHS-David-Birney/dp/6300189287/ref=sr_1_2?s=movies-tv&ie=UTF8&qid=1447690438&sr=1-2&keywords=caravan+to+vaccares">amazon</a>
+						</div>
+						<p>While not yet available on DVD (and hence unobtainable from the likes of Netflix), some MacLean-based movies are easy to find in VHS format on eBay. That's where I got my copy of 1974's Caravan to Vaccares, which still bears a Blockbuster Video sticker.</p><p>I often grouse about plot changes that were made when filming good books. That won't happen here, as the writers and/or producers of Caravan to Vaccares didn't make plot changes — they simply invented an entirely new (and vastly inferior) plot. Oh, sure, protagonist Neil Bowman still works in league with the imperious Duc de Croytor, and a fellow named Czerda and his henchmen try to prevent Bowman from rescuing someone from a gypsy trailer. But the threadbare resemblances end there. Where the book showed intelligence agents scheming to help gypsies and free kidnapped scientists, the movie has a lone-wolf American ex-soldier getting hired by a rich man to aid a runaway. Situations, confrontations, and even romantic matters are completely unlike those in the book (which I reviewed <a href="book.html#w-caravan">here</a>). There isn't even a "caravan."</p><p>The lead actors are an odd pairing. David Birney, best known for the goofy TV romance series "Bridget Loves Bernie," is the rugged and seductive man of action. (This was his first feature film.) His affections are lavished upon Charlotte Rampling, a fine thespian who should have fired her agent after this movie (even without the unnecessary frontal nudity scenes). They were stuck in the type of screenplay where both heroes and bad guys often fail to look behind them in perilous moments, and where the lead couple indulge in ironic chats or bedroom romps when villains could still strike at any moment.</p><p>Sample of this movie's scintillating dialogue (from memory, as I don't want to watch it again):</p><p>•	Rampling (beautiful woman who was just dumped by the roadside): "You're not another French sex maniac, are you?"</p><p>•	Birney (passing motorist Neil Bowman, offering to help her): "No, I'm an American sex maniac."</p><p>•	Rampling (smiling and getting into his car): "Ah, that makes all the difference."</p><p>Presumably, the producers paid decent money for the rights to use this title and Alistair MacLean's name. Why they would then utterly ignore the author's intentions is beyond me. At least now I understand why nobody has bothered to convert some MacLean-based films to DVD. I initially gave this movie 3 stars, but the more I thought about it, the less I liked it.</p>
+						<h3>Rating</h3>
+						<p>♦♦ (2 out of 10)</p>
+                        </div><!--/satan-->
+					</div><!--/bookreview--><!--caravan-->
+					<div class="fluid bookreview">
+						<h2>Breakheart Pass <button id="b-breakheart">Show/hide review</button></h2>
+						<div id="w-breakheart" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#adaptions" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('breakheart-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="breakheart-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/breakheart2_amazon.jpg" alt="Breakheart Pass"/><h3>Breakheart Pass:</h3>
+						<a href="http://www.imdb.com/title/tt0072735/?ref_=rvi_tt">imdb</a>
+						<a href="http://www.amazon.com/Breakheart-Pass-Charles-Bronson/dp/B00KOW4AG4/ref=sr_1_2?s=movies-tv&ie=UTF8&qid=1447694284&sr=1-2&keywords=breakheart+pass">amazon</a>
+						</div>
+						<p>For most of this film treatment of MacLean's sole Western thriller (see my review of the book Breakheart Pass <a href="book.html#w-breakheart">here</a>), I was quite impressed. Apart from a few small details (and some necessary scene-condensing), the movie hews closely to the book's plot. Sure, Marica in the movie is the governor's mistress rather than his niece ... but you can excuse Hollywood for wanting to jazz things up a tad.</p><p>Near the end, though, my admiration dropped. Significant changes in the movie's denouement are a jarring change after so much true-to-the-source filming.</p><p>Despite this sudden dropoff, Breakheart Pass still bears watching for several reasons. Charles Bronson, while different from my mental image of the book's protagonist, employs his devil-may-care snideness well as he sniffs out and disposes of the bad guys. A couple of those baddies offer an interesting twist: former Super Bowl quarterback Joe Kapp and champion light-heavyweight boxer Archie Moore say few words but add a distinct physical presence.</p><p>This isn't exactly an all-around Academy Award vehicle, though. Richard Crenna and Charles Durning are adequate in their large roles, but hardly inspiring. (The same goes for Ben Johnson, with whom I was unfamiliar.) Bronson's wife Jill Ireland comes off as a stiff leading lady, but to be fair, it's not written as a terribly sympathetic role.
+Meanwhile, from the opening scene (which had cool Western-thriller music), the train chugs on and on and on, its load getting ever lighter (thanks to bodies getting flung off) as it gradually nears its destiny. Retro, sometimes hypnotic, and only occasionally cheesy, Breakheart Pass is worth a look.</p>
+						<h3>Rating</h3>
+						<p>♦♦♦♦♦♦♦ (7 out of 10)</p>
+                        </div><!--/ice-->
+					</div><!--/bookreview-->
+					<div class="fluid bookreview">
+						<h2>Golden Rendezvous <button id="b-goldenrendezvous">Show/hide review</button></h2>
+						<div id="w-goldenrendezvous" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#adaptions" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('goldenrendezvous-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="goldenrendezvous-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/goldenrendezvous2_amazon.jpg" alt="Golden Rendezvous"/><h3>Golden Rendezvous:</h3>
+						<a href="http://www.imdb.com/title/tt0076091/?ref_=rvi_tt">imdb</a>
+						<a href="http://www.amazon.com/Golden-Rendezvous-aka-Nuclear-Terror/dp/B000NKWKLY/ref=sr_1_1?s=movies-tv&ie=UTF8&qid=1447694136&sr=1-1&keywords=golden+rendezvous">amazon</a>
+						</div>
+						<p>Golden Rendezvous (the filmmakers dropped the word "The" from the book title) is an extreme example of the highs and lows of converting an Alistair MacLean thriller to the big screen. The cast, featuring a few well-known actors and a lot of relative nobodies, turns in strikingly uneven performances. Even less calming is the script, which follows MacLean's story for much of the way but occasionally takes some wild swings. Viewers of this ship-borne adventure get the sensation of being on a posh cruise ship that is sometimes buffeted by large waves, leaving them mildly seasick.</p><p>This was only a middling book, with vintage MacLean writing but a somewhat hackneyed plot (see my review <a href="book.html#w-goldenrendezvous">here</a>). Hence, I didn't mind the plot alterations, and I even liked some. There's no mention of the stereotypical third-world "generalissimo" who was behind the book's shenanigans. The ship, a converted freighter with luxury cabins in the book, is now a floating casino. The tangential and weak story about a stolen American nuclear device has been skipped. Many new characters are introduced (so quickly that it is difficult to keep them all straight). And the leading lady, Susan Beresford, has changed from the available daughter of the ship's owners to some mysterious femme fatale with a "Mrs." before her name.</p><p>Despite all those initial changes, the plot proceeds directly along the book's lines. Crew members start to turn up missing or dead, especially in and around the ship's wireless office. Just when protagonist John Carter has captured the leading bad guys, a team of machine-gun-wielding guerrillas takes over the ship. (The outcome of this invasion differs greatly, though, as the ship's captain is killed rather then merely wounded, and some passengers are also gunned down.) With the aid of the ship's doctor (an amalgam of MacLean's doctor and McDonald-the-Scottish-bosun), Susan, and a couple of added characters of mixed loyalties, the wounded Carter rises from his sick-bay bed and sets out to wreck the evildoers' plans.</p><p>That's all fine as far as it goes. But just when the story has reached its apparent denouement — the point where, in the book, the baddies go sailing off to their unexpected doom — the plot changes completely, and dishearteningly. The filmmakers must have wanted to throw in a couple of final twists, but by removing some of MacLean's cleverness and adding trite bits about a bomb about to detonate, they ruined a perfectly good ending. I could only shake my head and wince.</p><p>The day before viewing Golden Rendezvous, I had seen the final Harry Potter movie, and my reaction was largely the same: when a film has followed a book author's vision faithfully for so long, why throw in a sudden monkey wrench by drastically altering the climactic scenes? In both cases, those changes were clearly for the worse. I'm no expert on cinematic theory ... but I can't understand why filmmakers feel the need to express their creative visions in ways that spoil the final product.</p><p>The celebrated actor Richard Harris acquitted himself reasonably well as Carter, despite a dreadful Prince Valiant-ish hairstyle. His romantic moments with Susan seemed unnatural, largely because she looked like she was in her 20s and he struck me as nearing 60. Only later did I discover that Harris was actually in his 40s at that time; Ann Turkel, who played Susan, was in her early 30s; and in fact, they were married in real life!</p><p>Veteran actor John Vernon made a career of playing black-hearted characters well (including his defining role as Dean Wormer in the movie and TV series Animal House), and his turn as evil schemer Luis Carreras here was no exception, though the Latino surname didn't match his persona. Burgess Meredith had a small but vital role as a mysterious gambler who somehow (it wasn't clear how) was part of the conspiracy. Some of the bit-part actors were just going through the motions and/or hamming it up too much.
+This isn't a bad adventure film (especially compared to some of the other MacLean-based movies). Most of the actors are very watchable, and if you've read the book, you'll enjoy recognizing many of the same developments. Just be prepared for a major letdown at the end.</p>
+						<h3>Rating</h3>
+						<p>♦♦♦♦♦ (5 out of 10)</p>
+                        </div><!--/when-->
+					</div><!--/bookreview--><!--goldenrendezvous-->
+					<div class="fluid bookreview">
+						<h2>Force 10 from Navarone <button id="b-force">Show/hide review</button></h2>
+						<div id="w-force" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#adaptions" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('force-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="force-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/force_imdb.jpg" alt="Force 10 from Navarone"/><h3>Force 10 from Navarone:</h3>
+						<a href="http://www.imdb.com/title/tt0077572/?ref_=rvi_tt">imdb</a>
+						<a href="http://www.amazon.com/Force-10-Navarone-Harrison-Ford/dp/0792844017/ref=sr_1_8?s=movies-tv&ie=UTF8&qid=1447691080&sr=1-8&keywords=the+guns+of+navarone">amazon</a>
+						</div>
+						<p>Anyone filming a movie version of a book faces the eternal question: how true to the book's plot must the movie stay? A precise retelling is usually impossible and generally undesirable. Some types of book sequences don't translate well to film, and it's only natural to take some creative liberties to propel the story and maintain the viewer's attention.</p><p>In Force 10 from Navarone, though, too many changes were made without good reason. Unlike some earlier films where Alistair MacLean wrote the screenplay — <a href="#w-where">Where Eagles Dare</a>, for instance — this one strays from not only the book's details but also its spirit.</p><p>The barest bones of the plot are still recognizable. Having just disposed of those nasty <a href="#w-guns">Guns of Navarone</a>, a crack Allied intelligence team is sent to Yugoslavia (along with some American soldiers) to help the Partisans destroy a crucial bridge. That's about where the resemblance ends.</p><p>Not all of the plot changes are bad. One of the worst is a weird, unexplained battle just before their plane took off from England. A better addition is the necessity for the team to infiltrate a German supply area and make off with explosives, which does add conflict and dramatic tension. (Also, it's always nice to see German soldiers actually speaking German when their words aren't absolutely crucial to the story.)</p><p>Some of the most jarring differences are in the character lineup. Andrea, a key character in the book for multiple reasons, is absent from the movie.</p><p>Explosives expert Dusty Miller has changed from a laconic American to a pipe-puffing Brit. The one remaining female character (since Andrea's wife isn't included), unlike her subtle book persona, turns parts of the movie into awkward melodrama. A U.S. sergeant, in the person of Carl Weathers (taking a time-out from playing Apollo Creed in the first four Rocky movies), is introduced oddly and often acts senselessly. An important Yugoslavian officer, depicted in the book as cunning, is buffoonishly portrayed by the giant Richard Kiel (perhaps best known as the villainous Jaws in some James Bond films).</p><p>Otherwise, the cast is quite respectable. Robert Shaw isn't bad as Keith Mallory; at least he sounds like a subject of the British Empire, unlike Gregory Peck in the earlier Navarone movie. Harrison Ford comes across well enough as Mallory's American counterpart, though he has to deliver some unrealistic dialogue and actions. Edward Fox, besides being the wrong nationality, doesn't seem as tough-minded as one would like Dusty Miller to be; however, he does at least as well in that regard as the original Dusty, David Niven. Franco Nero is strong as an officer of the Partisan forces whose loyalty is in doubt.</p><p>Among the most annoying aspects of this and some other films based on MacLean books is the way the characters toss off clever dialogue at moments of high tension. When characters speak that way in his books, I imagine them doing so with clenched teeth and some sense of urgency, not as if they were enjoying a Sunday in the park. In a real war, someone who focused on being ironic and wry rather than on planning immediate survival would be asking for trouble.</p><p>Robin Chapman, who wrote the screenplay, was mainly a television writer; this was only his second, and last, movie script. That may explain why the film contains the over-broad acting and jazzed-up plot of a typical TV drama.</p><p>Someone who had never read the book <a href="book.html#w-force">Force 10 from Navarone</a> might find this film a diverting if lightweight war story. It seems like less to me because it had the potential to be so much more.</p>
+						<h3>Rating</h3>
+						<p>♦♦♦♦♦ (5 out of 10)</p>
+                        </div><!--/where-->
+					</div><!--/bookreview-->
+					<div class="fluid bookreview">
+						<h2>Bear Island <button id="b-bear">Show/hide review</button></h2>
+						<div id="w-bear" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#adaptions" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('bear-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="bear-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/bear2_amazon.jpg" alt="Bear Island"/><h3>Bear Island:</h3>
+						<a href="http://www.imdb.com/title/tt0078836/?ref_=fn_al_tt_1">imdb</a>
+						<a href="http://www.amazon.com/Force-10-Navarone-Harrison-Ford/dp/0792844017/ref=sr_1_8?s=movies-tv&ie=UTF8&qid=1447691080&sr=1-8&keywords=the+guns+of+navarone">amazon</a>
+						</div>
+						<p>Bear Island was another in a series of VHS-format Alistair MacLean adaptations that I got on eBay.It's one more example of a film I was unaware of, for good reason.</p><p>In this case — unlike that of <a href="#w-caravan">Caravan to Vaccares</a>, for example — I'll give the producers / screenwriters the benefit of the doubt. They were working with a <a href="book.html#w-bear">middling MacLean story</a>, rather than one of his better tales, so it was natural that they'd be tempted to make changes. Still, creating an entirely different plot under the Bear Island title leaves a bad taste. This film's only similarity to the book (apart from a few character names) is that evildoers are trying to liberate Nazi gold from the frigid, inhospitable Bear Island.</p><p>MacLean's book depicts a movie production company en route to Bear Island for some filming. Nearly half the story takes place aboard their ship as it steams toward the island. The film features a United Nations crew studying the environment or some such, and after the opening credits it takes less than ten minutes for them to climb ashore.</p><p>The surprisingly high-level cast appears to be just "going through the motions." Donald Sutherland, as the protagonist, is wholly non-believable, whether conversing with others or fist-fighting the bad guys. He pronounces "Nazis" as if it rhymed with "patsies." At one point, he loudly tells a compatriot who he suspects is behind the violence; it's the sort of thing one would furtively whisper, knowing the baddies could be nearby.</p><p>Other "name" actors include Vanessa Redgrave, Richard Widmark, and Lloyd Bridges. Christopher Lee hams it up in a smallish part, a far cry from his later memorable performances in roles such as Count Dooku in the second set of Star Wars movies and Saruman in the Lord of the Rings series. One interesting coincidence: a secondary character is played by a Canadian-born actor named Michael J. Reynolds. Alistair MacLean fans will recall that Michael Reynolds is the protagonist of <a href="book.html#w-last">The Secret Ways</a> (my favorite MacLean novel).</p><p>It doesn't help that the cast spends much of its time clad in bulky parkas; it's hard to keep track of which faces are peeking out from some of those hoods.</p><p>This movie provides some diversion for action movie fans who enjoy chase scenes, explosions, brawls, and so forth. Apart from that, I can't think of a reason for anyone (especially MacLean fans) to watch it.</p>
+						<h3>Rating</h3>
+						<p>♦♦ (2 out of 10)</p>
+                        </div><!--/force-->
+					</div><!--/bookreview--><!--bear-->
+					<div class="fluid bookreview">
+						<h2>River of Death <button id="b-river">Show/hide review</button></h2>
+						<div id="w-river" class="fluid section-columns2-text">
+						<div class="fluid tomenu">
+							<a href="#adaptions" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('river-button','','images/amnettsidegrafikkhover_tomenu3.png',1)"><img id="river-button" src="images/amnettsidegrafikk_tomenu3.png" alt="knapp"></a>
+						</div>
+						<div class="fluid revealin"><img src="images/river2_amazon.jpg" alt="River of Death"/><h3>River of Death:</h3>
+						<a href="http://www.imdb.com/title/tt0098205/?ref_=fn_al_tt_1">imdb</a>
+						<a href="http://www.amazon.com/River-Death-Michael-Dudikoff/dp/B00U0SSEBY/ref=pd_bxgy_74_img_2?ie=UTF8&refRID=0VNP6QPVSKA19V38Q8HB">amazon</a>
+						</div>
+						<p>Fifteen movies have been based on Alistair MacLean novels as of this writing, and 1989's River of Death was thenext-to-last (being followed only by 1996's made-for-TV version of The Way to Dusty Death). Sadly, the string of movies didn't wane because River of Death was such a tough act to follow; more likely, it was because MacLean's passing in 1987 had made his name less of an attraction.</p><p>As mentioned in my review, the book <a href="book.html#w-river">River of Death</a> was actually better than many of his other late-career writings. It seemed like a natural candidate to be filmed. Very little about this movie, though, can be described as "natural."</p><p>While the opening World War II scenes foreshadow later developments (as in the book), the most powerful Nazi is presented as a mad scientist, rather than merely a rogue officer as depicted by MacLean. The movie then drops us directly into a dense and treacherous South American jungle, where fearless guide John Hamilton is helping an aging doctor and his beautiful-and-amorous daughter trace the source of a strange disease afflicting indigenous people. A violent confrontation with a darkly painted warlike tribe and its gun-wielding white-skinned ally sends Hamilton running for his life — none of which happened in the book. The nearest town's police chief, who presses Hamilton for details on that encounter, has a very different allegiance than the one MacLean created for him.</p><p>Setting out to return to this tribe's "lost city," Hamilton is accompanied by a motley crew: a soldier of fortune, a pair of Nazi hunters, a supposed expert on indigenous tribes, and a wealthy businessman, who also brings a couple of his associates and his gorgeous young girlfriend. After harrowing adventures (which bear only a hazy resemblance to anything MacLean described), they find the lost city, where many terrible secrets are revealed and vengeances are sought. (The denouement bears little resemblance to the book's, and a major plot twist involving Hamilton is omitted due to the earlier script changes.)</p><p>Hamilton is portrayed by Michael Dudikoff, probably best known as the star of the American Ninja movies. His performance here is uninspiring; the few emotions he shows seem forced, and despite frequent deadly threats and attacks, he never seems especially worried about his fate. (Perhaps he had read ahead in the script.) A few other semi-name actors are similarly unexciting. Only Donald Pleasence, as the rich man on a desperate quest, is reliably believable.</p><p>A few scenes do stand out as watchable, mostly the ones involving explosions (kudos to the special-effects coordinator). There's also one strangely long and hypnotic scene in which a woman who resembles a Cabaret reject sings a decadent come-hither song to a handful of ex-Nazis in a dark nightclub.</p><p>For the most part, though, the writers and directors apparently "mailed it in" as much as the actors did. From the unlimited ammunition that everyone's gun seems to contain, to the Nazi-hunters' annoying habit of filling Hamilton in with impossibly detailed information every now and then, to the characters' frequently letting their attention wander when an enemy and/or a loose gun is next to them, to the deepest-Amazon tribal leader who speaks English as if he'd been raised in the heart of the U.S.A. ... there's a whole lot to dislike about this film. Pity — it had the potential to be better than the book.</p>
+						<h3>Rating</h3>
+						<p>♦♦♦ (3 out of 10)</p>
+                        </div><!--/puppet-->
+					</div><!--/bookreview-->
+				</div><!--/div class="fluid reviews"-->
+
+ 				<!--<p>div class="content"</p>-->
+				<!--<div class="flexslider">
+					<ul class="slides">
+						<li id="slide1">
+							<img src="images/0-M_inferno_ark.jpg" alt="inferno"/>
+						</li>
+						<li id="slide2">
+							<img src="images/0-M_raketten_ark.jpg" alt="raketten"/>
+						</li>
+					</ul>
+				</div>-->
+				<div id="about" class="fluid section">		
+					<div class="fluid totop">
+						<a href="#top" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('knapp','','images/amnettsidegrafikkhover_totop3.png',1)"><img id="knapp" src="images/amnettsidegrafikk_totop3.png" alt="knapp"></a>
+					</div>
+				
+				<!--				<div class="bg">
+					<img src="images/WIK_US_Convoy-to-Capetown_1941_kingsacademy.jpg" alt="convoy">
+				</div>-->
+				</div>													<!--/content-->
+            <footer class="fluid footer">
+				<!--<p>&copy; Pål Stakvik 2015</p>-->
+				<p>Questions/ideas? Drop me a line: <a href="mailto:info@AlistairMacLean.com">info@AlistairMacLean.com</a></p>
+				<p>Go <a href="http://alistair-maclean.blogspot.nl/">here</a> for more facts about MacLean and about novels by other authors, based on plot summaries he wrote.</p>
+				<br>
+				<p>Literature lover? Learn about my favorite book, Jane Eyre — visit my site at <a href="http://janeeyre.net/">JaneEyre.net!</a></p>
+				<p>alistairmaclean.com redesigned by &copy; Pål Stakvik 2015</p>
+			</footer>
+		</div>														
+		</div>														<!--/div id="div1" class="fluid"-->
+	</div>															<!--/container-->
+
+<p></p>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alistair MacLean blog</title>
+<link href="css/boilerplate.css" rel="stylesheet" type="text/css">
+<link href="css/stylesheet.css" rel="stylesheet" type="text/css">
+
+<!-- 
+To learn more about the conditional comments around the html tags at the top of the file:
+paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+
+Do the following if you're using your customized build of modernizr (http://www.modernizr.com/):
+* insert the link to your js here
+* remove the link below to the html5shiv
+* add the "no-js" class to the html tags at the top
+* you can also remove the link to respond.min.js if you included the MQ Polyfill in your modernizr build 
+-->
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!--CSS-->
+<!--font-->
+<link href="https://fonts.googleapis.com/css?family=Changa+One" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Muli" rel="stylesheet" type="text/css"><!---normal 400-->
+<link href="http://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet" type="text/css">
+<!--<script src="scripts/respond.min.js"></script>-->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>-->
+<!-- Place somewhere in the <head> of your document -->
+<!--<link rel="stylesheet" href="flexslider.css" type="text/css">-->
+<!--
+<script src="jquery.flexslider.js"></script>-->
+
+<!--forslag påhttp://stackoverflow.com/questions/16129880/flexslider-not-working-->
+<!--<link rel="stylesheet" type="text/css" href="http://flexslider.woothemes.com/css/flexslider.css"> 
+<link rel="stylesheet" type="text/css" href="http://lab.mattvarone.com/projects/jquery/totop/css/ui.totop.css">-->
+
+<!--script-->
+
+<!--Place in the <head>, after the three links-->
+<!--	<script type="text/javascript" charset="utf-8">
+  $(window).load(function() {
+    $('.flexslider').flexslider();
+  });
+</script>	-->
+
+<!--forslag på http://stackoverflow.com/questions/16129880/flexslider-not-working-->
+<!--<script type="text/javascript" src="http://flexslider.woothemes.com/js/jquery.flexslider.js"></script> 
+<script type="text/javascript" src="http://flexslider.woothemes.com/js/jquery.easing.js"></script> 
+<script type="text/javascript" src="http://flexslider.woothemes.com/js/jquery.mousewheel.js"></script> 
+<script type="text/javascript" src="http://lab.mattvarone.com/projects/jquery/totop/js/jquery.ui.totop.js"></script>--> 
+
+<!--forslag på http://community.mybb.com/thread-136316.html-->
+<!--<script type="text/javascript">
+jQuery.noConflict();
+jQuery(window).load(function() {
+  jQuery('.flexslider').flexslider({
+    animation: "slide"
+  });
+});
+</script>-->
+
+<!--<script type="text/javascript">jQuery.noConflict();</script>-->
+
+<!--<script type="text/javascript">
+jQuery.noConflict($);
+$(window).load(function() {
+  $('.flexslider').flexslider({
+    animation: "slide"
+  });
+});
+
+</script>-->
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+<body>
+	<!--<p>i desktop: få news div og collected-works bøker side om side. mindre scorlling. legg til marginleft til contents, (menu h2) og lenketeksten. gjør om siden slik at det blir en offisiel nettside, og ikke en blogg</p>-->
+	<div class="gridContainer clearfix">
+		<div id="div1" class="fluid">
+			<header class="fluid header">
+				
+				<div class="fluid omforfatter">
+					<div class="fluid tittel">
+						<!--<div class="alistair">
+							<a href="index.html"><img src="images/a1-3.png" alt="alistair maclean"></a>
+						</div>
+						<div class="maclean">
+							<a href="index.html"><img src="images/m1-3.png" alt="alistair maclean"></a>
+						</div>-->
+						<!--<p>div class="tittel"</p>-->
+						<!--<a href="index.html"><h1>Alistair Maclean</h1></a>-->
+<body onLoad="MM_preloadImages('images/am1-3-2.jpg')">
+<a href="index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('tittel','','images/am1-3-2.png',1)"><img id="tittel" src="images/am2-3.png" alt="alistair maclean"></a></body>
+						<!--<a href="index.html"><img src="images/am1-3.png" alt="alistair maclean"></a>-->
+
+						<!--<a href="#top">1</a>-->
+					</div>
+					<!--<div class="fluid bredtittel">
+					</div>-->
+					<!--<p>div class="omforfatter"</p>-->
+					<nav class="fluid menu"><!--<div class="fluid vannrettborder"></div>-->
+						<a href="index.html">Home</a>
+						<a href="about.html">About MacLean</a>
+						<a href="book.html">Book Reviews</a>
+						<a href="movie.html">Movie Reviews</a>
+						<a href="first.html">First Editions</a>
+						<a href="news.html" class="current">MacLean News</a>
+					</nav>
+					<!--<div class="fluid omforfatter-bilde-tekst">-->		
+						<!--<div class="fluid omforfatter-bilde">-->
+							<!--<p>fluid omforfatter-bilde</p>-->
+							<!--<img src="images/sek_person_scid_10508_web.jpg" alt="alistair maclean"/>-->
+						<!--</div>-->
+						<!--<div class="fluid omforfatter-tekst">-->
+							<!--<p>Alistair MacLean was born in Scotland in 1922. In early 1954, he won a short story contest run by the Glasgow Herald with an entry titled "The Dileas", which is included in his maritime collection The Lonely Sea. In the wake of this achievement, he was asked to write a novel; that first book, H.M.S. Ulysses, was published in October 1955. It achieved such wide acclaim that he soon became a full-time writer</p>-->
+							<!--<p></p>-->
+						<!--</div>-->
+                    <!--</div>-->						<!--/omforfatter-bilde-tekst-->
+				</div>							<!--/omforfatter-->
+			</header>
+
+			<div class="fluid content">
+ 				<!--<p>div class="content"</p>-->
+				<!--<div class="flexslider">
+					<ul class="slides">
+						<li id="slide1">
+							<img src="images/0-M_inferno_ark.jpg" alt="inferno"/>
+						</li>
+						<li id="slide2">
+							<img src="images/0-M_raketten_ark.jpg" alt="raketten"/>
+						</li>
+					</ul>
+				</div>-->
+				
+				<div id="news" class="fluid section">
+					<h2>Alistair Maclean news</h2>
+					<!--<p>http://alistairmaclean.com/MacLean-News.html</p>-->
+					<br>
+					
+					<div class="fluid section-columns2-text-news"><h3>September 11, 2014</h3>
+					<p>Just a footnote to yesterday's death of actor Richard Kiel: while best known as "Jaws" from some James Bond films, he also played a villain in the film version of Force 10 from Navarone. His role differed greatly (in unfortunate ways) from the way his character was portrayed in the book, but this massive actor's physical presence always made him interesting to watch.</p>
+					</div>
+					<br>
+					
+					<div class="fluid section-columns2-text-news"><h3>September 8, 2014</h3>
+					<p>This isn't news per se, but I thought it was worth mentioning. A fellow named Simon has recently started posting detailed, insightful reviews of MacLean's first 16 novels (from HMS Ulysses to Bear Island) on his website. He has a lot of thought-provoking things to say about MacLean's stylistic habits and about each book's strengths and weaknesses. As of this writing, he's posted ten reviews. See them <a href="https://astrofella.wordpress.com/tag/alistair-maclean/">here</a></p>
+					</div>
+					<br>
+					
+					<div class="fluid section-columns2-text-news"><h3>July 9, 2014</h3>
+					<p>I just discovered that the film Air Force One is Down is available on iTunes. Based on a story written from a MacLean plot, this 2013 production was licensed to TV networks in various countries as a two-episode miniseries. Jeremy Sisto and Linda Hamilton are among the "name" actors it features. I haven't read any books in the UNACO series, but MacLean fans may want to give this film a look.</p>
+					</div>
+					<br>
+					
+					<div class="fluid section-columns2-text-news"><h3>March 7, 2014</h3>
+					<p>Warner Bros. has announced <a href="http://www.hollywoodreporter.com/heat-vision/christopher-mcquarrie-set-ice-station-451705">plans</a> to remake the film Ice Station Zebra, with Christopher McQuarrie in the director's chair. He's known for writing, producing, and/or directing such films as The Usual Suspects, Valkyrie, Jack Reacher, and The Way of the Gun. MacLean fans certainly hope the new film is an improvement on the original 1968 Ice Station Zebra movie</p>
+					</div>
+					<br>
+					
+					<div class="fluid section-columns2-text-news"><h3>January 11, 2013</h3>
+					<p>Want to own Alistair MacLean's former home? Located outside Inverness, in the Scottish Highlands, it has been converted to a guest house (with four separate cottages). See details <a href="http://www.hotel-magazine.co.uk/famed-authors-former-dwelling-for-sale-as-guest-house">here.</a></p>
+					</div>
+					<br>
+					<div class="fluid section-columns2-text-news"><h3>August 31, 2012</h3>
+					<p>Today's edition of the Scottish newspaper The Press and Journal contained a nice interview with Alistair MacLean's niece Shona MacLean, who (as mentioned in my April 24 entry) is also an author. She mentions her uncle several times and even tells a funny story about him. See the article <a href="http://us.mg6.mail.yahoo.com/neo/launch?.rand=6q80lltc8up1s">here.</a></p>
+					</div>
+					<br>
+					<div class="fluid section-columns2-text-news"><h3>July 3, 2012</h3>
+					<p>I received a note from Steve Soboroff, a social leader in the Los Angeles area, mentioning that he had won an auction for a typewriter used by Alistair MacLean to write some of his later books. You can see the listing <a href="http://www.bonhams.com/auctions/20138/lot/485/">here</a>, on the website of the Bonhams auction firm.<em> (Another of MacLean's typewriters is the "artifact" mentioned in my December 2, 2011 entry [below]; I don't yet know when that will be offered for sale.)</em> Soboroff collects typewriters used by prominent people, ranging from Ernest Hemingway to the Unabomber; see an article on him, and his hobby, <a href="http://articles.latimes.com/2012/apr/18/local/la-me-soboroff-typewriters-20120418">here.</a></p>
+<p><em>(P.S. [August 27]: Mr. Soboroff has posted a photo of the typewriter, which has a European-style [non-QWERTY] keyboard, <a href="http://campl.us/lBiQ">here</a>.)</em>
+</p>
+					</div>
+					<br>
+					<div class="fluid section-columns2-text-news"><h3>June 21, 2012</h3>
+					<p>The cast of the television serialization of Alistair MacLean's Air Force One is Down [see July 13, 2011 entry on this page] has been announced. Linda Hamilton, best known for a lead role in the Terminator series, will star as the United States President, who is captured by "a Serbian strongman" after her plane crashes. Some other well-known cast members include Jeremy Sisto (Law & Order, Suburgatory) and Amanda Donohoe (L.A. Law, The Madness of King George). The CEO of Sonar Entertainment boasts that this miniseries will feature "a taut, edgy script inspired by the legendary Alistair MacLean"; the book was written by John Denis, supposedly around a plot suggested by MacLean, so it has only a tangential connection to Alistair himself. Visit <a href="http://www.worldscreen.com/premium/register/34895">here</a> or <a href="http://www.thewrap.com/movies/article/linda-hamilton-leads-cast-air-force-one-down-44861/">here</a> for more information about the casting for this miniseries.</p>
+					</div>
+					<br>
+					<div class="fluid section-columns2-text-news"><h3>June 15, 2012</h3>
+					<p>Warner Brothers Home Video has announced that it will release <a href="movie.html#w-ice">Ice Station Zebra</a> on Blu-ray Disc on October 9th — two weeks short of the 44th anniversary of its theatrical release. While not one of my favorite MacLean-based films, it does enjoy a wide following. (Click <a href="http://www.amazon.com/gp/product/B008B4KVS8/ref=as_li_ss_tl?ie=UTF8&tag=maclean-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=B008B4KVS8">here</a>  to place a pre-order through Amazon.com.)</p>
+					</div>
+					<br>
+					<div class="fluid section-columns2-text-news"><h3>April 24, 2012</h3>
+					<p>News tangentially related to Alistair MacLean: his niece, Shona MacLean, who writes historical novels based in 16th- and 17th-century Scotland, has been pressured into changing her pen name to S G MacLean "to make her novels more appealing to men." (Are we really that shallow?) Find more details in this article from The Scotsman.</p>
+					</div>
+					<br>
+				</div>		<!--nyheter-->
+					<div class="fluid totop">
+						<a href="#top" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('knapp','','images/amnettsidegrafikkhover_totop3.png',1)"><img id="knapp" src="images/amnettsidegrafikk_totop3.png" alt="knapp"></a>
+					</div>
+				
+				<!--				<div class="bg">
+					<img src="images/WIK_US_Convoy-to-Capetown_1941_kingsacademy.jpg" alt="convoy">
+				</div>-->
+				
+				
+
+			</div>													<!--/content-->
+            <footer class="fluid footer">
+				<!--<p>&copy; Pål Stakvik 2015</p>-->
+				<p>Questions/ideas? Drop me a line: <a href="mailto:info@AlistairMacLean.com">info@AlistairMacLean.com</a></p>
+				<p>Go <a href="http://alistair-maclean.blogspot.nl/">here</a> for more facts about MacLean and about novels by other authors, based on plot summaries he wrote.</p>
+				<br>
+				<p>Literature lover? Learn about my favorite book, Jane Eyre — visit my site at <a href="http://janeeyre.net/">JaneEyre.net!</a></p>
+				<p>alistairmaclean.com redesigned by &copy; Pål Stakvik 2015</p>
+			</footer>
+				
+		</div>														<!--/div id="div1" class="fluid"-->
+	</div>															<!--/container-->
+    <p></p>
+</body>
+</html>
